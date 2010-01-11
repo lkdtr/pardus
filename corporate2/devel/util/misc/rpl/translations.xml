@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>rpl</Name>
+        <Summary xml:lang="tr">Metin değiştirme aracı</Summary>
+        <Description xml:lang="tr">rpl bir metin değiştirme aracıdır. Birden fazla metin dosyasında eşlenen metinleri yenileri ile değiştirecektir. Alt dizinleri özyinelemeli olarak tarayabilir ve arama/değiştirme işlemini sadece belirli uzantılı dosyalara uygulayabilir.</Description>
+    </Source>
+</PISI>
