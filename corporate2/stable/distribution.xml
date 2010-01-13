@@ -1,0 +1,9 @@
+<PISI>
+    <SourceName>Pardus-Corporate2</SourceName>
+    <Version>1</Version>
+    <Description xml:lang="tr">Linux Kullanıcıları Derneği Pardus Kurumsal 2 Katkı Deposu</Description>
+    <Description xml:lang="en">Linux Users Association Pardus Corporate 2 Contrib Repository</Description>
+    <Type>Core</Type>
+    <Architecture>i686</Architecture>
+</PISI>
+

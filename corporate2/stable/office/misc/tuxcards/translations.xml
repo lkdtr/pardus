@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>tuxcards</Name>
+        <Summary xml:lang="tr">Hiyerarşik not defteri</Summary>
+        <Description xml:lang="tr">Tuxcards ile istediğiniz sayıda not yazmak mümkün. Tutulan notlar hiyerarşik olarak oluşturulabilen çeşitli &quot;klasör&quot;lerde gruplanabiliyor.</Description>
+    </Source>
+</PISI>

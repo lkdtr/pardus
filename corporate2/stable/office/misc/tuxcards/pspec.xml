@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tuxcards</Name>
+        <Homepage>http://tuxcards.de</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>tuxcards</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Hierarchical notebook</Summary>
+        <Description>With TuxCards it is possible to create as many different entries or notes as you wish. Everytime you add a new one and you think your new entry belongs to the same topic as notes you already have, then you may decide to group them and to create a kind of "folder" where you store them all together.</Description>
+        <Archive type="targz" sha1sum="107a72001c190087618d056df6e25903d4dd4cc9">http://tuxcards.de/src/tuxcards-2.2/tuxcards-2.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>qt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>tuxcards</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/tuxcards</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/tuxcards.desktop">tuxcards.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2009-09-29</Date>
+            <Version>2.2</Version>
+            <Comment>Version bump to QT4 port, add icon tag. Remove strict deps, update doc path for 2009.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2008-06-16</Date>
+            <Version>1.2</Version>
+            <Comment>GCC 4.3 fix.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2006-12-12</Date>
+            <Version>1.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
