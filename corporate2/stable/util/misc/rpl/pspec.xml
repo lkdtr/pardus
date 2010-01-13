@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>rpl</Name>
+        <Homepage>http://www.laffeycomputer.com/rpl.html</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Text replacement utility</Summary>
+        <Description>rpl is a text replacement utility. It will replace strings with new strings in multiple text files. It can work recursively over directories and supports limiting the search to specific file suffixes.</Description>
+        <Archive type="targz" sha1sum="6c67ecd2307f378b44b697411b0ab65bc5d2cdaa">http://downloads.laffeycomputer.com/current_builds/rpl-1.4.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>rpl</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/rpl</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2009-06-09</Date>
+            <Version>1.4.1</Version>
+            <Comment>Update doc path for 2009.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2008-12-15</Date>
+            <Version>1.4.1</Version>
+            <Comment>Version bump, only fixes compilation issues.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2006-11-17</Date>
+            <Version>1.4.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
