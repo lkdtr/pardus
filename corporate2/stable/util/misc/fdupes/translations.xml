@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>fdupes</Name>
+        <Summary xml:lang="tr">Eş dosyaları bulma aracı</Summary>
+        <Description xml:lang="tr">FDupes, belirlenen dizinlerde eş dosyaları tespit etmek ve/ya silmek için kullanılan bir yazılımdır. Dosyaların eş olmasını öncelikle dosya boyutu, daha sonra MD5 imzası ve son olarak da bayt karşılaştırılmasının sonucuna göre belirler.</Description>
+    </Source>
+</PISI>

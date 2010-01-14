@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>fdupes</Name>
+        <Homepage>http://netdial.caribe.net/~adrian2/fdupes.html</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>app:console</IsA>
+        <Summary>Duplicate file finder</Summary>
+        <Description>FDupes is a program for identifying or deleting duplicate files residing within specified directories. Such files are found by comparing file sizes and MD5 signatures, followed by a byte-by-byte comparison.</Description>
+        <Archive type="targz" sha1sum="e1bce9bdf50d7bf700dda3eb8a3d218b181b3931">http://netdial.caribe.net/~adrian2/programs/fdupes-1.40.tar.gz</Archive>
+        <Patches>
+            <Patch>memcpy-warning-gentoo.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>fdupes</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/fdupes</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2009-06-09</Date>
+            <Version>1.40</Version>
+            <Comment>Update doc path for 2009.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2009-03-24</Date>
+            <Version>1.40</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
