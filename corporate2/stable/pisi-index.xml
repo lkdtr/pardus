@@ -70,6 +70,391 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>tuxtype</Name>
+            <Homepage>http://tux4kids.alioth.debian.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.kids</PartOf>
+            <Summary xml:lang="en">Typing tutor for children</Summary>
+            <Summary xml:lang="tr">Çocuklar için daktilo öğretmeni</Summary>
+            <Description xml:lang="en">&quot;Tux Typing&quot; is an educational typing tutor for children. It features several different types of gameplay, at a variety of difficulty levels.</Description>
+            <Description xml:lang="tr">&quot;Tux Typing&quot; çocuklar için eğitsel bir daktilo öğretmenidir. Çeşitli tipte ve zorluk düzeyinde oyunlar içerir.</Description>
+            <Icon>tuxtype</Icon>
+            <Archive type="targz" sha1sum="e33d8138b8f0907f228fe0105f6266408332d59d">http://alioth.debian.org/frs/download.php/3175/tuxtype_w_fonts-1.8.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-pango</Dependency>
+                <Dependency>librsvg</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/kids/tuxtype/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tuxtype</Name>
+            <RuntimeDependencies>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-pango</Dependency>
+                <Dependency>librsvg</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/tuxtype</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/tuxtype</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/var/lib/tuxtype</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2009-11-15</Date>
+                <Version>1.8.0</Version>
+                <Comment>Version bump:
+             * Word list editor
+             * Much better background images and new music for the &quot;fish cascade&quot;
+             * Significantly expanded word lists, phrase list and lessons
+             * New translations</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-07-18</Date>
+                <Version>1.7.5</Version>
+                <Comment>Add missing sdl-pango dependency</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2009-07-17</Date>
+                <Version>1.7.5</Version>
+                <Comment>Version bump :
+             * i18n and utf8 fixes
+             * Cleanup of some scripting menu issues
+             * Text drawing, background scaling and optimization improvements
+             * Add translations.xml, fix summary
+             * Update doc path, remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2009-01-15</Date>
+                <Version>1.7.2</Version>
+                <Comment>Version bump :
+             * Fixed crashing bug in fullscreen fish cascade game
+             * Safety checks for null pointers, array bounds violations, etc.
+             * Tweaks to startup screen
+             * Lessons menu now has the same look and feel of the other menus</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-01-12</Date>
+                <Version>1.7.1</Version>
+                <Comment>Version bump, non-essential bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-12-11</Date>
+                <Version>1.7.0</Version>
+                <Comment>Version bump. Many new features, many bugfixes over a period of four years (too many to list).</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-06-25</Date>
+                <Version>1.5.3</Version>
+                <Comment>Added a desktop file for kmenu</Comment>
+                <Name>Michael Austin</Name>
+                <Email>tuxed.up@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-06-21</Date>
+                <Version>1.5.3</Version>
+                <Comment>Initial release</Comment>
+                <Name>Michael Austin</Name>
+                <Email>tuxed.up@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>tuxmath</Name>
+            <Homepage>http://www.newbreedsoftware.com/tuxmath/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.kids</PartOf>
+            <Summary xml:lang="en">Educational Math Game</Summary>
+            <Summary xml:lang="tr">Eğitsel Matematik Oyunu</Summary>
+            <Description xml:lang="en">&quot;Tux, of Math Command&quot; (&quot;TuxMath,&quot; for short) is an educational arcade game where you have to solve math problems, starring Tux, the Linux mascot!</Description>
+            <Description xml:lang="tr">Başrolde Linux maskotu Tux&apos;ın olduğu, çocuklara özel eğitim amaçlı, matematik problemlerinin çözüldüğü bir oyun</Description>
+            <Icon>tuxmath</Icon>
+            <Archive type="targz" sha1sum="4cd16ac2e580bba52382351d6e01f290f6568fa3">http://alioth.debian.org/frs/download.php/2971/tuxmath_w_fonts-1.7.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-pango</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>menu_tr.patch</Patch>
+            </Patches>
+            <SourceURI>game/kids/tuxmath/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>tuxmath</Name>
+            <RuntimeDependencies>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/tuxmath</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc/tuxmath</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2010-01-15</Date>
+                <Version>1.7.2</Version>
+                <Comment>Add icon tag, change menu category (and use internal desktop file)</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-07-17</Date>
+                <Version>1.7.2</Version>
+                <Comment>Version bump:
+             * Text drawing, background scaling and optimization improvements
+             * More strings have i18n support
+             * Fix &quot;Math Command Training Academy&quot; lesson reset problem
+             * 3 new menu icons and clean-up cloud icon
+             * Check for indeterminate questions and to use the &quot;comprehensive&quot; method whenever multiple-operand questions are not needed.
+             * Update doc path, remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-12-09</Date>
+                <Version>1.7.0</Version>
+                <Comment>Version bump, many new features, including i18n support and Turkish translation.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-10-02</Date>
+                <Version>0.0_p75</Version>
+                <Comment>Version bump to svn r75 for cool new features.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-04-20</Date>
+                <Version>20010907_0102</Version>
+                <Comment>Fix dep and version</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-10-28</Date>
+                <Version>2001.09.07_0102</Version>
+                <Comment>Add a patch for makefile to fix installation</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-10-27</Date>
+                <Version>2001.09.07_0102</Version>
+                <Comment>installation sync</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-07-27</Date>
+                <Version>2001.09.07_0102</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>njam</Name>
+            <Homepage>http://njam.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Network multiplayer or singleplayer Pacman-like game</Summary>
+            <Summary xml:lang="tr">Ağ üzerinden oynanabilen Pac-man türevi bir oyun</Summary>
+            <Description xml:lang="en">Njam is a full-featured cross-platform pacman-like game written in C++ using SDL library.</Description>
+            <Description xml:lang="tr">Njam, çokluplatform destekleyen, C++ dilinde ve SDL kütüphanelerini kullanarak hazırlanmış pac-man tarzı bir oyundur.</Description>
+            <Icon>njam</Icon>
+            <Archive type="targz" sha1sum="1975c17e83fcc1042d758b25bccb784130bb22ad">ftp://mirror.switch.ch/mirror/gentoo/distfiles/njam-1.25-src.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/arcade/njam/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>njam</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/njam</Path>
+                <Path fileType="doc">/usr/share/doc/njam</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/njam.desktop">njam.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/njam.png">njam.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2010-01-15</Date>
+                <Version>1.25</Version>
+                <Comment>Add icon tag, change icon type to png.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2009-05-06</Date>
+                <Version>1.25</Version>
+                <Comment>Update doc path, remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2005-12-29</Date>
+                <Version>1.25</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>Ri-li</Name>
+            <Homepage>http://ri-li.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Chu chu chuu</Summary>
+            <Summary xml:lang="tr">Çuf çuf çuf</Summary>
+            <Description xml:lang="en">Drive the toy to find all the coaches to finish the levels.</Description>
+            <Description xml:lang="tr">Oyuncak tahta motoru sürerek bölümlerdeki objelerin hepsini toplayın.</Description>
+            <Icon>Ri-li</Icon>
+            <Archive type="tarbz2" sha1sum="33c1cd7c7a757decf813f5065a1bd88bba9520f3">mirrors://sourceforge/ri-li/Ri-li-2.0.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">gcc43.patch</Patch>
+                <Patch>remove-gentoo-directory.patch</Patch>
+            </Patches>
+            <SourceURI>game/arcade/Ri-li/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>Ri-li</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/Ri-li</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc/Ri-li</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/Ri-li.desktop" permission="0644" owner="root">Ri-li.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2009-07-20</Date>
+                <Version>2.0.1</Version>
+                <Comment>Update doc path and remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-11-11</Date>
+                <Version>2.0.1</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2008-05-11</Date>
+                <Version>2.0.1</Version>
+                <Comment>Add gcc43 patch and remove gentoo directory</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-12-11</Date>
+                <Version>2.0.1</Version>
+                <Comment>Version bump for new translations and mouse support</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-10-23</Date>
+                <Version>2.0.0</Version>
+                <Comment>Version bump, Turkish translation by Doruk Fişek</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-06</Date>
+                <Version>1.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>easytag</Name>
             <Homepage>http://easytag.sourceforge.net/</Homepage>
             <Packager>
