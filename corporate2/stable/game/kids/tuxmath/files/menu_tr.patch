@@ -1,0 +1,15 @@
+--- tuxmath.desktop.orig	2010-01-15 12:14:28.363189578 +0200
++++ tuxmath.desktop	2010-01-15 12:15:19.867188418 +0200
+@@ -3,10 +3,12 @@
+ GenericName=Educational math game
+ GenericName[de]=Mathe Spiel
+ GenericName[ru]=Образовательная игра
++GenericName[tr]=Eğitsel matematik oyunu
+ Comment=Tux Math - Learn math with tux!
+ Comment[pl]=Tux Math - Ucz siê matematyki z tuxem!
+ Comment[de]=Tux Math - Lerne Mathe mit Tux!
+ Comment[ru]=Обучение арифметике с пингвином в главной роли
++Comment[tr]=TuxMath Matematik Oyunu
+ Exec=tuxmath
+ Icon=tuxmath
+ Type=Application

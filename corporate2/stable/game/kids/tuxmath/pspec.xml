@@ -1,0 +1,111 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>tuxmath</Name>
+        <Homepage>http://www.newbreedsoftware.com/tuxmath/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>tuxmath</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Educational Math Game</Summary>
+        <Description>"Tux, of Math Command" ("TuxMath," for short) is an educational arcade game where you have to solve math problems, starring Tux, the Linux mascot!</Description>
+        <Archive sha1sum="4cd16ac2e580bba52382351d6e01f290f6568fa3" type="targz">http://alioth.debian.org/frs/download.php/2971/tuxmath_w_fonts-1.7.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+            <Dependency>sdl-pango</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>menu_tr.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>tuxmath</Name>
+        <RuntimeDependencies>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+            <Dependency>sdl-pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/tuxmath</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc/tuxmath</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="8">
+            <Date>2010-01-15</Date>
+            <Version>1.7.2</Version>
+            <Comment>Add icon tag, change menu category (and use internal desktop file)</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2009-07-17</Date>
+            <Version>1.7.2</Version>
+            <Comment>Version bump:
+             * Text drawing, background scaling and optimization improvements
+             * More strings have i18n support
+             * Fix "Math Command Training Academy" lesson reset problem
+             * 3 new menu icons and clean-up cloud icon
+             * Check for indeterminate questions and to use the "comprehensive" method whenever multiple-operand questions are not needed.
+             * Update doc path, remove strict deps for 2009.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="6">
+            <Date>2008-12-09</Date>
+            <Version>1.7.0</Version>
+            <Comment>Version bump, many new features, including i18n support and Turkish translation.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2008-10-02</Date>
+            <Version>0.0_p75</Version>
+            <Comment>Version bump to svn r75 for cool new features.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2007-04-20</Date>
+            <Version>20010907_0102</Version>
+            <Comment>Fix dep and version</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2006-10-28</Date>
+            <Version>2001.09.07_0102</Version>
+            <Comment>Add a patch for makefile to fix installation</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2006-10-27</Date>
+            <Version>2001.09.07_0102</Version>
+            <Comment>installation sync</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2006-07-27</Date>
+            <Version>2001.09.07_0102</Version>
+            <Comment>First release</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
