@@ -9,6 +9,202 @@
     </Distribution>
     <SpecFile>
         <Source>
+            <Name>gpsbabel</Name>
+            <Homepage>http://www.gpsbabel.org</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>science.gis</PartOf>
+            <Summary xml:lang="en">GPS and Map Format Convertor</Summary>
+            <Summary xml:lang="tr">GPS/Harita Biçemleri Dönüştürücü ve İşleyicisi</Summary>
+            <Description xml:lang="en">GPSBabel converts waypoints, tracks, and routes between popular GPS receivers and mapping programs. It also has powerful manipulation tools for such data.</Description>
+            <Description xml:lang="tr">GPSBabel durak noktaları, izler ve rotaların yaygın GPS alıcılar ve haritalama programları arasında biçem dönüşümlerini yapar. Bu verileri işlemek için güçlü araçlara da sahiptir.</Description>
+            <Archive type="targz" sha1sum="8ff86e356539ca493b33527b91032adb3b452a78">http://www.gpsbabel.org/plan9.php?dl=gpsbabel-1.3.6.tar.gz</Archive>
+            <SourceURI>science/gis/gpsbabel/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gpsbabel</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/gpsbabel</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2009-06-09</Date>
+                <Version>1.3.6</Version>
+                <Comment>Update doc path for 2009, remove non-existant doc.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-12-29</Date>
+                <Version>1.3.6</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-08-20</Date>
+                <Version>1.3.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-03-09</Date>
+                <Version>1.3.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-11-17</Date>
+                <Version>1.3.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-30</Date>
+                <Version>1.3.1</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>merkaartor</Name>
+            <Homepage>http://www.irule.be/bvh/c++/merkaartor/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>science.gis</PartOf>
+            <Summary xml:lang="en">Qt4 map editor for OpenStreetMap</Summary>
+            <Summary xml:lang="tr">Açık Sokak Haritası (OSM) Düzenleyicisi</Summary>
+            <Description xml:lang="en">This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
+            <Description xml:lang="tr">Açık Sokak Haritası (OpenStreetMap) için bir Qt4 tabanlı harita düzenleyicisi olan Merkaartor&apos;un stil düzenleyici, harita özelliklerinin saydam gösterilmesi, bağımsız otoyol desteği, NMEA dosyalarının içe aktarılmabilesi, WYSIWYG tarzı düzenleme gibi birçok özelliği bulunuyor.</Description>
+            <Icon>merkaartor</Icon>
+            <Archive type="tarbz2" sha1sum="122cf565785274dacabdae9abd9d24ac37af003c">http://www.merkaartor.org/downloads/source/merkaartor-0.14.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>qt-webkit</Dependency>
+                <Dependency>exiv2</Dependency>
+            </BuildDependencies>
+            <SourceURI>science/gis/merkaartor/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>merkaartor</Name>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>qt-webkit</Dependency>
+                <Dependency>exiv2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib/merkaartor</Path>
+                <Path fileType="localedata">/usr/share/merkaartor/translations</Path>
+                <Path fileType="data">/usr/share/merkaartor</Path>
+                <Path fileType="doc">/usr/share/doc/merkaartor</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="7">
+                <Date>2010-01-17</Date>
+                <Version>0.14</Version>
+                <Comment>Update tarball sha1sum (includes non-trivial fix), add translations.xml, remove optional dependency, add qt-webkit dependency since it&apos;s a seperate package now.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2009-08-12</Date>
+                <Version>0.14</Version>
+                <Comment>Version bump :
+             * Switch to API 0.6, remove support for API 0.5
+             * Add a Features dock displaying the features in the current viewport
+             * Alternative way of drawing GPX tracks
+             * Support for proxy authentication
+             * Ability to create a junction between to crossing roads, polygons of any number of sides, house numbers &quot;Karlsruhe&quot; style
+             * Ability to rotate roads/areas
+             * Spatial indexing of features for faster display with large downloaded areas
+             * Support for multiple image layers
+             * Support for multi-selection of layers; allow to show/hide or readonly several layers at once
+             * Drag and drop re-ordering of layers
+             * Plugin-based background layers
+             * Ability to choose Qt style
+             * Discardable dialog/messageboxes
+             * Fixed a bugging graphical corruption on Intel chipsets when the &quot;Show downloaded area&quot; was selected.
+             * Fixed problem with &quot;center&quot; + &quot;center and zoom&quot; from the properties dock.
+             * Fixed nodes fetched by relations are incomplete and not completed by &quot;download more&quot;.
+             * Other minor tweaks and bug fixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2009-07-11</Date>
+                <Version>0.13.1</Version>
+                <Comment>Update doc path and remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-03-31</Date>
+                <Version>0.13.1</Version>
+                <Comment>Version bump :
+             * Fix in Name property inspector causes AV
+             * Remove English language warning 
+             * Proper handling of the &quot;Don&apos;t connect GPX nodes...&quot; preference when set to 0.
+             * Fit the style editor in 1024x600 resolution
+             * Reflect in dirty dock the fact that multiple objects were changed together
+             * Added threaded browser-based background image grabbing.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-03-15</Date>
+                <Version>0.13</Version>
+                <Comment>Version bump :
+             * Support for KML import
+             * Support for ESRI Shapefile import (albeit not enough tested ;-)
+             * A new background image layer with a basic SHP map of the world
+             * Improved Geotagging pictures support
+             * A &quot;Style&quot; dock
+             * Readonly layers
+             * A native SVG renderer to export your custom maps
+             * A custom QT style
+             * A &quot;one-mouse-button&quot; interaction preference
+             * Many other features and bugfixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-10-15</Date>
+                <Version>0.12</Version>
+                <Comment>Version bump to stable release, use official logo, change menu category.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2008-10-02</Date>
+                <Version>0.11_p11021</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>tuxcards</Name>
             <Homepage>http://tuxcards.de</Homepage>
             <Packager>
@@ -393,6 +589,54 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>connectagram</Name>
+            <Homepage>http://gottcode.org/connectagram/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">Word Unscrambling Game</Summary>
+            <Summary xml:lang="tr">Sözcük Tahmin Etme Oyunu</Summary>
+            <Description xml:lang="en">Connectagram is a word unscrambling game. The board consists of several scrambled words that are joined together. You can choose the length of the words, the amount of words, and the pattern that the words are arranged in. The game provides a hint option for times when you are stuck, and features an online word lookup that fetches the definitions of each word from www.dict.org.</Description>
+            <Description xml:lang="tr">Connectagram bir sözcük tahmin etme oyunudur. Oyun tahtasında, birbiriyle birleştirilmiş ama harflerinin yerleri değiştirilmiş sözcükler bulunmaktadır. Sözcüklerin uzunluklarını, sayısını ve tahtadaki düzenleniş biçimlerini seçebiliyorsunuz. Takıldığınızda isterseniz ipucu alabiliyorsunuz. Bunun yanında Connectagram, kullanılan sözcüklerin anlamlarını www.dict.org adresinden bakıp, önünüze getirebiliyor.</Description>
+            <Icon>connectagram</Icon>
+            <Archive type="tarbz2" sha1sum="256ad0ba4e17fdd0b341968007e90f58ed392942">http://gottcode.org/connectagram/connectagram-1.0.1-src.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>qt</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">desktop.patch</Patch>
+            </Patches>
+            <SourceURI>game/puzzle/connectagram/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>connectagram</Name>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/connectagram</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/connectagram</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2009-09-03</Date>
+                <Version>1.0.1</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>fish-fillets-data</Name>
             <Homepage>http://fillets.sourceforge.net</Homepage>
             <Packager>
@@ -457,6 +701,155 @@
             <Update release="1">
                 <Date>2006-08-30</Date>
                 <Version>0.7.1</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pytraffic</Name>
+            <Homepage>http://alpha.uhasselt.be/Research/Algebra/Members/pytraffic/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="de">&quot;Rush Hour&quot; Puzzle</Summary>
+            <Summary xml:lang="en">&quot;Rush Hour&quot; Puzzle</Summary>
+            <Summary xml:lang="tr">&quot;Kalabalık Saatler&quot; Bulmacası</Summary>
+            <Description xml:lang="en">PyTraffic is a computer version of the board puzzle Rush Hour. The goal is to remove the red car out of the grid through the slot on the right. To do this you have to slide the other cars out of the way.</Description>
+            <Description xml:lang="tr">PyTraffic &quot;Kalabalık Saatler&quot; (Rush Hour) bulmacasının bilgisayara uyarlanmışıdır. Amaç, kırmızı aracı haritadan çıkartabilmektir. Bunun için diğer araçları yolundan çekmeniz gerekir.</Description>
+            <Icon>pytraffic</Icon>
+            <Archive type="targz" sha1sum="08077ccf3803f6f4dbb5a7892ae23416f5097350">http://alpha.uhasselt.be/Research/Algebra/Members/pytraffic/pytraffic-2.5.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>pygame</Dependency>
+                <Dependency>pygtk</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/puzzle/pytraffic/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pytraffic</Name>
+            <RuntimeDependencies>
+                <Dependency>pygame</Dependency>
+                <Dependency>pygtk</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/pytraffic</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/pytraffic</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2010-01-17</Date>
+                <Version>2.5.4</Version>
+                <Comment>Add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-05-07</Date>
+                <Version>2.5.4</Version>
+                <Comment>Update doc path for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-03-29</Date>
+                <Version>2.5.4</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-10-23</Date>
+                <Version>2.5.3</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pathological</Name>
+            <Homepage>http://pathological.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">Clone of the game &quot;Logical&quot; by Rainbow Arts</Summary>
+            <Summary xml:lang="tr">Rainbow Arts&apos;ın Logical oyununun benzeri</Summary>
+            <Description xml:lang="en">Path-o-Logical is a clone of the game &quot;Logical&quot; by Rainbow Arts. To solve a level, fill each wheel with four marbles of matching color. Various board elements such as teleporters, switches, filters, etc., make the game interesting and challenging. New levels can be created using your favorite text editor.</Description>
+            <Description xml:lang="tr">Rainbow Arts&apos;ın Logical oyununun benzeri. Işınlama noktaları, düğmeler, filtreler ve benzeri bir çok aracı kullanarak her tekerleği eş renk toplarla doldurun. Üstelik herhangi bir düzmetin editörü kullanarak kendinize yeni seviyeler yapabilirsiniz.</Description>
+            <Icon>pathological</Icon>
+            <Archive type="targz" sha1sum="70b1c9e12704c7fd3b301aa90bceee2e8373b7b9">mirrors://sourceforge/pathological/pathological-1.1.3.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>pygame</Dependency>
+                <Dependency>netpbm</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>pathological-1.1.3-build.patch</Patch>
+                <Patch>pathological-1.1.3-music-py.patch</Patch>
+                <Patch level="1">netpbm-param.patch</Patch>
+                <Patch level="1">nothingserious.patch</Patch>
+                <Patch compressionType="bz2" level="1">boards-20031004.patch.bz2</Patch>
+            </Patches>
+            <SourceURI>game/puzzle/pathological/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pathological</Name>
+            <RuntimeDependencies>
+                <Dependency>pygame</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/pathological</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pathological</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/pathological.desktop" permission="0644" owner="root">pathological.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/bin/pathological" permission="0755" owner="root">pathological</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2009-07-20</Date>
+                <Version>1.1.3</Version>
+                <Comment>Update doc path for 2009, add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-11-11</Date>
+                <Version>1.1.3</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-10-27</Date>
+                <Version>1.1.3</Version>
+                <Comment>Add 27 more levels</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-16</Date>
+                <Version>1.1.3</Version>
                 <Comment>First release</Comment>
                 <Name>Onur Küçük</Name>
                 <Email>onur@pardus.org.tr</Email>
@@ -811,6 +1204,73 @@
                 <Comment>First release</Comment>
                 <Name>Murat Şenel</Name>
                 <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>maniadrive</Name>
+            <Homepage>http://maniadrive.raydium.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.sports</PartOf>
+            <Summary xml:lang="en">Car acrobatics</Summary>
+            <Summary xml:lang="tr">Araba akrobasi oyunu</Summary>
+            <Description xml:lang="en">Arcade car game on acrobatic tracks, with a quick and nervous gameplay (tracks almost never exceed one minute), and featuring a network mode.</Description>
+            <Description xml:lang="tr">Akrobasi pistlerinde ister yerel, ister ağ ve internet üzerinden yarış oyunu. Hızlı düşünmeli ve oynamalısınız, çünkü bölümlerin neredeyse hiçbiri bir dakikadan uzun sürmez.</Description>
+            <Icon>maniadrive</Icon>
+            <Archive type="targz" sha1sum="df28d607ef52cc38e1976305a01697df0c12be22">mirrors://sourceforge/maniadrive/ManiaDrive-1.2-linux-i386.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/sports/maniadrive/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>maniadrive</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/maniadrive</Path>
+                <Path fileType="data">/usr/share/maniadrive</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/maniadrive.desktop" permission="0644" owner="root">maniadrive.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/maniadrive-editor.desktop" permission="0644" owner="root">maniadrive-editor.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/maniadrive.png" permission="0644" owner="root">maniadrive.png</AdditionalFile>
+                <AdditionalFile target="/usr/bin/maniadrive" permission="0755" owner="root">maniadrive</AdditionalFile>
+                <AdditionalFile target="/usr/bin/maniadrive-editor" permission="0755" owner="root">maniadrive-editor</AdditionalFile>
+                <AdditionalFile target="/usr/bin/maniadrive-server" permission="0755" owner="root">maniadrive-server</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2009-07-20</Date>
+                <Version>1.2</Version>
+                <Comment>Update doc path and remove strict deps for 2009, add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-11-11</Date>
+                <Version>1.2</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-08-26</Date>
+                <Version>1.2</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1936,6 +2396,41 @@
                 <Date>2009-03-24</Date>
                 <Version>1.40</Version>
                 <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>torrentinfo</Name>
+            <Homepage>http://vrai.net/project.php?project=torrentinfo</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:console</IsA>
+            <PartOf>util.misc</PartOf>
+            <Summary xml:lang="en">Torrent File Viewer</Summary>
+            <Summary xml:lang="tr">Torrent Dosyası Göstericisi</Summary>
+            <Description xml:lang="en">TorrentInfo is a simple command-line tool that parses .torrent files and provides a summary of their contents.</Description>
+            <Description xml:lang="tr">TorrentInfo .torrent dosyalarını inceleyerek, içeriklerine ilişkin özet bilgisi veren basit bir komut satırı aracıdır.</Description>
+            <Archive type="tarbz2" sha1sum="e4097c59f4971a7b8199d39e7b81b2cf0f63d5e0">http://vrai.net/files/software_projects/torrentinfo/torrentinfo-1.0.2.tar.bz2</Archive>
+            <SourceURI>util/misc/torrentinfo/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>torrentinfo</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/torrentinfo</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="1">
+                <Date>2010-01-16</Date>
+                <Version>1.0.2</Version>
+                <Comment>First release</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
             </Update>
