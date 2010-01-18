@@ -1,0 +1,10 @@
+[Desktop Entry]
+Categories=Application;Game;BoardGame;
+Encoding=UTF-8
+Exec=pouetChess
+Icon=pouetchess.png
+Name=Pouet Chess
+StartupNotify=false
+Terminal=false
+Type=Application
+Version=1.0
