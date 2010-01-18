@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>josm</Name>
+        <Summary xml:lang="tr">Açık Sokak Haritası (OSM) Düzenleyicisi</Summary>
+        <Description xml:lang="tr">JOSM, deneyimli OSM haritacılarına yönelik zengin özelliklere sahip bir çevirim-dışı düzenleyicisidir. Bağımsız GPX izlerinin yanı sıra; OSM veritabanından GPX izlerini, mevcut düğümlerini, hat parçalarını ve etiketlerini kullanabilir.</Description>
+    </Source>
+</PISI>
