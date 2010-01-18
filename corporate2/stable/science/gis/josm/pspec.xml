@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>josm</Name>
+        <Homepage>http://josm.openstreetmap.de/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <Icon>josm</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Open Street Map (OSM) Offline Editor</Summary>
+        <Description>JOSM is a feature-rich offline editor for the experienced OSM mapper. It supports stand alone GPX tracks, GPX track data from the OSM database and existing nodes, line segments and metadata tags from the OSM database.</Description>
+        <Archive sha1sum="315039987319d1c6e04cef3e34ee3a75cbfba221" type="tarlzma">http://josm.fabian-fingerle.de/josm-2561.tar.lzma</Archive>
+        <BuildDependencies>
+            <Dependency>sun-jdk</Dependency>
+            <Dependency>ant</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>josm</Name>
+        <RuntimeDependencies>
+            <Dependency>sun-jre</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/josm</Path>
+            <Path fileType="data">/usr/share/josm</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/josm.desktop">josm.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/josm">josm</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="6">
+            <Date>2010-01-17</Date>
+            <Version>1.5_p2561</Version>
+            <Comment>Version bump to latest stable.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="5">
+            <Date>2009-09-29</Date>
+            <Version>1.5_p1981</Version>
+            <Comment>Version bump to latest stable.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2009-07-11</Date>
+            <Version>1.5_p1669</Version>
+            <Comment>Version bump to new stable, update doc path for 2009.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2008-06-16</Date>
+            <Version>1.5_p655</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2007-10-08</Date>
+            <Version>1.5_p352</Version>
+            <Comment>Upgrade for new OSM API.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-09-01</Date>
+            <Version>1.5_p314</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
