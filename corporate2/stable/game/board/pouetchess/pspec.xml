@@ -1,0 +1,98 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pouetchess</Name>
+        <Homepage>http://pouetchess.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>pouetchess</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>3D chess game</Summary>
+        <Description>PouetChess is a 3D chess game using FAILE as embedded engine for AI.</Description>
+        <Archive sha1sum="023bea8043b5dcf8a134531b920497c7efb89adb" type="targz">mirrors://sourceforge/pouetchess/pouetchess_src_0.2.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>mesa</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>configure-fix.patch</Patch>
+            <Patch>pouetchess-0.2.0-gcc43.patch</Patch>
+            <Patch>pouetchess-0.2.0-nvidia_glext.patch</Patch>
+            <Patch>pouetchess-0.2.0-sconstruct-sandbox.patch</Patch>
+            <Patch>pouetchess-0.2.0-segfaults.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>pouetchess</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>mesa</Dependency>
+        </RuntimeDependencies>
+        <Conflicts>
+            <Package>pouetChess</Package>
+        </Conflicts>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/pouetchess</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc/pouetchess</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/usr/share/applications/pouetchess.desktop" owner="root" permission="0644">pouetchess.desktop</AdditionalFile>
+            <AdditionalFile target="/usr/share/pixmaps/pouetchess.png" owner="root" permission="0644">pouetchess.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="5">
+            <Date>2010-01-18</Date>
+            <Version>0.2.0</Version>
+            <Comment>Add icon tag.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="4">
+            <Date>2009-11-05</Date>
+            <Version>0.2.0</Version>
+            <Comment>
+             * Incorporate Gentoo and Debian patches
+             * Turn off scons optimization flag (messes with Pardus compilation flags)
+             * Change menu category to board games
+             * Correct configure fix
+             * Add docs
+             * Elaborate package description
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2007-05-09</Date>
+            <Version>0.2.0</Version>
+            <Comment>Add conflict</Comment>
+            <Name>Türker Sezer</Name>
+            <Email>turkersezer@tsdesign.info</Email>
+        </Update>
+        <Update release="2">
+           <Date>2006-09-23</Date>
+           <Version>0.2.0</Version>
+           <Comment>Install correctly.</Comment>
+           <Name>Uğur Çetin</Name>
+           <Email>jnmbk@users.sourceforge.net</Email>
+        </Update>
+        <Update release="1">
+            <Date>2006-06-27</Date>
+            <Version>0.2.0</Version>
+            <Comment>First release.</Comment>
+            <Name>Eren Türkay</Name>
+            <Email>turkay.eren@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
