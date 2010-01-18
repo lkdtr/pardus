@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>navilink</Name>
+        <Summary xml:lang="tr">NaviGPS Seri USB Portundan Veri Aktarımı</Summary>
+        <Description xml:lang="tr">Navilink protokolüyle bir Locosys NaviGPS ile seri USB portundan bağlantı kurarak veri aktarımı yapan basit bir perl betiğidir.</Description>
+    </Source>
+</PISI>
