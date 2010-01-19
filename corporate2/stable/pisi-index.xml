@@ -409,6 +409,175 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>moodin-ksplash-themes</Name>
+            <Homepage>http://moodwrod.com/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>desktop.lookandfeel</PartOf>
+            <Summary xml:lang="en">FingerPrint and MoodinKDE KSplash Themes</Summary>
+            <Summary xml:lang="tr">FingerPrint ve MoodinKDE KSplash Temaları</Summary>
+            <Archive type="targz" sha1sum="357b5f64257be45b02d588e13b9993e184885727">http://zzz.fisek.com.tr/files/sources/ksplash-engine-moodin_0.4.2.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>kdebase</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">multihead-transparency.patch</Patch>
+            </Patches>
+            <SourceURI>desktop/lookandfeel/moodin-ksplash-themes/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>moodinkde-ksplash-theme</Name>
+            <Summary xml:lang="en">MoodinKDE KSplash Theme</Summary>
+            <RuntimeDependencies>
+                <Dependency>kdebase</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/kde/3.5/share/apps/ksplash/Themes/MoodinKDE</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <Replaces>
+                <Package>moodinkde</Package>
+            </Replaces>
+        </Package>
+        <Package>
+            <Name>fingerprint-ksplash-theme</Name>
+            <Summary xml:lang="en">FingerPrint KSplash Theme</Summary>
+            <RuntimeDependencies>
+                <Dependency>kdebase</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/kde/3.5/share/apps/ksplash/Themes/FingerPrint</Path>
+            </Files>
+            <Replaces>
+                <Package>fingerprint</Package>
+            </Replaces>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2010-01-19</Date>
+                <Version>0.4.2</Version>
+                <Comment>Fix sandbox violations, file conflicts, change generic package names.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-08-17</Date>
+                <Version>0.4.2</Version>
+                <Comment>Fix multihead transparency.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-08-17</Date>
+                <Version>0.4.2</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pouetchess</Name>
+            <Homepage>http://pouetchess.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.board</PartOf>
+            <Summary xml:lang="en">3D chess game</Summary>
+            <Summary xml:lang="tr">3 boyutlu satranç oyunu</Summary>
+            <Description xml:lang="en">PouetChess is a 3D chess game using FAILE as embedded engine for AI.</Description>
+            <Description xml:lang="tr">PouetChess, yapay zeka için gömülü FAILE motorunu kullanan üç boyutlu bir satranç oyunudur.</Description>
+            <Icon>pouetchess</Icon>
+            <Archive type="targz" sha1sum="023bea8043b5dcf8a134531b920497c7efb89adb">mirrors://sourceforge/pouetchess/pouetchess_src_0.2.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>mesa</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>configure-fix.patch</Patch>
+                <Patch>pouetchess-0.2.0-gcc43.patch</Patch>
+                <Patch>pouetchess-0.2.0-nvidia_glext.patch</Patch>
+                <Patch>pouetchess-0.2.0-sconstruct-sandbox.patch</Patch>
+                <Patch>pouetchess-0.2.0-segfaults.patch</Patch>
+            </Patches>
+            <SourceURI>game/board/pouetchess/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pouetchess</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>mesa</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/pouetchess</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc/pouetchess</Path>
+            </Files>
+            <Conflicts>
+                <Package>pouetChess</Package>
+            </Conflicts>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/pouetchess.desktop" permission="0644" owner="root">pouetchess.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/pouetchess.png" permission="0644" owner="root">pouetchess.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-01-18</Date>
+                <Version>0.2.0</Version>
+                <Comment>Add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-11-05</Date>
+                <Version>0.2.0</Version>
+                <Comment>* Incorporate Gentoo and Debian patches
+             * Turn off scons optimization flag (messes with Pardus compilation flags)
+             * Change menu category to board games
+             * Correct configure fix
+             * Add docs
+             * Elaborate package description</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-05-09</Date>
+                <Version>0.2.0</Version>
+                <Comment>Add conflict</Comment>
+                <Name>Türker Sezer</Name>
+                <Email>turkersezer@tsdesign.info</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-09-23</Date>
+                <Version>0.2.0</Version>
+                <Comment>Install correctly.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-06-27</Date>
+                <Version>0.2.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>freecol</Name>
             <Homepage>http://www.freecol.org</Homepage>
             <Packager>
