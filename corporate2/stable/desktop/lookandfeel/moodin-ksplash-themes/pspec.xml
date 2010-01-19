@@ -1,0 +1,77 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>moodin-ksplash-themes</Name>
+        <Homepage>http://moodwrod.com/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>data</IsA>
+        <Summary>FingerPrint and MoodinKDE KSplash Themes</Summary>
+        <Summary xml:lang="tr">FingerPrint ve MoodinKDE KSplash Temaları</Summary>
+        <Archive sha1sum="357b5f64257be45b02d588e13b9993e184885727" type="targz">http://zzz.fisek.com.tr/files/sources/ksplash-engine-moodin_0.4.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>kdebase</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">multihead-transparency.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>moodinkde-ksplash-theme</Name>
+        <Summary>MoodinKDE KSplash Theme</Summary>
+        <RuntimeDependencies>
+            <Dependency>kdebase</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>moodinkde</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="data">/usr/kde/3.5/share/apps/ksplash/Themes/MoodinKDE</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+
+    <Package>
+        <Name>fingerprint-ksplash-theme</Name>
+        <Summary>FingerPrint KSplash Theme</Summary>
+        <RuntimeDependencies>
+            <Dependency>kdebase</Dependency>
+        </RuntimeDependencies>
+        <Replaces>
+            <Package>fingerprint</Package>
+        </Replaces>
+        <Files>
+            <Path fileType="data">/usr/kde/3.5/share/apps/ksplash/Themes/FingerPrint</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2010-01-19</Date>
+            <Version>0.4.2</Version>
+            <Comment>Fix sandbox violations, file conflicts, change generic package names.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2007-08-17</Date>
+            <Version>0.4.2</Version>
+            <Comment>Fix multihead transparency.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-08-17</Date>
+            <Version>0.4.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
