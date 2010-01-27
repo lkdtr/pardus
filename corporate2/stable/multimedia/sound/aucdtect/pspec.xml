@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>aucdtect</Name>
+        <Homepage>http://www.true-audio.com/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>as-is</License>
+        <IsA>app:console</IsA>
+        <Summary>CD Authenticity Detector</Summary>
+        <Description>auCDtect is a console tool for analyzing the spectral characteristics of audio files and determining if they have been compressed with using codecs. It is useful for checking if a compact disc has been recorded using MP3 files or from an original source. Tests shows that it is more than 95% accurate.</Description>
+        <Archive sha1sum="188bfa21cb5d962b80f620ab40fdb8f3f963b66b" type="targz">http://www.true-audio.com/ftp/aucdtect-0.8.2.tgz</Archive>
+    </Source>
+
+    <Package>
+        <Name>aucdtect</Name>
+        <RuntimeDependencies>
+            <Dependency>lib-compat</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/aucdtect</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2010-01-27</Date>
+            <Version>0.8.2</Version>
+            <Comment>Add Turkish translation of summary/description of the package.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-06-10</Date>
+            <Version>0.8.2</Version>
+            <Comment>Update doc path for 2009.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-09-12</Date>
+            <Version>0.8.2</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
