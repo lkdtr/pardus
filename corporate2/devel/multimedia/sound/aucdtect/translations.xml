@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>aucdtect</Name>
+        <Summary xml:lang="tr">CD Gerçeklik İnceleyici</Summary>
+        <Description xml:lang="tr">auCDtect, ses dosyalarının tayf karakteristiklerini inceleyen ve hangi kodçözler (codec) kullanılarak sıkıştırıldığını belirleyen bir konsol aracıdır. Bir müzik CD'sinin MP3 dosyalarından mı yoksa orjinal kaynağından mı oluşturulduğunu kontrol etmek için yararlıdır. Testler auCDtect'in %95'ten yüksek bir doğruluk oranına sahip olduğunu gösteriyor.</Description>
+    </Source>
+</PISI>
+
