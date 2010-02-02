@@ -1607,9 +1607,7 @@
             <IsA>app:gui</IsA>
             <PartOf>game.kids</PartOf>
             <Summary xml:lang="en">Typing tutor for children</Summary>
-            <Summary xml:lang="tr">Çocuklar için daktilo öğretmeni</Summary>
             <Description xml:lang="en">&quot;Tux Typing&quot; is an educational typing tutor for children. It features several different types of gameplay, at a variety of difficulty levels.</Description>
-            <Description xml:lang="tr">&quot;Tux Typing&quot; çocuklar için eğitsel bir daktilo öğretmenidir. Çeşitli tipte ve zorluk düzeyinde oyunlar içerir.</Description>
             <Icon>tuxtype</Icon>
             <Archive type="targz" sha1sum="e33d8138b8f0907f228fe0105f6266408332d59d">http://alioth.debian.org/frs/download.php/3175/tuxtype_w_fonts-1.8.0.tar.gz</Archive>
             <BuildDependencies>
@@ -2066,9 +2064,7 @@
             <IsA>app:gui</IsA>
             <PartOf>game.arcade</PartOf>
             <Summary xml:lang="en">Addictive jump game</Summary>
-            <Summary xml:lang="tr">Bağımlılık yapan zıplama oyunu</Summary>
             <Description xml:lang="en">GNUjump is a clone of the simple yet addictive game Xjump, adding new features like multiplaying, unlimited FPS, smooth floor falling, themable graphics etc.</Description>
-            <Description xml:lang="tr">SDLjump basit bir temele dayanan (zıplamak) ama bağımlılık yapan Xjump oyununun SDL türevidir. Xjump&apos;a nazaran çok oyunculu olma gibi önemli ek özellikler getirir.</Description>
             <Icon>gnujump</Icon>
             <Archive type="targz" sha1sum="b2413adfa4dd38227d2ece45dc334dea4e20dad4">ftp://ftp.gnu.org/gnu/gnujump/1.0.6/gnujump-1.0.6.tar.gz</Archive>
             <BuildDependencies>
