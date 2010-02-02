@@ -9,6 +9,149 @@
     </Distribution>
     <SpecFile>
         <Source>
+            <Name>xchat</Name>
+            <Homepage>http://www.xchat.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.chat</PartOf>
+            <Summary xml:lang="en">GTK based IRC client</Summary>
+            <Summary xml:lang="tr">GTK tabanlı IRC istemcisi</Summary>
+            <Description xml:lang="en">X-chat allows you to join multiple IRC channels (chat rooms) at the same time, talk publicly, private one-on-one conversations etc. Even file transfers are possible.</Description>
+            <Description xml:lang="tr">X-chat birden fazla IRC kanalına (sohbet odasına) aynı anda girmenize, herkesle beraber ya da özel başbaşa konuşmalara olanak tanır. Dosya aktarımları bile mümkündür.</Description>
+            <Icon>xchat</Icon>
+            <Archive type="tarbz2" sha1sum="7a7463e65cb26c680ed70dd96cec98bcc05435a4">http://xchat.org/files/source/2.8/xchat-2.8.6.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libsexy</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>tcl</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>xchat_desktop.patch</Patch>
+                <Patch level="1">browser.patch</Patch>
+                <Patch level="1">default-configs.patch</Patch>
+                <Patch level="1">xchat-2.8.4-shm-pixmaps.patch</Patch>
+                <Patch level="1">xc286-smallfixes.diff</Patch>
+                <Patch level="1">new-gtk-type.patch</Patch>
+                <Patch level="1">xchat-2.8.6-default-utf8.patch</Patch>
+                <Patch level="1">use_ascii_str.patch</Patch>
+            </Patches>
+            <SourceURI>network/chat/xchat/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>xchat</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libsexy</Dependency>
+                <Dependency>dbus-glib</Dependency>
+                <Dependency>tcl</Dependency>
+                <Dependency>libnotify</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/xchat</Path>
+                <Path fileType="config">/etc/gconf/schemas</Path>
+                <Path fileType="library">/usr/lib/xchat/plugins</Path>
+                <Path fileType="data">/usr/share/dbus-1/services</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="12">
+                <Date>2010-01-27</Date>
+                <Version>2.8.6</Version>
+                <Comment>Add package description, update Turkish summary, tidy file paths.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="11">
+                <Date>2009-05-20</Date>
+                <Version>2.8.6</Version>
+                <Comment>- Use g_ascii string functions to not working irc commands.
+               - Enable shared libsexy support instead of gtkspell.</Comment>
+                <Name>Burak Çalışkan</Name>
+                <Email>burakclskn@gmail.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2009-02-11</Date>
+                <Version>2.8.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Burak Çalışkan</Name>
+                <Email>burakclskn@gmail.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2008-06-11</Date>
+                <Version>2.8.4</Version>
+                <Comment>Enable gtkspell support.</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2008-05-23</Date>
+                <Version>2.8.4</Version>
+                <Comment>Add patch to fix crash when transparent background is set.</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2007-08-20</Date>
+                <Version>2.8.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>İlker Kesen</Name>
+                <Email>ikesen92@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-04-20</Date>
+                <Version>2.8.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>İlker Kesen</Name>
+                <Email>ikesen92@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-01-08</Date>
+                <Version>2.8.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>İlker Kesen</Name>
+                <Email>ikesen92@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2006-12-12</Date>
+                <Version>2.6.8</Version>
+                <Comment>Version bump</Comment>
+                <Name>İlker Kesen</Name>
+                <Email>ikesen92@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-08-19</Date>
+                <Version>2.6.6</Version>
+                <Comment>Version bump</Comment>
+                <Name>Fethi Aymaz</Name>
+                <Email>fethi@linux-sevenler.org</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-05-11</Date>
+                <Version>2.6.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-25</Date>
+                <Version>2.6.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Fethi Aymaz</Name>
+                <Email>fethi@linux-sevenler.org</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>gpsbabel</Name>
             <Homepage>http://www.gpsbabel.org</Homepage>
             <Packager>
@@ -1464,9 +1607,7 @@
             <IsA>app:gui</IsA>
             <PartOf>game.kids</PartOf>
             <Summary xml:lang="en">Typing tutor for children</Summary>
-            <Summary xml:lang="tr">Çocuklar için daktilo öğretmeni</Summary>
             <Description xml:lang="en">&quot;Tux Typing&quot; is an educational typing tutor for children. It features several different types of gameplay, at a variety of difficulty levels.</Description>
-            <Description xml:lang="tr">&quot;Tux Typing&quot; çocuklar için eğitsel bir daktilo öğretmenidir. Çeşitli tipte ve zorluk düzeyinde oyunlar içerir.</Description>
             <Icon>tuxtype</Icon>
             <Archive type="targz" sha1sum="e33d8138b8f0907f228fe0105f6266408332d59d">http://alioth.debian.org/frs/download.php/3175/tuxtype_w_fonts-1.8.0.tar.gz</Archive>
             <BuildDependencies>
@@ -1923,9 +2064,7 @@
             <IsA>app:gui</IsA>
             <PartOf>game.arcade</PartOf>
             <Summary xml:lang="en">Addictive jump game</Summary>
-            <Summary xml:lang="tr">Bağımlılık yapan zıplama oyunu</Summary>
             <Description xml:lang="en">GNUjump is a clone of the simple yet addictive game Xjump, adding new features like multiplaying, unlimited FPS, smooth floor falling, themable graphics etc.</Description>
-            <Description xml:lang="tr">SDLjump basit bir temele dayanan (zıplamak) ama bağımlılık yapan Xjump oyununun SDL türevidir. Xjump&apos;a nazaran çok oyunculu olma gibi önemli ek özellikler getirir.</Description>
             <Icon>gnujump</Icon>
             <Archive type="targz" sha1sum="b2413adfa4dd38227d2ece45dc334dea4e20dad4">ftp://ftp.gnu.org/gnu/gnujump/1.0.6/gnujump-1.0.6.tar.gz</Archive>
             <BuildDependencies>
@@ -2624,6 +2763,58 @@
                 <Comment>First release.</Comment>
                 <Name>Furkan Duman</Name>
                 <Email>coderlord@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>aucdtect</Name>
+            <Homepage>http://www.true-audio.com/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">CD Authenticity Detector</Summary>
+            <Summary xml:lang="tr">CD Gerçeklik İnceleyici</Summary>
+            <Description xml:lang="en">auCDtect is a console tool for analyzing the spectral characteristics of audio files and determining if they have been compressed with using codecs. It is useful for checking if a compact disc has been recorded using MP3 files or from an original source. Tests shows that it is more than 95% accurate.</Description>
+            <Description xml:lang="tr">auCDtect, ses dosyalarının tayf karakteristiklerini inceleyen ve hangi kodçözler (codec) kullanılarak sıkıştırıldığını belirleyen bir konsol aracıdır. Bir müzik CD&apos;sinin MP3 dosyalarından mı yoksa orjinal kaynağından mı oluşturulduğunu kontrol etmek için yararlıdır. Testler auCDtect&apos;in %95&apos;ten yüksek bir doğruluk oranına sahip olduğunu gösteriyor.</Description>
+            <Archive type="targz" sha1sum="188bfa21cb5d962b80f620ab40fdb8f3f963b66b">http://www.true-audio.com/ftp/aucdtect-0.8.2.tgz</Archive>
+            <SourceURI>multimedia/sound/aucdtect/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>aucdtect</Name>
+            <RuntimeDependencies>
+                <Dependency>lib-compat</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/aucdtect</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2010-01-27</Date>
+                <Version>0.8.2</Version>
+                <Comment>Add Turkish translation of summary/description of the package.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2009-06-10</Date>
+                <Version>0.8.2</Version>
+                <Comment>Update doc path for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-09-12</Date>
+                <Version>0.8.2</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
             </Update>
         </History>
     </SpecFile>
