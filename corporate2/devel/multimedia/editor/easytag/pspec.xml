@@ -24,6 +24,9 @@
             <Dependency>libmp4v2</Dependency>
             <Dependency>wavpack</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch level="1">libmp4v2.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -48,6 +51,13 @@
     </Package>
 
     <History>
+        <Update release="15">
+            <Date>2010-03-09</Date>
+            <Version>2.1.6</Version>
+            <Comment>Add patch for fixing broken libmp4v2 support.</Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
         <Update release="14">
             <Date>2009-06-10</Date>
             <Version>2.1.6</Version>
