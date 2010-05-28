@@ -13,12 +13,13 @@
         <IsA>app:gui</IsA>
         <Summary>Platform game about a blob and his quest to rescue MIAs from an alien invader</Summary>
         <Description>In Blob Wars:Metal Blob Solid, you take on the role of a fearless Blob agent, Bob. Bob's mission is to infiltrate the various enemy bases around the Blobs' homeworld and rescue as many MIAs as possible. But standing in his way are many vicious aliens, other Blobs who have been assimilated and the evil alien leader, Galdov.</Description>
-        <Archive sha1sum="df8f992d0096d793b4bab8956e51a67db68ccbd2" type="targz">http://zzz.fisek.com.tr/files/sources/blobwars-1.14-1.tar.gz</Archive>
+        <Archive sha1sum="0541c4f6e4b9ca7222dc66594c054db8219e3e5f" type="targz">http://zzz.fisek.com.tr/files/sources/blobwars-1.17-1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-image</Dependency>
             <Dependency>sdl-mixer</Dependency>
             <Dependency>sdl-ttf</Dependency>
+            <Dependency>sdl-net</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch>pardus.config.patch</Patch>
@@ -33,6 +34,7 @@
             <Dependency>sdl-image</Dependency>
             <Dependency>sdl-mixer</Dependency>
             <Dependency>sdl-ttf</Dependency>
+            <Dependency>sdl-net</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -48,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>2010-04-28</Date>
+            <Version>1.17</Version>
+            <Comment>Version bump: Allow players to earn in-game medals, by performing certain tasks.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="8">
             <Date>2009-07-27</Date>
             <Version>1.14</Version>
