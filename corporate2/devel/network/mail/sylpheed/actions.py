@@ -9,6 +9,8 @@ from pisi.actionsapi import autotools
 from pisi.actionsapi import pisitools
 from pisi.actionsapi import get
 
+WorkDir='sylpheed-3.1.0beta1' 
+
 docdir = '/%s/%s' % (get.docDIR(), get.srcNAME())
 
 def setup():
