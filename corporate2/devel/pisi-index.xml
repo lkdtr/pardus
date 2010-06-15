@@ -166,7 +166,7 @@
             <Description xml:lang="en">Sylpheed is a simple and lightweight but featureful and easy-to-use e-mail client.</Description>
             <Description xml:lang="tr">GTK+ tabanlı, X-Window Sistemi üzerinde çalışan bir e-posta ve haber istemcisi</Description>
             <Icon>sylpheed-128x128</Icon>
-            <Archive type="tarbz2" sha1sum="7001053b540db3ff48c3304699d9a622de5f5f85">http://sylpheed.sraoss.jp/sylpheed/v3.0/sylpheed-3.0.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="60273633ce5a30541009baddbdd5cb06ed49a670">http://sylpheed.sraoss.jp/sylpheed/v3.1beta/sylpheed-3.1.0beta1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>shared-mime-info</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
@@ -182,7 +182,6 @@
             </BuildDependencies>
             <Patches>
                 <Patch level="1">panel-transparency-fix.patch</Patch>
-                <Patch level="1">xdg-open.patch</Patch>
             </Patches>
             <SourceURI>network/mail/sylpheed/pspec.xml</SourceURI>
         </Source>
@@ -212,6 +211,23 @@
             </Files>
         </Package>
         <History>
+            <Update release="42">
+                <Date>2010-06-15</Date>
+                <Version>3.1.0_beta1</Version>
+                <Comment>Version bump to new beta for testing:
+              * Full automatic address completion was implemented. Users can also configure to use the previous behavior (start completion on Tab key).
+              * The debug log output for filtering was added.
+              * New plug-in APIs for update check and folder view were added.
+              * A new option &apos;--instance-id ID&apos; was added. This allows users to run multiple instances of Sylpheed.
+              * &apos;Open&apos; menu was added to the attach context menu of the message composition window. This allows users to open attached files before sending.
+              * English Sylpheed FAQ was updated.
+              * Plug-ins are also loaded from user plug-in directory now.
+              * The crash when using %f on IMAP messages at the action tool was fixed.
+              * The crash when clicking tray icon menu &apos;Get from current account&apos; when no account exist was fixed.
+              * The bug that MIME flags were not set to imported mbox file and filtered sent messages was fixed.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="41">
                 <Date>2010-04-17</Date>
                 <Version>3.0.2</Version>
