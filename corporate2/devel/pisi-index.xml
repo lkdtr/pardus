@@ -3533,7 +3533,7 @@
             <Archive type="tarbz2" sha1sum="3df2187c9e869be6745fb1e1396586b9b0486485">http://audacity.googlecode.com/files/audacity-minsrc-1.3.12-beta.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>alsa-lib</Dependency>
-                <Dependency>ffmpeg</Dependency>
+                <Dependency releaseFrom="73">ffmpeg</Dependency>
                 <Dependency>flac</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
                 <Dependency>jack-audio-connection-kit</Dependency>
@@ -3552,6 +3552,7 @@
                 <Patch level="1">library-paths.patch</Patch>
                 <Patch level="1">desktopfile.patch</Patch>
                 <Patch>CVE-2009-0490.diff</Patch>
+                <Patch level="1">ffmpeg-0.5.1.patch</Patch>
             </Patches>
             <SourceURI>multimedia/sound/audacity/pspec.xml</SourceURI>
         </Source>
@@ -3559,7 +3560,7 @@
             <Name>audacity</Name>
             <RuntimeDependencies>
                 <Dependency>alsa-lib</Dependency>
-                <Dependency>ffmpeg</Dependency>
+                <Dependency releaseFrom="73">ffmpeg</Dependency>
                 <Dependency>flac</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
                 <Dependency>jack-audio-connection-kit</Dependency>
@@ -3588,6 +3589,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="19">
+                <Date>2010-05-29</Date>
+                <Version>1.3.12</Version>
+                <Comment>Work with new ffmpeg</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="18">
                 <Date>2010-04-17</Date>
                 <Version>1.3.12</Version>
