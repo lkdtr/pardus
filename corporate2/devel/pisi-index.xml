@@ -166,7 +166,7 @@
             <Description xml:lang="en">Sylpheed is a simple and lightweight but featureful and easy-to-use e-mail client.</Description>
             <Description xml:lang="tr">GTK+ tabanlı, X-Window Sistemi üzerinde çalışan bir e-posta ve haber istemcisi</Description>
             <Icon>sylpheed-128x128</Icon>
-            <Archive type="tarbz2" sha1sum="60273633ce5a30541009baddbdd5cb06ed49a670">http://sylpheed.sraoss.jp/sylpheed/v3.1beta/sylpheed-3.1.0beta1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="798cbfcb2d61a534e4cc4146ab8a362e5f885323">http://sylpheed.sraoss.jp/sylpheed/v3.1beta/sylpheed-3.1.0beta2.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>shared-mime-info</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
@@ -211,6 +211,24 @@
             </Files>
         </Package>
         <History>
+            <Update release="43">
+                <Date>2010-07-16</Date>
+                <Version>3.1.0_beta2</Version>
+                <Comment>Version bump to new beta for testing:
+              * On POP3 receiving, new messages are displayed on the summary view immediately. Folder switching is not required anymore.
+              * The feature to combine partial messages (RFC 2046, message/partial) was added.
+              * Users can move up/collapse/expand the folder view using left/right arrow key now.
+              * When inline image setting is off, images are not displayed in the Attachment tab too.
+              * When a connection to IMAP/News server fails, an error dialog will be displayed now.
+              * The menu items &apos;Mark/Mark&apos; and &apos;Mark/Unmark&apos; were changed to &apos;Mark/Set flag&apos; and &apos;Mark/Unset flag&apos; for understandability.
+              * The upper limit of auto-check interval was changed to 1000 minutes.
+              * The new plug-in APIs for user-agent string and the summary view were added.
+              * The hidden &apos;account-id&apos; filter condition works now.
+              * Fixed-positioned windows (such as main window, compose window, etc.) are always displayed on screen now. This prevents windows displayed outside of screen between multi and single monitor switching.
+              * The crash when POP3 session was cancelled while processing received mail was fixed.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="42">
                 <Date>2010-06-15</Date>
                 <Version>3.1.0_beta1</Version>
