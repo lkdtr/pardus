@@ -13,38 +13,62 @@
         <IsA>app:gui</IsA>
         <Summary>Opera web browser</Summary>
         <Description>A standards-compliant graphical Web browser.</Description>
-        <Archive sha1sum="f6d2938acdc8bbe2d762521313892989fd62a8be" type="tarbz2">http://get.opera.com/pub/opera/linux/1010/final/en/i386/opera-10.10.gcc4-qt4.i386.tar.bz2</Archive>
+        <Archive sha1sum="ff41947c1a3909db182069b8fc28e02fc96bf6da" type="targz">http://get.opera.com/pub/opera/linux/1060/opera-10.60-6386.i386.linux.tar.gz</Archive>
         <Patches>
+            <Patch>remove_unused_langs_and_uninstall_file.patch</Patch>
             <Patch level="1">add_nsbrowserplugins.patch</Patch>
+            <Patch level="1">tr_desktop.patch</Patch>
         </Patches>
     </Source>
 
     <Package>
         <Name>opera</Name>
         <RuntimeDependencies>
-            <Dependency>lcms</Dependency>
             <Dependency>qt</Dependency>
+            <Dependency>kdelibs</Dependency>
             <Dependency>sun-jre</Dependency>
             <Dependency>flashplugin</Dependency>
-            <Dependency>Bitstream-Vera-fonts</Dependency>
+            <Dependency>atk</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>gst-plugins-base</Dependency>
+            <Dependency>gstreamer</Dependency>
+            <Dependency>gtk2</Dependency>
+            <Dependency>libXext</Dependency>
+            <Dependency>libXft</Dependency>
+            <Dependency>libXrender</Dependency>
+            <Dependency>libXt</Dependency>
+            <Dependency>pango</Dependency>
         </RuntimeDependencies>
         <Files>
-            <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
-            <Path fileType="library">/usr/lib</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
-            <Path fileType="man">/usr/share/man/man1</Path>
-            <Path fileType="data">/usr/share/opera</Path>
+            <Path fileType="library">/usr/lib/opera</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
             <Path fileType="data">/usr/share/icons</Path>
-            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="data">/usr/share/mime/packages</Path>
+            <Path fileType="data">/usr/share/opera</Path>
         </Files>
-        <AdditionalFiles>
-            <AdditionalFile target="/usr/share/applications/opera.desktop" permission="0644" owner="root">opera.desktop</AdditionalFile>
-        </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="29">
+            <Date>2010-07-06</Date>
+            <Version>10.60</Version>
+            <Comment>Version bump to 10.60 release. Vast changes in the package, dependencies revised.
+                See http://www.opera.com/docs/changelogs/unix/1060/ for details.
+            </Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
+        <Update release="28">
+            <Date>2010-06-28</Date>
+            <Version>10.11</Version>
+            <Comment>Version bump to 10.11 release. See http://www.opera.com/docs/changelogs/linux/1011/ for details.</Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
         <Update release="27">
             <Date>2010-01-05</Date>
             <Version>10.10</Version>

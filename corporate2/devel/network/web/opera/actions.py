@@ -9,14 +9,13 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="%s-%s-4742.gcc4-qt4.i386" %(get.srcNAME(), get.srcVERSION())
+WorkDir="%s-%s-6386.i386.linux" % (get.srcNAME(), get.srcVERSION())
 
 def install():
-    shelltools.system("./install.sh DESTDIR=%s" % get.installDIR())
+    pisitools.dosed("install", "dest=\$PREFIX", "dest=%s/usr" % get.installDIR())
+    pisitools.dosed("install", "\$HOME/.local", "/usr")
+    pisitools.dosed("install", "update-[a-z]*-database", "XXpatchedXX")
 
-    pisitools.insinto("/usr/share/pixmaps", "usr/share/pixmaps/opera.xpm")
+    shelltools.system("./install --unattended --user")
 
     pisitools.dosym("/opt/netscape/plugins/libflashplayer.so", "/usr/lib/opera/plugins/libflashplayer.so")
-
-    for size in ["16x16","22x22","32x32","48x48"]:
-      pisitools.insinto("/usr/share/icons/hicolor/%s/apps" % size, "usr/share/icons/hicolor/%s/apps/opera.png" % size)

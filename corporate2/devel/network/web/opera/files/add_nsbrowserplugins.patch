@@ -1,7 +1,7 @@
-diff -Naur opera-10.10-4742.gcc4-qt4.i386.orig/usr/share/opera/defaults/pluginpath.ini opera-10.10-4742.gcc4-qt4.i386/usr/share/opera/defaults/pluginpath.ini
---- opera-10.10-4742.gcc4-qt4.i386.orig/usr/share/opera/defaults/pluginpath.ini	2010-01-05 02:57:56.205235185 +0200
-+++ opera-10.10-4742.gcc4-qt4.i386/usr/share/opera/defaults/pluginpath.ini	2010-01-05 03:01:34.877235252 +0200
-@@ -60,6 +60,7 @@
+diff -Naur opera-10.60-6386.i386.linux.orig/share/opera/defaults/pluginpath.ini opera-10.60-6386.i386.linux/share/opera/defaults/pluginpath.ini
+--- opera-10.60-6386.i386.linux.orig/share/opera/defaults/pluginpath.ini	2010-06-30 14:23:43.000000000 +0300
++++ opera-10.60-6386.i386.linux/share/opera/defaults/pluginpath.ini	2010-07-06 09:14:44.882016870 +0300
+@@ -61,6 +61,7 @@
  $HOME/.netscape/plugins=1
  /opt/netscape/plugins=1
  /usr/lib/netscape/plugins=1
