@@ -1,0 +1,19 @@
+diff -Naur audacious-2.0.1.orig/audacious2.desktop audacious-2.0.1/audacious2.desktop
+--- audacious-2.0.1.orig/audacious2.desktop	2009-06-22 01:20:39.000000000 +0300
++++ audacious-2.0.1/audacious2.desktop	2009-06-22 01:21:59.000000000 +0300
+@@ -1,12 +1,14 @@
+ [Desktop Entry]
+ Name=Audacious2
+ GenericName=Audio Player
++GenericName[tr]=Ses Çalıcısı
+ Comment=Play music
++Comment[tr]=Müzik çalar
+ Comment[hu]=Zene lejátszása
+ Comment[de]=Musik abspielen
+ Exec=audacious2 %U
+ Icon=audacious2
+-MimeType=application/x-ogg;audio/mp3;audio/mpeg;audio/mpegurl;audio/prs.sid;audio/x-flac;audio/x-it;audio/x-mod;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-ms-wma;audio/x-musepack;audio/x-s3m;audio/x-scpls;audio/x-stm;audio/x-wav;audio/x-xm;application/ogg;audio/x-vorbis+ogg
++MimeType=application/x-ogg;audio/mp3;audio/mpeg;audio/mpegurl;audio/prs.sid;audio/x-flac;audio/x-it;audio/x-mod;audio/x-mp3;audio/x-mpeg;audio/x-mpegurl;audio/x-ms-wma;audio/x-musepack;audio/x-s3m;audio/x-scpls;audio/x-stm;audio/x-wav;audio/x-xm;application/ogg;audio/x-vorbis+ogg;
+ Categories=Application;GTK;AudioVideo;Player;
+ Terminal=false
+ Type=Application

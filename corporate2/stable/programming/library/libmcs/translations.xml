@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libmcs</Name>
+        <Summary xml:lang="tr">Uygulamaların ayarların saklamasını uygulamadan soyutlar</Summary>
+        <Description xml:lang="tr">MCS, kullanıcıların çalıştırdığı uygulamaların ayarları saklamasını uygulamadan soyutlayan, bir kitaplık ve kullanıcıların çalıştırabileceği araçlardan oluşur.</Description>
+    </Source>
+</PISI>

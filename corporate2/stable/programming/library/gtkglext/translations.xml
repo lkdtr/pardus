@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gtkglext</Name>
+        <Summary xml:lang="tr">GTK+ için OpenGL eklentisi</Summary>
+        <Description xml:lang="tr">GTK+ 2.0 veya sonraki sürümler için OpenGL eklentisi</Description>
+    </Source>
+</PISI>
