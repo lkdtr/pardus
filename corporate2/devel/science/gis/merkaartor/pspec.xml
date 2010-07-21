@@ -15,6 +15,7 @@
         <Description>This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
         <Archive sha1sum="fdd595e99f22545973e1b73d8503c34e52f92a11" type="tarbz2">http://www.merkaartor.be/attachments/download/2/merkaartor-0.16.1.tar.bz2</Archive>
         <BuildDependencies>
+            <Dependency>boost-devel</Dependency>
             <Dependency>qt-devel</Dependency>
             <Dependency>exiv2</Dependency>
         </BuildDependencies>
@@ -42,7 +43,7 @@
             <Date>2010-07-21</Date>
             <Version>0.16.1</Version>
             <Comment>
-             * Update homepage
+             * Update homepage, add missing build time dependency
              * Fix crash when deleting relations
              * Allow to move complete relations
              * Fix first feature not OSM exported
