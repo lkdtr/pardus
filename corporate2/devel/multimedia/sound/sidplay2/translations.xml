@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libsidplay2</Name>
+        <Summary xml:lang="tr">C64 SID oynatıcısı</Summary>
+        <Description xml:lang="tr">libsidplay2, C64 için SID oynatıcısı kitaplığıdır.</Description>
+    </Source>
+</PISI>
+

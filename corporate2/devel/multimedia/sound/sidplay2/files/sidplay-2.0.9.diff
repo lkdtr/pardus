@@ -1,0 +1,201 @@
+--- sidplay-2.0.9.orig/Makefile.am
++++ sidplay-2.0.9/Makefile.am	2003/01/23 15:18:39
+@@ -1,4 +1,4 @@
+-
++ACLOCAL_AMFLAGS = -I unix
+ AUTOMAKE_OPTIONS = foreign
+ 
+ SUBDIRS = doc unix src
+--- sidplay-2.0.9.orig/src/IniConfig.cpp
++++ sidplay-2.0.9/src/IniConfig.cpp
+@@ -120,7 +120,7 @@
+ }
+ 
+ 
+-bool IniConfig::readInt (ini_fd_t ini, char *key, int &value)
++bool IniConfig::readInt (ini_fd_t ini, const char *key, int &value)
+ {
+     int i = value;
+     if (ini_locateKey (ini, key) < 0)
+@@ -134,7 +134,7 @@
+ }
+ 
+ 
+-bool IniConfig::readString (ini_fd_t ini, char *key, char *&str)
++bool IniConfig::readString (ini_fd_t ini, const char *key, char *&str)
+ {
+     char  *ret;
+     size_t length;
+@@ -165,7 +165,7 @@
+ }
+ 
+ 
+-bool IniConfig::readBool (ini_fd_t ini, char *key, bool &boolean)
++bool IniConfig::readBool (ini_fd_t ini, const char *key, bool &boolean)
+ {
+     int b = boolean;
+     if (ini_locateKey (ini, key) < 0)
+@@ -179,7 +179,7 @@
+ }
+ 
+ 
+-bool IniConfig::readChar (ini_fd_t ini, char *key, char &ch)
++bool IniConfig::readChar (ini_fd_t ini, const char *key, char &ch)
+ {
+     char *str, c = 0;
+     bool  ret = readString (ini, key, str);
+@@ -206,7 +206,7 @@
+ }
+ 
+ 
+-bool IniConfig::readTime (ini_fd_t ini, char *key, int &value)
++bool IniConfig::readTime (ini_fd_t ini, const char *key, int &value)
+ {
+     char *str, *sep;
+     int   time;
+--- sidplay-2.0.9.orig/src/IniConfig.h
++++ sidplay-2.0.9/src/IniConfig.h
+@@ -98,11 +98,11 @@
+ protected:
+     void  clear ();
+ 
+-    bool  readInt    (ini_fd_t ini, char *key, int &value);
+-    bool  readString (ini_fd_t ini, char *key, char *&str);
+-    bool  readBool   (ini_fd_t ini, char *key, bool &boolean);
+-    bool  readChar   (ini_fd_t ini, char *key, char &ch);
+-    bool  readTime   (ini_fd_t ini, char *key, int  &time);
++    bool  readInt    (ini_fd_t ini, const char *key, int &value);
++    bool  readString (ini_fd_t ini, const char *key, char *&str);
++    bool  readBool   (ini_fd_t ini, const char *key, bool &boolean);
++    bool  readChar   (ini_fd_t ini, const char *key, char &ch);
++    bool  readTime   (ini_fd_t ini, const char *key, int  &time);
+ 
+     bool  readSidplay2  (ini_fd_t ini);
+     bool  readConsole   (ini_fd_t ini);
+--- sidplay-2.0.9.orig/src/audio/AudioBase.h
++++ sidplay-2.0.9/src/audio/AudioBase.h
+@@ -43,7 +43,7 @@
+ {
+ protected:
+     AudioConfig _settings;
+-    char       *_errorString;
++    const char *_errorString;
+     void       *_sampleBuffer;
+ 
+ public:
+--- sidplay-2.0.9.orig/src/audio/oss/audiodrv.h
++++ sidplay-2.0.9/src/audio/oss/audiodrv.h
+@@ -57,7 +57,9 @@
+ #include <stdio.h>
+ #include <unistd.h>
+ 
+-#if defined(HAVE_LINUX_SOUNDCARD_H)
++#if defined(HAVE_SYS_SOUNDCARD_H)
++#   include <sys/soundcard.h>
++#elif defined(HAVE_LINUX_SOUNDCARD_H)
+ #   include <linux/soundcard.h>
+ #elif defined(HAVE_MACHINE_SOUNDCARD_H)
+ #   include <machine/soundcard.h>
+--- sidplay-2.0.9.orig/src/keyboard.cpp
++++ sidplay-2.0.9/src/keyboard.cpp
+@@ -56,7 +56,7 @@
+ #   include <sys/stat.h>
+ #   include <fcntl.h>
+ #   include <unistd.h>
+-char _getch (void);
++int _getch (void);
+ #endif
+ 
+ #define MAX_CMDLEN 10
+@@ -200,7 +200,8 @@
+ 
+ int keyboard_decode ()
+ {
+-    char cmd[MAX_CMDLEN+1], c;
++    char cmd[MAX_CMDLEN+1];
++    int c;
+     int  nch = 0;
+     int  action = A_NONE;
+ 
+@@ -208,14 +209,14 @@
+      * Collect characters in a buffer.
+      * Start with the one we have, and get more if we need them.
+      */
+-    c = (char) _getch();
++    c = _getch();
+     if (c == '\0')
+         c = '\340'; // 224
+     else if (c == ESC)
+     {
+         cmd[nch++] = c;
+         if (_kbhit ())
+-            c = (char) _getch ();
++            c = _getch ();
+     }
+ 
+     while (c >= 0)
+@@ -228,7 +229,7 @@
+             break;
+         if (!_kbhit ())
+             break;
+-        c = (char) _getch ();
++        c = _getch ();
+     }
+     return action;
+ }
+@@ -256,7 +257,7 @@
+     return 0;
+ }
+ 
+-char _getch (void)
++int _getch (void)
+ {
+     char ch = -1;
+     if (infd >= 0)
+--- sidplay-2.0.9.orig/src/menu.cpp
++++ sidplay-2.0.9/src/menu.cpp
+@@ -353,7 +353,7 @@
+ {
+     if ((m_iniCfg.console ()).ansi)
+     {
+-        char *mode = "";
++        const char *mode = "";
+ 
+         switch (colour)
+         {
+--- sidplay-2.0.9.orig/unix/config.h.in
++++ sidplay-2.0.9/unix/config.h.in
+@@ -78,6 +78,9 @@
+ /* Define to 1 if you have the <sys/ioctl.h> header file. */
+ #undef HAVE_SYS_IOCTL_H
+ 
++/* Define to 1 if you have the <sys/soundcard.h> header file. */
++#undef HAVE_SYS_SOUNDCARD_H
++
+ /* Define to 1 if you have the <sys/stat.h> header file. */
+ #undef HAVE_SYS_STAT_H
+ 
+--- sidplay-2.0.9.orig/unix/my_macros.m4
++++ sidplay-2.0.9/unix/my_macros.m4
+@@ -80,7 +80,8 @@
+     AC_CACHE_VAL(test_cv_have_ios_binary,
+     [
+         AC_TRY_COMPILE(
+-            [#include <fstream.h>],
++            [#include <fstream>
++	    using namespace std;],
+             [ifstream myTest(ios::in|ios::binary);],
+             [test_cv_have_ios_binary=yes],
+             [test_cv_have_ios_binary=no]
+@@ -105,8 +106,9 @@
+     AC_CACHE_VAL(test_cv_have_ios_openmode,
+     [
+         AC_TRY_COMPILE(
+-            [#include <fstream.h>
+-             #include <iomanip.h>],
++            [#include <fstream>
++             #include <iomanip>
++	     using namespace std;],
+             [ios::openmode myTest = ios::in;],
+             [test_cv_have_ios_openmode=yes],
+             [test_cv_have_ios_openmode=no]
