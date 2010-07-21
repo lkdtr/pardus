@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Colonization clone strategy game</Summary>
         <Description>Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King's forces.</Description>
-        <Archive sha1sum="98c4d4f233c406d7b5318a08f68b51b2d473f567" type="zip">mirrors://sourceforge/freecol/freecol-0.9.0-src.zip</Archive>
+        <Archive sha1sum="a4505d7a3222c986c902fe178570f56b4688047e" type="zip">mirrors://sourceforge/freecol/freecol-0.9.3-src.zip</Archive>
         <BuildDependencies>
             <Dependency>sun-jdk</Dependency>
             <Dependency>ant</Dependency>
@@ -28,15 +28,44 @@
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="doc">/usr/share/doc/freecol</Path>
-            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/usr/share/freecol</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="man">/usr/share/man</Path>
         </Files>
         <AdditionalFiles>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/freecol.desktop">freecol.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/freecol.png">freecol.png</AdditionalFile>
             <AdditionalFile owner="root" permission="0755" target="/usr/bin/freecol">freecol</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="24">
+            <Date>2010-06-20</Date>
+            <Version>0.9.3</Version>
+            <Comment>Bump to latest stable:
+             * Fix several bugs, including a combat bug that made it possible to capture colonies that still had armed defenders.
+             * Keyboard accelerators are now available for virtually all mapboard actions, including movement
+             * New "Hutzli" graphical mod.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="23">
+            <Date>2010-03-08</Date>
+            <Version>0.9.2</Version>
+            <Comment>Bump to latest stable:
+             * Fix prevention of the REF from landing in the New World
+             * Fixed a serious bug in privateer combat
+             * Many other fixes.
+             * Add parameter support to freecol script.
+             * Add program icon (png) as a seperate file.
+             * Add Debian man page.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="22">
             <Date>2010-01-01</Date>
             <Version>0.9.0</Version>
