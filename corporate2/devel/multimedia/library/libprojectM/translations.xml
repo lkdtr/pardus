@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>libprojectM</Name>
+        <Summary xml:lang="tr">Gelişmiş Milkdrop-uyumlu ses görselleştirme kitaplığı</Summary>
+        <Description xml:lang="tr">libprojectM, OpenGL'i donanım hızlandıması için kullanan yinelemeli bir müzik görselleştirme kitaplığıdır. Winamp görselleştirme eklentisi olan Milkdrop'un yeniden uyarlamasıdır; ona ek olarak 3 boyutlu grafik donanımları, yinelenen görüntü temelli render teknikleri kullanır ve hazır Milkdrop setleri ile uyumludur.</Description>
+    </Source>
+</PISI>
