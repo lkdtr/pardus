@@ -34,7 +34,7 @@
             <Patch level="1">library-paths.patch</Patch>
             <Patch level="1">desktopfile.patch</Patch>
             <Patch>CVE-2009-0490.diff</Patch>
-            <Patch level="1">ffmpeg-0.5.1.patch</Patch>
+            <Patch>ffmpeg.patch</Patch>
         </Patches>
     </Source>
 
@@ -75,9 +75,9 @@
 
    <History>
         <Update release="19">
-            <Date>2010-05-29</Date>
+            <Date>2010-07-21</Date>
             <Version>1.3.12</Version>
-            <Comment>Work with new ffmpeg</Comment>
+            <Comment>Work with ffmpeg 0.6</Comment>
             <Name>Doruk Fişek</Name>
             <Email>dfisek@fisek.com.tr</Email>
         </Update>

@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Typing tutor for children</Summary>
         <Description>"Tux Typing" is an educational typing tutor for children. It features several different types of gameplay, at a variety of difficulty levels.</Description>
-        <Archive sha1sum="e33d8138b8f0907f228fe0105f6266408332d59d" type="targz">http://alioth.debian.org/frs/download.php/3175/tuxtype_w_fonts-1.8.0.tar.gz</Archive>
+        <Archive sha1sum="f9e67f4cb8a6bb882bd6360b773f8b1645d74c23" type="targz">http://alioth.debian.org/frs/download.php/3270/tuxtype_w_fonts-1.8.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>sdl-image</Dependency>
             <Dependency>sdl-mixer</Dependency>
@@ -21,6 +21,9 @@
             <Dependency>sdl-pango</Dependency>
             <Dependency>librsvg</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>makefile_chown.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -34,6 +37,7 @@
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="config">/etc/tuxtype</Path>
             <Path fileType="doc">/usr/share/doc/tuxtype</Path>
             <Path fileType="localedata">/usr/share/locale</Path>
             <Path fileType="data">/usr/share/tuxtype</Path>
@@ -44,6 +48,17 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>2010-07-21</Date>
+            <Version>1.8.1</Version>
+            <Comment>
+             * Fish cascade backgrounds now selected randomly.
+             * Fish cascade graphics now use true alpha channel rather than SDL colorkey.
+             * Some fixes related to file location of custom word lists.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="8">
             <Date>2009-11-15</Date>
             <Version>1.8.0</Version>
