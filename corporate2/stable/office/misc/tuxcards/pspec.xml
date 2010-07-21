@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Hierarchical notebook</Summary>
         <Description>With TuxCards it is possible to create as many different entries or notes as you wish. Everytime you add a new one and you think your new entry belongs to the same topic as notes you already have, then you may decide to group them and to create a kind of "folder" where you store them all together.</Description>
-        <Archive type="targz" sha1sum="107a72001c190087618d056df6e25903d4dd4cc9">http://tuxcards.de/src/tuxcards-2.2/tuxcards-2.2.tar.gz</Archive>
+        <Archive type="targz" sha1sum="c0410f28b51d58b4f372ffae0ce0d2a7329f2c45">http://tuxcards.de/src/tuxcards-2.2.1/tuxcards-2.2.1.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt</Dependency>
         </BuildDependencies>
@@ -36,6 +36,28 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2010-07-21</Date>
+            <Version>2.2.1</Version>
+            <Comment>
+             * Fix crash in a special case during encryption.
+             * The font that is set for the editor (via options dialog) is now also used as default font for entries in RTF format.
+             * Activate command line options.
+             * Make keyboard shortcuts for adding and deleting entries available.
+             * Improve user interaction: If a new entry is created, the tree does automatically select this new entry. In addition the editor receives the keyboard input focus.
+             * Change default font and size for tree and editor.
+             * Change default textformat for new entries from ASCII to RTF.
+             * In the run where configuration file is written from scratch, do not ask for saving, if no changes where done.
+             * Fix crash when scrolling within the tree and loading a new data file immediately afterwards.
+             * Fix potential error: Use file system independent method to retrieve the base file name from the absolute file name.
+             * Localization support and German translation.
+             * Correct spelling in configuration dialog.
+             * Fix application crash where only one entry existed when moving an entry up and down.
+             * Remove bug when encrypting text during a very special scenario.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="3">
             <Date>2009-09-29</Date>
             <Version>2.2</Version>

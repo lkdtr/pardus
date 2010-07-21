@@ -13,9 +13,9 @@ def build():
     shelltools.system("ant")
 
 def install():
-    pisitools.insinto("/usr/share/pixmaps", "packaging/common/freecol_90x90.xpm", "freecol.xpm")
     pisitools.insinto("/usr/share/freecol", "FreeCol.jar")
     pisitools.insinto("/usr/share/freecol/data", "data/*")
     pisitools.insinto("/usr/share/freecol/jars", "jars/*")
 
+    pisitools.doman("packaging/debian/freecol.6")
     pisitools.dodoc("packaging/common/README", "packaging/common/COPYING")
