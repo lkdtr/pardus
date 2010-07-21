@@ -1,0 +1,95 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>libmcs</Name>
+        <Homepage>http://www.atheme.org/project/mcs</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Abstracts the storage of configuration settings away from applications</Summary>
+        <Description>MCS is a library and set of userland tools which abstract the storage of configuration settings away from userland applications.</Description>
+        <Archive sha1sum="f0f147f3175d6e0d9e8e2ddb0918dde65b96c86b" type="targz">http://distfiles.atheme.org/libmcs-0.7.2.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>libmowgli</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>libmcs</Name>
+        <RuntimeDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>libmowgli</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/libmcs</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="8">
+            <Date>2010-07-20</Date>
+            <Version>0.7.2</Version>
+            <Comment>Version bump, add missing kdelibs dep, use strict doc dir, fix homepage, fix summary/description, add Turkish package info translation, add app:console isa tag.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="7">
+            <Date>2009-06-22</Date>
+            <Version>0.7.1</Version>
+            <Comment>Fix home page</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+        <Update release="6">
+            <Date>2008-06-01</Date>
+            <Version>0.7.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Eren Türkay</Name>
+            <Email>turkay.eren@gmail.com</Email>
+        </Update>
+        <Update release="5">
+            <Date>2008-03-29</Date>
+            <Version>0.7.0</Version>
+            <Comment>Stable bump</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="4">
+            <Date>2007-11-09</Date>
+            <Version>0.6.0</Version>
+            <Comment>Stable bump</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="3">
+            <Date>2007-09-11</Date>
+            <Version>0.5.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2007-03-09</Date>
+            <Version>0.4.1</Version>
+            <Comment>Version bump</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-02-20</Date>
+            <Version>0.3.3</Version>
+            <Comment>First release</Comment>
+            <Name>Murat Şenel</Name>
+            <Email>muratasenel@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
