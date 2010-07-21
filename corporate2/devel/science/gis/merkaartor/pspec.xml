@@ -3,7 +3,7 @@
 <PISI>
     <Source>
         <Name>merkaartor</Name>
-        <Homepage>http://www.irule.be/bvh/c++/merkaartor/</Homepage>
+        <Homepage>http://www.merkaartor.be/</Homepage>
         <Packager>
             <Name>Doruk Fişek</Name>
             <Email>dfisek@fisek.com.tr</Email>
@@ -13,10 +13,9 @@
         <IsA>app:gui</IsA>
         <Summary>Qt4 map editor for OpenStreetMap</Summary>
         <Description>This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
-        <Archive sha1sum="122cf565785274dacabdae9abd9d24ac37af003c" type="tarbz2">http://www.merkaartor.org/downloads/source/merkaartor-0.14.tar.bz2</Archive>
+        <Archive sha1sum="fdd595e99f22545973e1b73d8503c34e52f92a11" type="tarbz2">http://www.merkaartor.be/attachments/download/2/merkaartor-0.16.1.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>qt</Dependency>
-            <Dependency>qt-webkit</Dependency>
+            <Dependency>qt-devel</Dependency>
             <Dependency>exiv2</Dependency>
         </BuildDependencies>
     </Source>
@@ -25,7 +24,6 @@
         <Name>merkaartor</Name>
         <RuntimeDependencies>
             <Dependency>qt</Dependency>
-            <Dependency>qt-webkit</Dependency>
             <Dependency>exiv2</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -40,6 +38,59 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>2010-07-21</Date>
+            <Version>0.16.1</Version>
+            <Comment>
+             * Update homepage
+             * Fix crash when deleting relations
+             * Allow to move complete relations
+             * Fix first feature not OSM exported
+             * Fix WMS'es in EPSG:4326 not showing
+             * Fix don't overzoom on layer zoom and don't allow if the bbox is null)
+             * Add a "portable" mode to merkaartor via command-line ("-p")
+             * Added the possibility to show a lat/lon grid
+             * Support for WMS-C servers
+             * Support for "standard" TMS servers
+             * Allow to tile (and cache) arbitrary WMS'es (only EPSG:4326 and google projection supported)
+             * Allow google maps links and others in goto and download dialogs
+             * Added a projection editor
+             * Enhanced Relations support
+             * Geo-tagging of photos inside Merkaartor, importing them without track layer and displaying them directly on the map
+             * Improved SHP support
+             * Support for JOSM remote protocol on port 8111
+             * Added Ramer-Douglas-Peucker simplification of ways (in Roads menu)
+             * Many other minor tweaks and fixes
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="8">
+            <Date>2010-04-28</Date>
+            <Version>0.15.3</Version>
+            <Comment>Version bump:
+             * Virtual nodes allow fast creation of intermediary nodes
+             * Allow to move node in Node creation mode
+             * Only generate log files on request (--log) on release builds
+             * Re-added tiled Yahoo! imagery as a plugin
+             * NearMap Austalian TMS to the default list
+             * Allow all platforms to connect to a gpsd backend
+             * Support for OSM short link as input
+             * Show distance measurement during area creation
+             * Add language to changeset created_by
+             * Add GlobeXplorer (DigitalGlobe) to default WMS list
+             * Make the point where nodes are not displayed configurable
+             * Keep directional arrows blue for oneway roads in "Show directional arrows - Always" mode.
+             * GeoTIFF background plugin
+             * Grabbing hand icon in single mouse mode
+             * When in "single mouse button" mode, allow to cancel most operation with a right-click
+             * "Zoom lock" mode. Zoom steps are locked to TMS ones and projection is locked to Mercator
+             * Add a preference disallowing selection of relations when hidden
+             * Various bugfixes
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="7">
             <Date>2010-01-17</Date>
             <Version>0.14</Version>
