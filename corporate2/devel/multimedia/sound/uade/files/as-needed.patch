@@ -1,0 +1,24 @@
+diff -Naur uade-2.13.orig/src/frontends/uade123/Makefile.in uade-2.13/src/frontends/uade123/Makefile.in
+--- uade-2.13.orig/src/frontends/uade123/Makefile.in	2009-11-19 18:52:54.454728913 +0200
++++ uade-2.13/src/frontends/uade123/Makefile.in	2009-11-19 18:54:07.739574551 +0200
+@@ -13,7 +13,7 @@
+ 	  $(COMMONMODULES)
+ 
+ uade123:	$(MODULES)
+-	$(CC) $(CFLAGS) -o $@ $(MODULES) $(CLIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) $(MODULES) $(CLIBS) -o $@ 
+ 
+ clean:	
+ 	rm -f uade123 *.o
+diff -Naur uade-2.13.orig/src/frontends/uadefs/Makefile.in uade-2.13/src/frontends/uadefs/Makefile.in
+--- uade-2.13.orig/src/frontends/uadefs/Makefile.in	2009-11-19 18:52:54.456727980 +0200
++++ uade-2.13/src/frontends/uadefs/Makefile.in	2009-11-19 18:54:23.620574586 +0200
+@@ -16,7 +16,7 @@
+ 	$(CC) $(CFLAGS) -c $<
+ 
+ uadefs:	$(MODULES)
+-	$(CC) $(CFLAGS) -o $@ $(MODULES) $(CLIBS)
++	$(CC) $(LDFLAGS) $(CFLAGS) $(MODULES) $(CLIBS) -o $@ 
+ 
+ uadefs.o:	uadefs.c
+ 
