@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>uade</Name>
+        <Summary xml:lang="tr">Unix Amiga DeliTracker Emülatörü</Summary>
+        <Description xml:lang="tr">UADE, eski Amiga müziklerini UAE emülasyonu ve klonlanmış m68k-çevirici EaglePlayer API'si ile çalar.</Description>
+    </Source>
+</PISI>
+

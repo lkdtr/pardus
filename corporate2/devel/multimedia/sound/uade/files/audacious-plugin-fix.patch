@@ -1,0 +1,65 @@
+--- src/frontends/audacious/plugin.c.orig	2010-07-20 21:18:33.352800450 +0300
++++ src/frontends/audacious/plugin.c	2010-07-20 21:41:55.924799359 +0300
+@@ -59,13 +59,11 @@
+ #endif
+ 
+ #ifdef __AUDACIOUS_INPUT_PLUGIN_API__
+-static int uade_get_time(InputPlayback *playhandle);
+ static void uade_pause(InputPlayback *playhandle, short paused);
+ static void uade_play_file(InputPlayback *playhandle);
+ static void uade_seek(InputPlayback *playhandle, int time);
+ static void uade_stop(InputPlayback *playhandle);
+ #else
+-static int uade_get_time(void);
+ static void uade_pause(short paused);
+ static void uade_play_file(char *filename);
+ static void uade_seek(int time);
+@@ -83,9 +81,7 @@
+   .stop = uade_stop,
+   .pause = uade_pause,
+   .seek = uade_seek,
+-  .get_time = uade_get_time,
+   .cleanup = uade_cleanup,
+-  .get_song_info = uade_get_song_info,
+   .file_info_box = uade_file_info,
+ };
+ 
+@@ -947,38 +943,6 @@
+ }
+ 
+ 
+-/* XMMS calls this function periodically to determine current playing time.
+-   We use this function to report song name and title after play_file(),
+-   and to tell XMMS to end playing if song ends for any reason. */
+-#ifdef __AUDACIOUS_INPUT_PLUGIN_API__
+-static int uade_get_time(InputPlayback *playhandle)
+-#else
+-static int uade_get_time(void)
+-#endif
+-{
+-  if (abort_playing || last_beat_played)
+-    return -1;
+-
+-  /* uade_get_time can be called before play_file initializes uadesong
+-     structure, so we must return 0 as time */
+-  if (!uade_thread_running)
+-    return 0;
+-
+-  if (!gui_info_set && state.song->max_subsong != -1) {
+-    uade_lock();
+-
+-    if (state.song->max_subsong != -1)
+-      UADE_INFO_STRING(playhandle);
+-
+-    gui_info_set = 1;
+-    uade_unlock();
+-    file_info_update(gui_module_filename, gui_player_filename, gui_modulename, gui_playername, gui_formatname);
+-  }
+-
+-  return playhandle->output->output_time();
+-}
+-
+-
+ static void uade_get_song_info(char *filename, char **title, int *length)
+ {
+   char tempname[PATH_MAX];
