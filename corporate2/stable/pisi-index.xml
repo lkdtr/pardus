@@ -624,37 +624,60 @@
             <Description xml:lang="en">A standards-compliant graphical Web browser.</Description>
             <Description xml:lang="tr">Opera, standartlarla uyumlu, grafik arayüzlü bir internet tarayıcısıdır.</Description>
             <Icon>opera</Icon>
-            <Archive type="tarbz2" sha1sum="f6d2938acdc8bbe2d762521313892989fd62a8be">http://get.opera.com/pub/opera/linux/1010/final/en/i386/opera-10.10.gcc4-qt4.i386.tar.bz2</Archive>
+            <Archive type="targz" sha1sum="ff41947c1a3909db182069b8fc28e02fc96bf6da">http://get.opera.com/pub/opera/linux/1060/opera-10.60-6386.i386.linux.tar.gz</Archive>
             <Patches>
+                <Patch>remove_unused_langs_and_uninstall_file.patch</Patch>
                 <Patch level="1">add_nsbrowserplugins.patch</Patch>
+                <Patch level="1">tr_desktop.patch</Patch>
             </Patches>
             <SourceURI>network/web/opera/pspec.xml</SourceURI>
         </Source>
         <Package>
             <Name>opera</Name>
             <RuntimeDependencies>
-                <Dependency>lcms</Dependency>
                 <Dependency>qt</Dependency>
+                <Dependency>kdelibs</Dependency>
                 <Dependency>sun-jre</Dependency>
                 <Dependency>flashplugin</Dependency>
-                <Dependency>Bitstream-Vera-fonts</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libXext</Dependency>
+                <Dependency>libXft</Dependency>
+                <Dependency>libXrender</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>pango</Dependency>
             </RuntimeDependencies>
             <Files>
-                <Path fileType="config">/etc</Path>
                 <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc</Path>
-                <Path fileType="man">/usr/share/man/man1</Path>
-                <Path fileType="data">/usr/share/opera</Path>
+                <Path fileType="library">/usr/lib/opera</Path>
                 <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
                 <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="man">/usr/share/man/man1</Path>
+                <Path fileType="data">/usr/share/mime/packages</Path>
+                <Path fileType="data">/usr/share/opera</Path>
             </Files>
-            <AdditionalFiles>
-                <AdditionalFile target="/usr/share/applications/opera.desktop" permission="0644" owner="root">opera.desktop</AdditionalFile>
-            </AdditionalFiles>
         </Package>
         <History>
+            <Update release="29">
+                <Date>2010-07-06</Date>
+                <Version>10.60</Version>
+                <Comment>Version bump to 10.60 release. Vast changes in the package, dependencies revised.
+                See http://www.opera.com/docs/changelogs/unix/1060/ for details.</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
+            <Update release="28">
+                <Date>2010-06-28</Date>
+                <Version>10.11</Version>
+                <Comment>Version bump to 10.11 release. See http://www.opera.com/docs/changelogs/linux/1011/ for details.</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
             <Update release="27">
                 <Date>2010-01-05</Date>
                 <Version>10.10</Version>
@@ -942,7 +965,7 @@
             <Description xml:lang="en">JOSM is a feature-rich offline editor for the experienced OSM mapper. It supports stand alone GPX tracks, GPX track data from the OSM database and existing nodes, line segments and metadata tags from the OSM database.</Description>
             <Description xml:lang="tr">JOSM, deneyimli OSM haritacılarına yönelik zengin özelliklere sahip bir çevirim-dışı düzenleyicisidir. Bağımsız GPX izlerinin yanı sıra; OSM veritabanından GPX izlerini, mevcut düğümlerini, hat parçalarını ve etiketlerini kullanabilir.</Description>
             <Icon>josm</Icon>
-            <Archive type="tarlzma" sha1sum="315039987319d1c6e04cef3e34ee3a75cbfba221">http://josm.fabian-fingerle.de/josm-2561.tar.lzma</Archive>
+            <Archive type="tarlzma" sha1sum="20fd1aa505df8ca82105b04344b5b526d090f156">http://zzz.fisek.com.tr/files/sources/josm-3376.tar.lzma</Archive>
             <BuildDependencies>
                 <Dependency>sun-jdk</Dependency>
                 <Dependency>ant</Dependency>
@@ -967,6 +990,27 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2010-07-21</Date>
+                <Version>1.5_p3376</Version>
+                <Comment>Version bump to latest stable.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2010-06-20</Date>
+                <Version>1.5_p3329</Version>
+                <Comment>Version bump to latest stable.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2010-04-28</Date>
+                <Version>1.5_p3208</Version>
+                <Comment>Version bump to latest stable.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="6">
                 <Date>2010-01-17</Date>
                 <Version>1.5_p2561</Version>
@@ -1072,7 +1116,7 @@
     <SpecFile>
         <Source>
             <Name>merkaartor</Name>
-            <Homepage>http://www.irule.be/bvh/c++/merkaartor/</Homepage>
+            <Homepage>http://www.merkaartor.be/</Homepage>
             <Packager>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
@@ -1085,10 +1129,9 @@
             <Description xml:lang="en">This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
             <Description xml:lang="tr">Açık Sokak Haritası (OpenStreetMap) için bir Qt4 tabanlı harita düzenleyicisi olan Merkaartor&apos;un stil düzenleyici, harita özelliklerinin saydam gösterilmesi, bağımsız otoyol desteği, NMEA dosyalarının içe aktarılmabilesi, WYSIWYG tarzı düzenleme gibi birçok özelliği bulunuyor.</Description>
             <Icon>merkaartor</Icon>
-            <Archive type="tarbz2" sha1sum="122cf565785274dacabdae9abd9d24ac37af003c">http://www.merkaartor.org/downloads/source/merkaartor-0.14.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="fdd595e99f22545973e1b73d8503c34e52f92a11">http://www.merkaartor.be/attachments/download/2/merkaartor-0.16.1.tar.bz2</Archive>
             <BuildDependencies>
-                <Dependency>qt</Dependency>
-                <Dependency>qt-webkit</Dependency>
+                <Dependency>qt-devel</Dependency>
                 <Dependency>exiv2</Dependency>
             </BuildDependencies>
             <SourceURI>science/gis/merkaartor/pspec.xml</SourceURI>
@@ -1097,7 +1140,6 @@
             <Name>merkaartor</Name>
             <RuntimeDependencies>
                 <Dependency>qt</Dependency>
-                <Dependency>qt-webkit</Dependency>
                 <Dependency>exiv2</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -1111,6 +1153,56 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2010-07-21</Date>
+                <Version>0.16.1</Version>
+                <Comment>* Update homepage
+             * Fix crash when deleting relations
+             * Allow to move complete relations
+             * Fix first feature not OSM exported
+             * Fix WMS&apos;es in EPSG:4326 not showing
+             * Fix don&apos;t overzoom on layer zoom and don&apos;t allow if the bbox is null)
+             * Add a &quot;portable&quot; mode to merkaartor via command-line (&quot;-p&quot;)
+             * Added the possibility to show a lat/lon grid
+             * Support for WMS-C servers
+             * Support for &quot;standard&quot; TMS servers
+             * Allow to tile (and cache) arbitrary WMS&apos;es (only EPSG:4326 and google projection supported)
+             * Allow google maps links and others in goto and download dialogs
+             * Added a projection editor
+             * Enhanced Relations support
+             * Geo-tagging of photos inside Merkaartor, importing them without track layer and displaying them directly on the map
+             * Improved SHP support
+             * Support for JOSM remote protocol on port 8111
+             * Added Ramer-Douglas-Peucker simplification of ways (in Roads menu)
+             * Many other minor tweaks and fixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2010-04-28</Date>
+                <Version>0.15.3</Version>
+                <Comment>Version bump:
+             * Virtual nodes allow fast creation of intermediary nodes
+             * Allow to move node in Node creation mode
+             * Only generate log files on request (--log) on release builds
+             * Re-added tiled Yahoo! imagery as a plugin
+             * NearMap Austalian TMS to the default list
+             * Allow all platforms to connect to a gpsd backend
+             * Support for OSM short link as input
+             * Show distance measurement during area creation
+             * Add language to changeset created_by
+             * Add GlobeXplorer (DigitalGlobe) to default WMS list
+             * Make the point where nodes are not displayed configurable
+             * Keep directional arrows blue for oneway roads in &quot;Show directional arrows - Always&quot; mode.
+             * GeoTIFF background plugin
+             * Grabbing hand icon in single mouse mode
+             * When in &quot;single mouse button&quot; mode, allow to cancel most operation with a right-click
+             * &quot;Zoom lock&quot; mode. Zoom steps are locked to TMS ones and projection is locked to Mercator
+             * Add a preference disallowing selection of relations when hidden
+             * Various bugfixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="7">
                 <Date>2010-01-17</Date>
                 <Version>0.14</Version>
@@ -1211,7 +1303,7 @@
             <Description xml:lang="en">With TuxCards it is possible to create as many different entries or notes as you wish. Everytime you add a new one and you think your new entry belongs to the same topic as notes you already have, then you may decide to group them and to create a kind of &quot;folder&quot; where you store them all together.</Description>
             <Description xml:lang="tr">Tuxcards ile istediğiniz sayıda not yazmak mümkün. Tutulan notlar hiyerarşik olarak oluşturulabilen çeşitli &quot;klasör&quot;lerde gruplanabiliyor.</Description>
             <Icon>tuxcards</Icon>
-            <Archive type="targz" sha1sum="107a72001c190087618d056df6e25903d4dd4cc9">http://tuxcards.de/src/tuxcards-2.2/tuxcards-2.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="c0410f28b51d58b4f372ffae0ce0d2a7329f2c45">http://tuxcards.de/src/tuxcards-2.2.1/tuxcards-2.2.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>qt</Dependency>
             </BuildDependencies>
@@ -1233,6 +1325,26 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2010-07-21</Date>
+                <Version>2.2.1</Version>
+                <Comment>* Fix crash in a special case during encryption.
+             * The font that is set for the editor (via options dialog) is now also used as default font for entries in RTF format.
+             * Activate command line options.
+             * Make keyboard shortcuts for adding and deleting entries available.
+             * Improve user interaction: If a new entry is created, the tree does automatically select this new entry. In addition the editor receives the keyboard input focus.
+             * Change default font and size for tree and editor.
+             * Change default textformat for new entries from ASCII to RTF.
+             * In the run where configuration file is written from scratch, do not ask for saving, if no changes where done.
+             * Fix crash when scrolling within the tree and loading a new data file immediately afterwards.
+             * Fix potential error: Use file system independent method to retrieve the base file name from the absolute file name.
+             * Localization support and German translation.
+             * Correct spelling in configuration dialog.
+             * Fix application crash where only one entry existed when moving an entry up and down.
+             * Remove bug when encrypting text during a very special scenario.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="3">
                 <Date>2009-09-29</Date>
                 <Version>2.2</Version>
@@ -1253,6 +1365,336 @@
                 <Comment>First release.</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmcs</Name>
+            <Homepage>http://www.atheme.org/project/mcs</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <IsA>app:console</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Abstracts the storage of configuration settings away from applications</Summary>
+            <Summary xml:lang="tr">Uygulamaların ayarların saklamasını uygulamadan soyutlar</Summary>
+            <Description xml:lang="en">MCS is a library and set of userland tools which abstract the storage of configuration settings away from userland applications.</Description>
+            <Description xml:lang="tr">MCS, kullanıcıların çalıştırdığı uygulamaların ayarları saklamasını uygulamadan soyutlayan, bir kitaplık ve kullanıcıların çalıştırabileceği araçlardan oluşur.</Description>
+            <Archive type="targz" sha1sum="f0f147f3175d6e0d9e8e2ddb0918dde65b96c86b">http://distfiles.atheme.org/libmcs-0.7.2.tgz</Archive>
+            <BuildDependencies>
+                <Dependency>kdelibs</Dependency>
+                <Dependency>libmowgli</Dependency>
+            </BuildDependencies>
+            <SourceURI>programming/library/libmcs/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmcs</Name>
+            <RuntimeDependencies>
+                <Dependency>kdelibs</Dependency>
+                <Dependency>libmowgli</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/libmcs</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2010-07-20</Date>
+                <Version>0.7.2</Version>
+                <Comment>Version bump, add missing kdelibs dep, use strict doc dir, fix homepage, fix summary/description, add Turkish package info translation, add app:console isa tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-06-22</Date>
+                <Version>0.7.1</Version>
+                <Comment>Fix home page</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-06-01</Date>
+                <Version>0.7.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-03-29</Date>
+                <Version>0.7.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-11-09</Date>
+                <Version>0.6.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-09-11</Date>
+                <Version>0.5.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-03-09</Date>
+                <Version>0.4.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-02-20</Date>
+                <Version>0.3.3</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libmowgli</Name>
+            <Homepage>http://www.atheme.org/projects/libmowgli</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>BSD</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">A development framework for C</Summary>
+            <Summary xml:lang="tr">C için bir geliştirme çatısı.</Summary>
+            <Description xml:lang="en">Mowgli provides high performance and highly flexible algorithms. It can be used as a suppliment to GLib (to add additional functions (dictionaries, hashes), or replace some of the slow GLib list manipulation functions), or stand alone. It also provides a powerful hook system and convenient logging for your code, as well as a high performance block allocator.</Description>
+            <Description xml:lang="tr">Mowgli kitaplığı yüksek performanslı ve çok esnek algoritmalar sunar. Glib&apos;i tamamlayıcı olarak da kullanılabilir (ek fonkisyonlar eklemek için (sözlükler, hashler), ya da Glib&apos;in bazı yavaş liste işleme fonksiyonlarının yerine), tek başına da. Aynı zamanda güçlü bir hook sistemi ve kodunuz için pratik kayıt tutma ile yüksek performanslı öbek tahsis edici sağlar.</Description>
+            <Archive type="targz" sha1sum="62ef22d3ff101e369c6424a130a7af83a840deee">http://distfiles.atheme.org/libmowgli-0.7.1.tgz</Archive>
+            <SourceURI>programming/library/libmowgli/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libmowgli</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/libmowgli</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="9">
+                <Date>2009-06-22</Date>
+                <Version>0.7.1</Version>
+                <Comment>Version bump, fix home page, add translations.xml and Turkish package translation, use strict doc dir, Turkish packege info translation.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2009-06-22</Date>
+                <Version>0.6.1</Version>
+                <Comment>Fix home page</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2008-03-29</Date>
+                <Version>0.6.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-01-23</Date>
+                <Version>0.6.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-11-09</Date>
+                <Version>0.5.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-09-12</Date>
+                <Version>0.4.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-08-20</Date>
+                <Version>0.3.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-07-31</Date>
+                <Version>0.3.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-06-13</Date>
+                <Version>0.2.0_20070613</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libbinio</Name>
+            <Homepage>http://libbinio.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">Binary I/O stream class library</Summary>
+            <Summary xml:lang="tr">İkili I/O yayın sınıfı kütüphanesi</Summary>
+            <Description xml:lang="en">The binary I/O stream class library presents a platform-independent way to access binary data streams in C++. The library is hardware independent in the form that it transparently converts between the different forms of machine-internal binary data representation. It further employs no special I/O protocol and can be used on arbitrary binary data sources.</Description>
+            <Description xml:lang="tr">libbinio, C++&apos;da ikili veri akımlarına erişmek için platform-bağımsız bir yöntem sunar. Kitaplık donanım bağımsızdır, transparan bir biçimde makinaların iç ikili veri gösterimleri arasında dönüşüm yapar. Özel bir girdi-çıktı protokolü kullanmaz, birbirini takip eden rastgele seçilmiş veri kaynaklarında kullanılabilir.</Description>
+            <Archive type="tarbz2" sha1sum="47db5f7448245f38b9d26c8b11f53a07b6f6da73">mirrors://sourceforge/libbinio/libbinio-1.4.tar.bz2</Archive>
+            <Patches>
+                <Patch level="1">gcc44.patch</Patch>
+                <Patch level="1">string-conversion.patch</Patch>
+            </Patches>
+            <SourceURI>programming/library/libbinio/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libbinio</Name>
+            <Files>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/libbinio</Path>
+                <Path fileType="info">/usr/share/info</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2010-07-21</Date>
+                <Version>1.4</Version>
+                <Comment>Fix package description, use sourceforge mirror, strict doc dir</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-06-22</Date>
+                <Version>1.4</Version>
+                <Comment>Add gcc44 and string-conversion patches</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-04-29</Date>
+                <Version>1.4</Version>
+                <Comment>Disable static libs</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-06</Date>
+                <Version>1.4</Version>
+                <Comment>First release.</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>gtkglext</Name>
+            <Homepage>http://www.k-3d.org/gtkglext/Main_Page</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>LGPLv2+</License>
+            <IsA>library</IsA>
+            <PartOf>programming.library</PartOf>
+            <Summary xml:lang="en">OpenGL extension to GTK+</Summary>
+            <Summary xml:lang="tr">GTK+ için OpenGL eklentisi</Summary>
+            <Description xml:lang="en">GtkGLExt is an OpenGL extension to GTK+ 2.0 or later</Description>
+            <Description xml:lang="tr">GTK+ 2.0 veya sonraki sürümler için OpenGL eklentisi</Description>
+            <Archive type="tarbz2" sha1sum="d84c9472af3438fbce84189613e5370b97d9d1e7">mirrors://sourceforge/gtkglext/gtkglext-1.2.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>glut</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libXmu</Dependency>
+                <Dependency>libXt</Dependency>
+                <Dependency>atk</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+                <Dependency>pango</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>support-pango.diff</Patch>
+            </Patches>
+            <SourceURI>programming/library/gtkglext/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>gtkglext</Name>
+            <RuntimeDependencies>
+                <Dependency>gtk2</Dependency>
+                <Dependency>glut</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libXmu</Dependency>
+                <Dependency>pango</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="header">/usr/include/gtkglext-1.0</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/aclocal</Path>
+                <Path fileType="doc">/usr/share/doc/gtkglext</Path>
+                <Path fileType="doc">/usr/share/gtk-doc/html/gtkglext</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2010-07-21</Date>
+                <Version>1.2.0</Version>
+                <Comment>Remove unnecessary runtime deps, strict dirs, use sourceforge mirrors.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-06-22</Date>
+                <Version>1.2.0</Version>
+                <Comment>Add pango support, fix linkage, add all direct dependencies</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-09-02</Date>
+                <Version>1.2.0</Version>
+                <Comment>Fix depends and paths</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-08-11</Date>
+                <Version>1.2.0</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1441,7 +1883,7 @@
             <Description xml:lang="en">Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King&apos;s forces.</Description>
             <Description xml:lang="tr">Oyun 1492&apos;de başlıyor. Oyunun amacı Amerika&apos;yı kolonileştirmek, güçlü bir ulus inşa etmek, bağımsızlığınızı ilan etmek ve kralın kuvvetlerinin saldırısına karşı ayakta kalmak.</Description>
             <Icon>freecol</Icon>
-            <Archive type="zip" sha1sum="98c4d4f233c406d7b5318a08f68b51b2d473f567">mirrors://sourceforge/freecol/freecol-0.9.0-src.zip</Archive>
+            <Archive type="zip" sha1sum="a4505d7a3222c986c902fe178570f56b4688047e">mirrors://sourceforge/freecol/freecol-0.9.3-src.zip</Archive>
             <BuildDependencies>
                 <Dependency>sun-jdk</Dependency>
                 <Dependency>ant</Dependency>
@@ -1456,14 +1898,41 @@
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
                 <Path fileType="doc">/usr/share/doc/freecol</Path>
-                <Path fileType="data">/usr/share</Path>
+                <Path fileType="data">/usr/share/freecol</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="man">/usr/share/man</Path>
             </Files>
             <AdditionalFiles>
                 <AdditionalFile target="/usr/share/applications/freecol.desktop" permission="0644" owner="root">freecol.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/freecol.png" permission="0644" owner="root">freecol.png</AdditionalFile>
                 <AdditionalFile target="/usr/bin/freecol" permission="0755" owner="root">freecol</AdditionalFile>
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="24">
+                <Date>2010-06-20</Date>
+                <Version>0.9.3</Version>
+                <Comment>Bump to latest stable:
+             * Fix several bugs, including a combat bug that made it possible to capture colonies that still had armed defenders.
+             * Keyboard accelerators are now available for virtually all mapboard actions, including movement
+             * New &quot;Hutzli&quot; graphical mod.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="23">
+                <Date>2010-03-08</Date>
+                <Version>0.9.2</Version>
+                <Comment>Bump to latest stable:
+             * Fix prevention of the REF from landing in the New World
+             * Fixed a serious bug in privateer combat
+             * Many other fixes.
+             * Add parameter support to freecol script.
+             * Add program icon (png) as a seperate file.
+             * Add Debian man page.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="22">
                 <Date>2010-01-01</Date>
                 <Version>0.9.0</Version>
@@ -1764,7 +2233,7 @@
             <Description xml:lang="en">Multiplication Puzzle is a simple GTK+ 2 game that emulates the multiplication game found in Emacs. Basically, a multiplication problem is shown with all digits replaced by letters. Your job is to guess which letter represents which number.</Description>
             <Description xml:lang="tr">Çarpma Bulmacası, Emacs&apos;teki çarpma oyununun benzeri basit bir GTK+ 2 oyunudur. Tüm basamakların harflerle değiştirildiği bir çarpma problemi gösteriliyor. Sizin işiniz de, hangi harfe hangi rakamın karşılık geldiğini tahmin etmek.</Description>
             <Icon>gmult</Icon>
-            <Archive type="tarbz2" sha1sum="9f4f7ff6113f0430ad7b234cde229372d0d91bf9">http://launchpad.net/gmult/trunk/7.2/+download/gmult-7.2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="1f52788c5594d35fdc4ae371cc5927b3d4c6e8da">http://launchpad.net/gmult/trunk/7.3/+download/gmult-7.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
             </BuildDependencies>
@@ -1784,6 +2253,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2010-04-28</Date>
+                <Version>7.3</Version>
+                <Comment>Version bump: Fix odd drag icons when in compiz. Translation updates.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="8">
                 <Date>2010-01-17</Date>
                 <Version>7.2</Version>
@@ -2315,7 +2791,7 @@
             <Summary xml:lang="en">Typing tutor for children</Summary>
             <Description xml:lang="en">&quot;Tux Typing&quot; is an educational typing tutor for children. It features several different types of gameplay, at a variety of difficulty levels.</Description>
             <Icon>tuxtype</Icon>
-            <Archive type="targz" sha1sum="e33d8138b8f0907f228fe0105f6266408332d59d">http://alioth.debian.org/frs/download.php/3175/tuxtype_w_fonts-1.8.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="f9e67f4cb8a6bb882bd6360b773f8b1645d74c23">http://alioth.debian.org/frs/download.php/3270/tuxtype_w_fonts-1.8.1.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-mixer</Dependency>
@@ -2323,6 +2799,9 @@
                 <Dependency>sdl-pango</Dependency>
                 <Dependency>librsvg</Dependency>
             </BuildDependencies>
+            <Patches>
+                <Patch>makefile_chown.patch</Patch>
+            </Patches>
             <SourceURI>game/kids/tuxtype/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -2336,6 +2815,7 @@
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="config">/etc/tuxtype</Path>
                 <Path fileType="doc">/usr/share/doc/tuxtype</Path>
                 <Path fileType="localedata">/usr/share/locale</Path>
                 <Path fileType="data">/usr/share/tuxtype</Path>
@@ -2345,6 +2825,15 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2010-07-21</Date>
+                <Version>1.8.1</Version>
+                <Comment>* Fish cascade backgrounds now selected randomly.
+             * Fish cascade graphics now use true alpha channel rather than SDL colorkey.
+             * Some fixes related to file location of custom word lists.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="8">
                 <Date>2009-11-15</Date>
                 <Version>1.8.0</Version>
@@ -3483,6 +3972,115 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>uade</Name>
+            <Homepage>http://zakalwe.fi/uade</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>LGPLv2</License>
+            <IsA>app:console</IsA>
+            <IsA>library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Unix Amiga Delitracker Emulator</Summary>
+            <Summary xml:lang="tr">Unix Amiga DeliTracker Emülatörü</Summary>
+            <Description xml:lang="en">UADE, plays old Amiga tunes through UAE emulation and cloned m68k-assembler Eagleplayer API</Description>
+            <Description xml:lang="tr">UADE, eski Amiga müziklerini UAE emülasyonu ve klonlanmış m68k-çevirici EaglePlayer API&apos;si ile çalar.</Description>
+            <Archive type="tarbz2" sha1sum="61c5ce9dfecc37addf233de06be196c9b15a91d8">http://zakalwe.fi/uade/uade2/uade-2.13.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libao</Dependency>
+                <Dependency>fuse</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">as-needed.patch</Patch>
+                <Patch>audacious-plugin-fix.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/sound/uade/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>uade</Name>
+            <RuntimeDependencies>
+                <Dependency>libao</Dependency>
+                <Dependency>fuse</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc/uade</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="9">
+                <Date>2010-07-20</Date>
+                <Version>2.13</Version>
+                <Comment>* Remove functions that don&apos;t exist in Audacious 2.3
+             * Add missing runtime dep, strict doc dir, add translations.xml and Turkish package info.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2009-11-19</Date>
+                <Version>2.13</Version>
+                <Comment>Stable bump, it&apos;s audacious 2.1 compatible now</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-06-22</Date>
+                <Version>2.12</Version>
+                <Comment>Stable bump, fix linkage, remove strict dep, add fuse as runtime dependency</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-07-26</Date>
+                <Version>2.11</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-12-28</Date>
+                <Version>2.09</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-12-18</Date>
+                <Version>2.08</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-05-07</Date>
+                <Version>2.07</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-04-11</Date>
+                <Version>2.06</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-01-30</Date>
+                <Version>2.05</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>aucdtect</Name>
             <Homepage>http://www.true-audio.com/</Homepage>
             <Packager>
@@ -3570,7 +4168,7 @@
                 <Patch level="1">library-paths.patch</Patch>
                 <Patch level="1">desktopfile.patch</Patch>
                 <Patch>CVE-2009-0490.diff</Patch>
-                <Patch level="1">ffmpeg-0.5.1.patch</Patch>
+                <Patch>ffmpeg.patch</Patch>
             </Patches>
             <SourceURI>multimedia/sound/audacity/pspec.xml</SourceURI>
         </Source>
@@ -3608,9 +4206,9 @@
         </Package>
         <History>
             <Update release="19">
-                <Date>2010-05-29</Date>
+                <Date>2010-07-21</Date>
                 <Version>1.3.12</Version>
-                <Comment>Work with new ffmpeg</Comment>
+                <Comment>Work with ffmpeg 0.6</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
             </Update>
@@ -3823,6 +4421,690 @@
                 <Comment>First release.</Comment>
                 <Name>Fatih Aşıcı</Name>
                 <Email>fatih.asici@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>audacious</Name>
+            <Homepage>http://audacious-media-player.org</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">A versatile and handy media player</Summary>
+            <Summary xml:lang="tr">Beep-media-player benzeri bir çoklu ortam oynatıcısı</Summary>
+            <Description xml:lang="en">Audacious is a media player based on the BMP music playing application. Its primary goals are usability and usage of current desktop standards.</Description>
+            <Description xml:lang="tr">Beep-media-player benzeri bir çoklu ortam oynatıcısı</Description>
+            <Icon>audacious</Icon>
+            <Archive type="targz" sha1sum="a7041650c54b6db68d0f3b3cf68f61fc7f841f34">http://distfiles.atheme.org/audacious-2.3.tgz</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+                <Dependency>kdelibs</Dependency>
+                <Dependency>fluidsynth</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libmcs</Dependency>
+                <Dependency>libmowgli</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libsamplerate</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/audacious/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libaudacious</Name>
+            <Summary xml:lang="en">Package that contains library and header files for Audacious</Summary>
+            <IsA>library</IsA>
+            <PartOf>programming.libs</PartOf>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>kdelibs</Dependency>
+                <Dependency>fluidsynth</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libmcs</Dependency>
+                <Dependency>libmowgli</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libsamplerate</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+            </Files>
+        </Package>
+        <Package>
+            <Name>audacious</Name>
+            <RuntimeDependencies>
+                <Dependency version="2.3">libaudacious</Dependency>
+                <Dependency version="2.3">audacious-plugins</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="24">
+                <Date>2010-06-09</Date>
+                <Version>2.3</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Renan Çakırerk</Name>
+                <Email>renan@pardus.org.tr</Email>
+            </Update>
+            <Update release="23">
+                <Date>2009-12-24</Date>
+                <Version>2.2</Version>
+                <Comment>Stable bump, drop redundant patch</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="22">
+                <Date>2009-07-09</Date>
+                <Version>2.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="21">
+                <Date>2009-06-22</Date>
+                <Version>2.0.1</Version>
+                <Comment>Stable bump, tidy strict deps up</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="20">
+                <Date>2009-01-22</Date>
+                <Version>1.5.1</Version>
+                <Comment>Disable sse2, fixes bug #8554 thanks to Gürhan Demirkapı</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="19">
+                <Date>2008-10-23</Date>
+                <Version>1.5.1</Version>
+                <Comment>Add missing dep fluidsynth</Comment>
+                <Name>İşbaran Akçayır</Name>
+                <Email>isbaran@comu.edu.tr</Email>
+            </Update>
+            <Update release="18">
+                <Date>2008-05-31</Date>
+                <Version>1.5.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2008-03-29</Date>
+                <Version>1.5.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2008-02-02</Date>
+                <Version>1.4.6</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="15">
+                <Date>2008-01-05</Date>
+                <Version>1.4.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="14">
+                <Date>2007-12-25</Date>
+                <Version>1.4.4</Version>
+                <Comment>Fix deps, translation and split the package</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2007-12-17</Date>
+                <Version>1.4.4</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2007-11-19</Date>
+                <Version>1.4.2</Version>
+                <Comment>Stable update. Skin problem fixed in upstream.</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2007-11-10</Date>
+                <Version>1.4.0</Version>
+                <Comment>Stable update and skin problem fixed</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2007-11-02</Date>
+                <Version>1.4.0_rc1</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2007-04-07</Date>
+                <Version>1.3.2</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2007-03-15</Date>
+                <Version>1.3.1</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2007-03-01</Date>
+                <Version>1.3.0_rc2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-01-30</Date>
+                <Version>1.2.2</Version>
+                <Comment>Now, we can play amiga-mod and c64-sid files</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2006-11-17</Date>
+                <Version>1.2.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2006-10-25</Date>
+                <Version>1.2.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-10-17</Date>
+                <Version>1.2.0_rc3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-09-24</Date>
+                <Version>1.2.0_rc1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-06</Date>
+                <Version>1.1.2</Version>
+                <Comment>First release.</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>audacious-plugins</Name>
+            <Homepage>http://audacious-media-player.org</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Plugins for Audacious</Summary>
+            <Summary xml:lang="tr">Audacious için eklentiler</Summary>
+            <Description xml:lang="en">Plugins for Audacious</Description>
+            <Description xml:lang="tr">Audacious için eklentiler</Description>
+            <Archive type="targz" sha1sum="1e18e2f3a070a23e58b8f91f2923ef7d9bbaf153">http://distfiles.atheme.org/audacious-plugins-2.3.tgz</Archive>
+            <BuildDependencies>
+                <Dependency versionFrom="2.3">libaudacious</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libmowgli</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>libmpcdec</Dependency>
+                <Dependency>sidplay2</Dependency>
+                <Dependency>libsidplay2</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>audiofile</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>jack-audio-connection-kit</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>libmms</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>imlib2</Dependency>
+                <Dependency>libmodplug</Dependency>
+                <Dependency versionFrom="2.13">uade</Dependency>
+                <Dependency>libbinio</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libcddb</Dependency>
+                <Dependency>libmtp</Dependency>
+                <Dependency>libmcs</Dependency>
+                <Dependency>libprojectM</Dependency>
+                <Dependency>gtkglext</Dependency>
+                <Dependency>lirc</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/sound/audacious-plugins/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>audacious-plugins</Name>
+            <RuntimeDependencies>
+                <Dependency versionFrom="2.3">libaudacious</Dependency>
+                <Dependency>gtk2</Dependency>
+                <Dependency>libglade</Dependency>
+                <Dependency>libmowgli</Dependency>
+                <Dependency>taglib</Dependency>
+                <Dependency>libmpcdec</Dependency>
+                <Dependency>sidplay2</Dependency>
+                <Dependency>libsidplay2</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>libogg</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>audiofile</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>jack-audio-connection-kit</Dependency>
+                <Dependency>libsamplerate</Dependency>
+                <Dependency>libmms</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>imlib2</Dependency>
+                <Dependency>libmodplug</Dependency>
+                <Dependency versionFrom="2.13">uade</Dependency>
+                <Dependency>libbinio</Dependency>
+                <Dependency>libsndfile</Dependency>
+                <Dependency>libcddb</Dependency>
+                <Dependency>libmtp</Dependency>
+                <Dependency>libmcs</Dependency>
+                <Dependency>libprojectM</Dependency>
+                <Dependency>gtkglext</Dependency>
+                <Dependency>lirc</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="28">
+                <Date>2010-06-09</Date>
+                <Version>2.3</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Renan Çakırerk</Name>
+                <Email>renan@pardus.org.tr</Email>
+            </Update>
+            <Update release="27">
+                <Date>2009-12-24</Date>
+                <Version>2.2</Version>
+                <Comment>Stable bump, drop upstreamed patch</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="26">
+                <Date>2009-11-19</Date>
+                <Version>2.1</Version>
+                <Comment>Add strict dependency for uade 2.13, it&apos;s needed for releated audacious plugin</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="25">
+                <Date>2009-07-09</Date>
+                <Version>2.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="24">
+                <Date>2009-06-22</Date>
+                <Version>2.0.1</Version>
+                <Comment>Stable bump, remove strict dependencies</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="23">
+                <Date>2009-01-22</Date>
+                <Version>1.5.1</Version>
+                <Comment>Disable sse2, fixes bug #8554 thanks to Gürhan Demirkapı</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="22">
+                <Date>2008-10-11</Date>
+                <Version>1.5.1</Version>
+                <Comment>Fix arts detection and amidi-plug loading</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="21">
+                <Date>2008-08-25</Date>
+                <Version>1.5.1</Version>
+                <Comment>Fix for libmtp 0.3.0 api break</Comment>
+                <Name>İşbaran Akçayır</Name>
+                <Email>isbaran@comu.edu.tr</Email>
+            </Update>
+            <Update release="20">
+                <Date>2008-05-31</Date>
+                <Version>1.5.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="19">
+                <Date>2008-03-29</Date>
+                <Version>1.5.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="18">
+                <Date>2008-02-02</Date>
+                <Version>1.4.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="17">
+                <Date>2008-01-05</Date>
+                <Version>1.4.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="16">
+                <Date>2007-12-25</Date>
+                <Version>1.4.2</Version>
+                <Comment>Fix deps and translation</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="15">
+                <Date>2007-12-18</Date>
+                <Version>1.4.2</Version>
+                <Comment>Depend new uade</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="14">
+                <Date>2007-12-17</Date>
+                <Version>1.4.2</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2007-11-19</Date>
+                <Version>1.4.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="12">
+                <Date>2007-11-10</Date>
+                <Version>1.4.0</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2007-10-02</Date>
+                <Version>1.4.0_rc1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="10">
+                <Date>2007-06-13</Date>
+                <Version>1.3.5</Version>
+                <Comment>Stable update. libmowgli dep. added</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="9">
+                <Date>2007-05-07</Date>
+                <Version>1.3.4</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2007-04-23</Date>
+                <Version>1.3.3</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2007-04-07</Date>
+                <Version>1.3.2</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-03-15</Date>
+                <Version>1.3.1</Version>
+                <Comment>Stable update</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-03-01</Date>
+                <Version>1.3.0_rc2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-01-30</Date>
+                <Version>1.2.5</Version>
+                <Comment>Add uade and sidplay deps in order to enable amiga-mod and c64-sid plugins</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-11-26</Date>
+                <Version>1.2.5</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-10-25</Date>
+                <Version>1.2.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-24</Date>
+                <Version>1.2.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>sidplay2</Name>
+            <Homepage>http://sidplay2.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">C64 SID player</Summary>
+            <Description xml:lang="en">libsidplay2 is a C64 SID player library.</Description>
+            <Archive type="targz" sha1sum="2e4589cc59b3d2d37f38b98d7a0a0ba37b82da7a">mirrors://sourceforge/sidplay2/sidplay-2.0.9.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency releaseFrom="2">libsidplay2</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">sidplay-2.0.9.diff</Patch>
+            </Patches>
+            <SourceURI>multimedia/sound/sidplay2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>sidplay2</Name>
+            <RuntimeDependencies>
+                <Dependency releaseFrom="2">libsidplay2</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2009-07-04</Date>
+                <Version>2.0.9</Version>
+                <Comment>Add strict dependency to libsidplay2</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2009-07-03</Date>
+                <Version>2.0.9</Version>
+                <Comment>Add translations and description, use mirror.</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-07-02</Date>
+                <Version>2.0.9</Version>
+                <Comment>Remove strict dependencies</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-05-31</Date>
+                <Version>2.0.9</Version>
+                <Comment>Compile with gcc43</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-03-22</Date>
+                <Version>2.0.9</Version>
+                <Comment>Fix flags</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-01-30</Date>
+                <Version>2.0.9</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>libprojectM</Name>
+            <Homepage>http://projectm.sourceforge.net</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>LGPLv2</License>
+            <IsA>library</IsA>
+            <PartOf>multimedia.library</PartOf>
+            <Summary xml:lang="en">An advanced MilkDrop-compatible music visualization library</Summary>
+            <Summary xml:lang="tr">Gelişmiş Milkdrop-uyumlu ses görselleştirme kitaplığı</Summary>
+            <Description xml:lang="en">libprojectm is an iterative music visualization library which uses OpenGL for hardware acceleration. It is a reimplementation of Winamp visualization plug-in MilkDrop which uses 3D graphics hardware, combined with iterative image-based rendering techniques and compatible with MilkDrop presets.</Description>
+            <Description xml:lang="tr">libprojectM, OpenGL&apos;i donanım hızlandıması için kullanan yinelemeli bir müzik görselleştirme kitaplığıdır. Winamp görselleştirme eklentisi olan Milkdrop&apos;un yeniden uyarlamasıdır; ona ek olarak 3 boyutlu grafik donanımları, yinelenen görüntü temelli render teknikleri kullanır ve hazır Milkdrop setleri ile uyumludur.</Description>
+            <Archive type="tarbz2" sha1sum="e8264009e7c6c588e6f4f2e51a10498e0b1d07b7">mirrors://sourceforge/projectm/libprojectM-1.2.0.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>glew</Dependency>
+                <Dependency>ftgl</Dependency>
+                <Dependency>mesa</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>gcc43.patch</Patch>
+                <Patch level="1">ftgl.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/library/libprojectM/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>libprojectM</Name>
+            <RuntimeDependencies>
+                <Dependency>glew</Dependency>
+                <Dependency>ftgl</Dependency>
+                <Dependency>mesa</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include</Path>
+                <Path fileType="data">/usr/share/projectM</Path>
+                <Path fileType="doc">/usr/share/doc/libprojectM</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-07-21</Date>
+                <Version>1.2.0</Version>
+                <Comment>Strict file paths, add translations.xml and Turkish package info.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2010-02-28</Date>
+                <Version>1.2.0</Version>
+                <Comment>Moved to pardus repository from Contrib</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-06-22</Date>
+                <Version>1.2.0</Version>
+                <Comment>Stable bump, remove strict dependencies, add mesa dependency</Comment>
+                <Name>Mehmet Nur Olcay</Name>
+                <Email>mnurolcay@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-05-31</Date>
+                <Version>1.1</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-12-25</Date>
+                <Version>1.01</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
