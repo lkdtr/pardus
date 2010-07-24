@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>An image viewer specifically designed to handle comic books</Summary>
         <Description>QComicBook is a viewer for comic book archives (cbz, cbr, cbt). QComicBook has specific features like page preview, thumbnails view, bookmarks, manga mode for easing comicbook reading.</Description>
-        <Archive sha1sum="e658a07198652c7d309a2d1aa21681f7331d47d2" type="targz">http://cloud.github.com/downloads/stolowski/QComicBook/qcomicbook-0.5.0.tar.gz</Archive>
+        <Archive sha1sum="f73f11b913f8099c77098396c94096cac1183bc9" type="targz">http://qcomicbook.linux-projects.net/releases/qcomicbook-0.6.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt</Dependency>
         </BuildDependencies>
@@ -31,10 +31,24 @@
             <Path fileType="man">/usr/share/man</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
             <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="localedata">/usr/share/qcomicbook/i18n</Path>
         </Files>
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2010-07-25</Date>
+            <Version>0.6.0</Version>
+            <Comment>
+             * Use standard directories for cache and bookmarks file obtained from QDesktopServices.
+             * Brazilian Portuguese, Finnish, French, Italian, Polish, Spanish and Ukrainian translations added.
+             * Active web page and email links in 'About' dialog.
+             * Shorten path names in 'Recently opened' menu.
+             * Fixed regression: display image size info in statusbar.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2010-01-15</Date>
             <Version>0.5.0</Version>
