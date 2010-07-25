@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>ssmtp</Name>
+        <Summary xml:lang="tr">Çok basit bir MTA</Summary>
+        <Description xml:lang="tr">Ssmtp iş istasyonlarında sendmail'in yerine geçen bir programdır. E-postayı kabul eder ve bir e-posta sunucusuna gönderir. İstenirse "Gönderen" başlığındaki alan adını değiştirebilir.</Description>
+    </Source>
+</PISI>

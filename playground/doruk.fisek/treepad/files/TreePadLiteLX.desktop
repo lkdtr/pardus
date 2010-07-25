@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Treepad
+GenericName=Hierarchical notebook
+GenericName[tr]=Hiyerarşik not defteri
+Icon=TreePadLiteLX
+Exec=treepad
+Terminal=false
+StartupNotify=false
+Categories=Application;Utility;

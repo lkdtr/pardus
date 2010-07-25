@@ -1,0 +1,32 @@
+--- Makefile.in.orig	2010-03-21 22:50:47.050452159 +0200
++++ Makefile.in	2010-03-21 22:51:16.941457060 +0200
+@@ -5,7 +5,7 @@
+ exec_prefix=@exec_prefix@
+ libexecdir=@libexecdir@
+ bindir=$(prefix)/sbin
+-mandir=$(prefix)/man/man8
++mandir=$(prefix)/share/man/man8
+ 
+ LN_S=@LN_S@
+ CC=@CC@
+@@ -46,13 +46,13 @@
+ 
+ .PHONY: install
+ install: ssmtp $(GEN_CONFIG)
+-	$(INSTALL) -d -m 755 $(bindir)
+-	$(INSTALL) -s -m 755 ssmtp $(bindir)/ssmtp
+-	$(INSTALL) -d -m 755 $(mandir)
+-	$(INSTALL) -m 644 $(srcdir)/ssmtp.8 $(mandir)/ssmtp.8
+-	$(INSTALL) -d -m 755 $(SSMTPCONFDIR)
+-	$(INSTALL) -m 644 $(srcdir)/revaliases $(INSTALLED_REVALIASES_FILE)
+-	$(GEN_CONFIG) $(INSTALLED_CONFIGURATION_FILE)
++	$(INSTALL) -d -m 755 $(DESTDIR)/$(bindir)
++	$(INSTALL) -s -m 755 ssmtp $(DESTDIR)/$(bindir)/ssmtp
++	$(INSTALL) -d -m 755 $(DESTDIR)/$(mandir)
++	$(INSTALL) -m 644 $(srcdir)/ssmtp.8 $(DESTDIR)/$(mandir)/ssmtp.8
++	$(INSTALL) -d -m 755 $(DESTDIR)/$(SSMTPCONFDIR)
++	$(INSTALL) -m 644 $(srcdir)/revaliases $(DESTDIR)/$(INSTALLED_REVALIASES_FILE)
++	$(GEN_CONFIG) $(DESTDIR)/$(INSTALLED_CONFIGURATION_FILE)
+ 
+ 
+ .PHONY: install-sendmail

@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=AzSMRC
+Name[tr]=AzSMRC
+GenericName=Azureus Remote Client
+GenericName[tr]=Azureus Uzak Bağlantı İstemcisi
+Icon=azsmrc
+Exec=azsmrc
+Terminal=false
+StartupNotify=false
+Categories=Application;Network;Java;

@@ -1,0 +1,57 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>TreePadLiteLX</Name>
+        <Homepage>http://www.treepad.com/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>as-is</License>
+        <Icon>TreepadLiteLX</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Personal database, organizer and text editor</Summary>
+        <Description>Treepad is a personal database, organizer and text editor. Beware though, this isn't free as in speech software, just freeware. There a much better alternatives in the free world. Should be used only if you're stuck with HJT files.</Description>
+        <Archive sha1sum="27e1de5bf485173a564b2e0a5619fb98eeb37c8d" type="targz">http://www.treepad.net/download/tplitelx_complete.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>TreePadLiteLX</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/TreePadLiteLX.desktop">TreePadLiteLX.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/TreePadLiteLX.png">TreePadLiteLX.png</AdditionalFile>
+            <AdditionalFile owner="root" permission="0755" target="/usr/bin/treepad">treepad</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2010-01-17</Date>
+            <Version>2.2.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-07-01</Date>
+            <Version>2.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-07-10</Date>
+            <Version>2.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

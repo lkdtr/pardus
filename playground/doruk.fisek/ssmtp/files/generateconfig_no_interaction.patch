@@ -1,0 +1,27 @@
+--- generate_config.orig	2010-03-21 22:28:19.606451553 +0200
++++ generate_config	2010-03-21 22:37:58.639643210 +0200
+@@ -15,24 +15,6 @@
+ 	mailname=$syshostname
+ fi
+ 
+-echo "Please enter the mail name of your system."
+-echo "This is the hostname portion of the address to be shown"
+-echo "on outgoing news and mail messages headers."
+-echo "The default is $syshostname, your system's host name."
+-echo
+-echo -n "Mail name [$syshostname]: "
+-read mailname
+-echo
+-
+-echo -n "Please enter the SMTP port number [25]: "
+-read smtpport
+-if test -z "$smtpport"
+-then
+-	mailhub=$mailhub
+-else
+-	mailhub="$mailhub:$smtpport"
+-fi
+-
+ #
+ # Generate configuration file
+ #

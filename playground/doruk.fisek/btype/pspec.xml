@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>btype</Name>
+        <Homepage>http://www.kde-apps.org/content/show.php/.torrent+file+editor?content=25051</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>btype</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Bittorrent file editor</Summary>
+        <Description>Btype deals with the b-encoding format used by BitTorrent's .torrent files. It supports reading, editing, and saving .torrent files. This includes adding new entries to lists and dicts, and removing entries.</Description>
+        <Archive sha1sum="2ecd48edf2c1907801ac021228d0553d77a1a597" type="tarbz2">http://www.kde-apps.org/CONTENT/content-files/25051-btype-0.4.1.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>qt</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>btype</Name>
+        <RuntimeDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>qt</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/kde/3.5/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/btype.desktop">btype.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/btype.png">btype.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-03-14</Date>
+            <Version>0.4.1</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

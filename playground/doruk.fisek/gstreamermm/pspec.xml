@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gstreamermm</Name>
+        <Homepage>http://gstreamer.freedesktop.org/bindings/cplusplus.html</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>gstreamermm</Icon>
+        <IsA>library</IsA>
+        <Summary>GStreamer C++ bindings</Summary>
+        <Description>The GStreamer API C++ bindings are based on gtkmm, using the same lifecycle mechanism.</Description>
+        <Archive sha1sum="d2924cf0440cced2c947fce4fcdc97776cc7ea4a" type="tarbz2">http://ftp.gnome.org/pub/GNOME/sources/gstreamermm/0.10/gstreamermm-0.10.7.3.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="0.10.28">gstreamer</Dependency>
+            <Dependency versionFrom="0.10.28">gst-plugins-base</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>libsigc++</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gstreamermm</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="0.10.28">gstreamer</Dependency>
+            <Dependency versionFrom="0.10.28">gst-plugins-base</Dependency>
+            <Dependency>glibmm</Dependency>
+            <Dependency>libxmlpp</Dependency>
+            <Dependency>libsigc++</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include/gstreamermm-0.10</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/devhelp/books/gstreamermm-0.10</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-06-08</Date>
+            <Version>0.10.7.3</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
