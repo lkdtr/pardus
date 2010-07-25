@@ -11,6 +11,7 @@ from pisi.actionsapi import shelltools
 
 def setup():
     autotools.configure("--enable-shm \
+                         --enable-ipv6 \
                          --enable-spell=libsexy")
 
 def build():
