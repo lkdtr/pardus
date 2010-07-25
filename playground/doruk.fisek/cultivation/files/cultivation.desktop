@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Cultivation
+Name[tr]=Cultivation
+GenericName=Gardening Game
+GenericName[tr]=Bahçıvanlık Oyunu
+Icon=cultivation
+Path=/usr/share/cultivation
+Exec=/usr/share/cultivation/cultivation
+Terminal=false
+StartupNotify=false
+Categories=Application;Game;StrategyGame

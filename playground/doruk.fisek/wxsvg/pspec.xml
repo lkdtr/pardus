@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wxsvg</Name>
+        <Homepage>http://www.wxsvg.org/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>SVG library for wxWindows</Summary>
+        <Description>It is a C++ library for wxWindows to create, manipulate and render SVG files.</Description>
+        <Archive sha1sum="95ebb5b271dc286c9455c34aeac31dcda5d66763" type="targz">mirrors://sourceforge/wxsvg/wxsvg-1.0b7_3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libart_lgpl</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>pkgconfig</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch>Makefile.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>wxsvg</Name>
+        <RuntimeDependencies>
+            <Dependency>wxGTK</Dependency>
+            <Dependency>fontconfig</Dependency>
+            <Dependency>libart_lgpl</Dependency>
+            <Dependency>libxml2</Dependency>
+            <Dependency>pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2007-11-21</Date>
+            <Version>1.0_7b</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

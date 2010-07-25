@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>dvdstyler</Name>
+        <Homepage>http://www.dvdstyler.de/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>DVD authoring applicaton</Summary>
+        <Description>It is a DVD authoring application that makes possible for video enthusiasts to create professional-looking DVDs.</Description>
+        <Archive sha1sum="ef3de9debdd55a051b185e89381e12a14bbab14d" type="targz">mirrors://sourceforge/dvdstyler/DVDStyler-1.5.1_2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency versionFrom="1.8.0">mjpegtools</Dependency>
+            <Dependency versionFrom="1.3.1">mpgtx</Dependency>
+            <Dependency versionFrom="0.6.11">dvdauthor</Dependency>
+            <Dependency versionFrom="2.6.3">wxGTK</Dependency>
+            <Dependency versionFrom="6.1">dvd+rw-tools</Dependency>
+            <Dependency versionFrom="2.0">libgnomeui</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>dvdstyler</Name>
+        <RuntimeDependencies>
+            <Dependency versionFrom="1.8.0">mjpegtools</Dependency>
+            <Dependency versionFrom="1.3.1">mpgtx</Dependency>
+            <Dependency versionFrom="0.6.11">dvdauthor</Dependency>
+            <Dependency versionFrom="2.6.3">wxGTK</Dependency>
+            <Dependency versionFrom="6.1">dvd+rw-tools</Dependency>
+            <Dependency versionFrom="2.0">libgnomeui</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2007-11-21</Date>
+            <Version>1.5.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

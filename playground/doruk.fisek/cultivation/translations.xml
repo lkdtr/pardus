@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>cultivation</Name>
+        <Summary xml:lang="tr">Bahçıvanlık Topluluğu Oyunu</Summary>
+        <Description xml:lang="tr">Cultivation bir bahçıvanlık topluluğu içindeki sosyal etkileşimleri araştırıyor. Siz, bir bahçıvanlar ailesine öncülük ediyorsunuz, tek bir kişi olarak başlıyorsunuz, bilge seçimlerle genetik soyunuzun tükenmesini engelleyebilirsiniz. Bitki yetiştirirken, yemek yerken, çiftleşirken davranışlarınız komşularınızı etkiliyor ve sosyal denge çatışma ile uzlaşma arasında gidip geliyor.</Description>
+    </Source>
+</PISI>
