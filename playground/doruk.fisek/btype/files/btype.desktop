@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Btype
+Name[tr]=Btype
+GenericName=Torrent Editor
+GenericName[tr]=Torrent Düzenleyicisi
+Icon=btype
+Exec=btype
+Terminal=false
+StartupNotify=false
+Categories=Application;Network;

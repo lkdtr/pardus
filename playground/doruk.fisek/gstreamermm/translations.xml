@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gstreamermm</Name>
+        <Summary xml:lang="tr">Gstreamer C++ arayüzü</Summary>
+        <Description xml:lang="tr">Gstreamer'ın C++ arayüzü gtkmm temel alınarak hazırlanmıştır, aynı yaşam ömrü mekanizmasını kullanır.</Description>
+    </Source>
+</PISI>

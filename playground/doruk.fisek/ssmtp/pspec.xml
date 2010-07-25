@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>ssmtp</Name>
+        <Homepage>ftp://ftp.debian.org/debian/pool/main/s/ssmtp/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>app:console</IsA>
+        <Summary>Extremely simple MTA</Summary>
+        <Description>Ssmtp is a program that replaces sendmail in workstations. It accepts mail and sends it to a mailhub, optionally replacing the domain in the From: line with a different one.</Description>
+        <Archive sha1sum="db0cc6b4f82ab8b4c79335933db9c4db706324d1" type="tarbz2">ftp://ftp.debian.org/debian/pool/main/s/ssmtp/ssmtp_2.64.orig.tar.bz2</Archive>
+        <Patches>
+            <Patch level="0">destdir.patch</Patch>
+            <Patch level="0">generateconfig_no_interaction.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>ssmtp</Name>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="config">/etc/ssmtp</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/ssmtp</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-03-21</Date>
+            <Version>2.64</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
