@@ -1,0 +1,12 @@
+diff -Nur Cultivation_6_UnixSource-old/game2/gameSource/game.cpp Cultivation_6_UnixSource/game2/gameSource/game.cpp
+--- Cultivation_6_UnixSource-old/game2/gameSource/game.cpp	2006-12-04 23:16:14.233256451 +0200
++++ Cultivation_6_UnixSource/game2/gameSource/game.cpp	2006-12-04 23:18:11.391445700 +0200
+@@ -1110,7 +1110,7 @@
+             double frameRate =
+                 1000 * (double)mFrameBatchSize / (double)timeDelta;
+             
+-            printf( "Frame rate = %f frames/second\n", frameRate );
++            // printf( "Frame rate = %f frames/second\n", frameRate );
+             
+             mFrameBatchStartTimeSeconds = mLastFrameSeconds;
+             mFrameBatchStartTimeMilliseconds = mLastFrameMilliseconds;

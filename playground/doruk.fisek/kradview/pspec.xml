@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>kradview</Name>
+        <Homepage>http://www.orcero.org/irbis/kradview/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:gui</IsA>
+        <Summary>DICOM viewer</Summary>
+        <Summary xml:lang="tr">DICOM görüntüleyici</Summary>
+        <Description>Kradview is a viewer of images obtained from different sources such as X-ray, NMR, and DICOM-compatible imaging devices. It allows medical professionals to view X-ray images easily..</Description>
+        <Description xml:lang="tr">Kradview röntgen, NMR ve DICOM uyumlu görüntüleme cihazları gibi farklı kaynaklardan gelen resimleri gösteren bir araçtır. Tıp uzmanlarının röntgen filmlerini kolayca görmelerini sağlar.</Description>
+        <Archive sha1sum="23144ab4b211911d261b79ed1e459f860800bb22" type="targz">http://www.orcero.org/irbis/kradview/kradview-0.6.1.tgz</Archive>
+        <Patches>
+            <Patch>desktopfile-tr.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>kradview</Name>
+        <Files>
+            <Path fileType="executable">/usr/kde/3.5/bin</Path>
+            <Path fileType="data">/usr/kde/3.5/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2006-11-13</Date>
+            <Version>0.6.1</Version>
+            <Comment>First release.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

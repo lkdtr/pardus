@@ -1,0 +1,12 @@
+diff -Nur Cultivation_6_UnixSource-old/game2/gameSource/game.cpp Cultivation_6_UnixSource/game2/gameSource/game.cpp
+--- Cultivation_6_UnixSource-old/game2/gameSource/game.cpp	2006-12-04 23:52:59.740968315 +0200
++++ Cultivation_6_UnixSource/game2/gameSource/game.cpp	2006-12-04 23:53:57.339212051 +0200
+@@ -363,7 +363,7 @@
+     glutInit( &inNumArgs, inArgs );
+ 
+     screen =
+-        new ScreenGL( 300, 300, false, 
++        new ScreenGL( 640, 480, false, 
+                       "Cultivation", NULL, NULL, NULL );
+ 
+     // lock while sceneHandler constructed so that

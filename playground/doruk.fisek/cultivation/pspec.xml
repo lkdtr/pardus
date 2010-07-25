@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>cultivation</Name>
+        <Homepage>http://cultivation.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>public-domain</License>
+        <IsA>app:gui</IsA>
+        <Summary>Gardening Community Game</Summary>
+        <Description>Cultivation explores the social interactions within a gardening community. You lead one family of gardeners, starting with a single individual, and wise choices can keep your genetic line from extinction. While breeding plants, eating, and mating, your actions impact your neighbors, and the social balance sways between conflict and compromise.</Description>
+        <Archive sha1sum="5f05dbdb35b25079e883826ba271cd78d92215c6" type="targz">http://heanet.dl.sourceforge.net/sourceforge/cultivation/Cultivation_6_UnixSource.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glut</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>cultivation</Name>
+        <RuntimeDependencies>
+            <Dependency>glut</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/cultivation.desktop">cultivation.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/cultivation.png">cultivation.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2006-12-04</Date>
+            <Version>6</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
