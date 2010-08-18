@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Qt4 map editor for OpenStreetMap</Summary>
         <Description>This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
-        <Archive sha1sum="fdd595e99f22545973e1b73d8503c34e52f92a11" type="tarbz2">http://www.merkaartor.be/attachments/download/2/merkaartor-0.16.1.tar.bz2</Archive>
+        <Archive sha1sum="ed21ead53f53733c23f6fbd2ce2fe243ef901fcf" type="tarbz2">http://www.merkaartor.be/attachments/download/26/merkaartor-0.16.2.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>boost-devel</Dependency>
             <Dependency>qt-devel</Dependency>
@@ -39,6 +39,29 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2010-08-18</Date>
+            <Version>0.16.2</Version>
+            <Comment>
+             * Fix initial viewport issue
+             * Do not export incomplete features
+             * Fix CSV import bugs
+             * Use "GPX track width" setting even when not in "Simple track appearance"
+             * Allow to pan with middle mouse button
+             * Lat/lon grid fixes for non-othogonal projections
+             * Fix for non-rthogonal projections, maximize the viewport in lat/lon
+             * Handle empty style list in editor
+             * Fix scale bar to take latitude into account.
+             * Do not tag-match relation's children unless the type is "multippolygon"
+             * Fix problem with "Bottom-left standard" TMS
+             * Draw relations children dashed to avoid multiple parent drawing
+             * Fix several issues with features dock.
+             * Fix reappearance of deleted features.
+             * Fix WayRemoveNodeCommand reversibility.
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2010-07-21</Date>
             <Version>0.16.1</Version>
