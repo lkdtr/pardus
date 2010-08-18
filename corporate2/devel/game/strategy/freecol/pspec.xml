@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Colonization clone strategy game</Summary>
         <Description>Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King's forces.</Description>
-        <Archive sha1sum="a4505d7a3222c986c902fe178570f56b4688047e" type="zip">mirrors://sourceforge/freecol/freecol-0.9.3-src.zip</Archive>
+        <Archive sha1sum="7db1a8907a04467fd26b8edb51416c461739dd93" type="zip">mirrors://sourceforge/freecol/freecol-0.9.4-src.zip</Archive>
         <BuildDependencies>
             <Dependency>sun-jdk</Dependency>
             <Dependency>ant</Dependency>
@@ -41,6 +41,17 @@
     </Package>
 
     <History>
+        <Update release="25">
+            <Date>2010-07-18</Date>
+            <Version>0.9.4</Version>
+            <Comment>Bump to latest stable:
+             * Several serious bugs, including a memory or reference leak have been fixed
+             * A graphical modification (mod) adds new graphics for goods and resources.
+             * Translation updates
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="24">
             <Date>2010-06-20</Date>
             <Version>0.9.3</Version>
