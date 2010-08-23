@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>barry</Name>
+        <Homepage>http://www.netdirect.ca/software/packages/barry</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>barry</Icon>
+        <IsA>app:console</IsA>
+        <IsA>library</IsA>
+        <Summary>BlackBerry Utilities for Linux</Summary>
+        <Description>Barry is an open source application that will provide synchronization, backup, restore, charging and program management for BlackBerry devices.</Description>
+        <Archive sha1sum="0ce84be37cce13c82800b9ea88ed36af1feb5614" type="targz">mirrors://sourceforge/barry/barry/barry-0.16/barry_0.16.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>fuse</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>barry</Name>
+        <RuntimeDependencies>
+            <Dependency>fuse</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="header">/usr/include/barry</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc/barry</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-08-23</Date>
+            <Version>0.16</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
