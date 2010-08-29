@@ -5,8 +5,8 @@
         <Name>hedgewars</Name>
         <Homepage>http://www.hedgewars.org/</Homepage>
         <Packager>
-            <Name>H. İbrahim Güngör</Name>
-            <Email>ibrahim@pardus.org.tr</Email>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
         </Packager>
         <License>GPLv2</License>
         <Icon>hedgewars</Icon>
