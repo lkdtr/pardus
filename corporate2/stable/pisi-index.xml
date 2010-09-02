@@ -9,6 +9,64 @@
     </Distribution>
     <SpecFile>
         <Source>
+            <Name>psimedia</Name>
+            <Homepage>http://delta.affinix.com/psimedia/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>LGPLv2.1</License>
+            <IsA>library</IsA>
+            <PartOf>network.library</PartOf>
+            <Summary xml:lang="en">Psi plugin for voice/video calls</Summary>
+            <Summary xml:lang="tr">Psi ses/görüntü çağrı eklentisi</Summary>
+            <Description xml:lang="en">PsiMedia is a thick abstraction layer for providing audio and video RTP services to Psi-like IM clients. The implementation is based on GStreamer.</Description>
+            <Description xml:lang="tr">Psimedia, Psi benzeri anında mesajlaşma istemcileri için ses ve görüntü RTP servisi sağlayan gstreamer tabanlı bir katmandır.</Description>
+            <Archive type="tarbz2" sha1sum="75428d427227ffa87ca40d7e29567a2d410fb9ff">http://delta.affinix.com/download/psimedia/psimedia-1.0.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>psi</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>speex</Dependency>
+                <Dependency versionFrom="4.6.2">qt-devel</Dependency>
+                <Dependency>liboil</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/library/psimedia/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>psimedia</Name>
+            <RuntimeDependencies>
+                <Dependency>psi</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>speex</Dependency>
+                <Dependency versionFrom="4.6.2">qt</Dependency>
+                <Dependency>liboil</Dependency>
+                <Dependency>gst-plugins-base</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="library">/usr/lib/psi/plugins</Path>
+                <Path fileType="library">/usr/share/doc/psimedia</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2010-05-13</Date>
+                <Version>1.0.3</Version>
+                <Comment>Write strict dependency to new version of kdepimlibs,qt,kdebase,kdebase-runtime,kdebase-workspace,kdelibs,kdelibs-devel,kdepimlibs-devel</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2009-09-03</Date>
+                <Version>1.0.3</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>xchat</Name>
             <Homepage>http://www.xchat.org/</Homepage>
             <Packager>
@@ -23,7 +81,7 @@
             <Description xml:lang="en">X-chat allows you to join multiple IRC channels (chat rooms) at the same time, talk publicly, private one-on-one conversations etc. Even file transfers are possible.</Description>
             <Description xml:lang="tr">X-chat birden fazla IRC kanalına (sohbet odasına) aynı anda girmenize, herkesle beraber ya da özel başbaşa konuşmalara olanak tanır. Dosya aktarımları bile mümkündür.</Description>
             <Icon>xchat</Icon>
-            <Archive type="tarbz2" sha1sum="7a7463e65cb26c680ed70dd96cec98bcc05435a4">http://xchat.org/files/source/2.8/xchat-2.8.6.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="a4ac161e4e40f4bbabc492675a1ff4380dba8d68">http://xchat.org/files/source/2.8/xchat-2.8.8.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>gtk2</Dependency>
                 <Dependency>libsexy</Dependency>
@@ -34,9 +92,6 @@
                 <Patch>xchat_desktop.patch</Patch>
                 <Patch level="1">browser.patch</Patch>
                 <Patch level="1">default-configs.patch</Patch>
-                <Patch level="1">xchat-2.8.4-shm-pixmaps.patch</Patch>
-                <Patch level="1">xc286-smallfixes.diff</Patch>
-                <Patch level="1">new-gtk-type.patch</Patch>
                 <Patch level="1">xchat-2.8.6-default-utf8.patch</Patch>
                 <Patch level="1">use_ascii_str.patch</Patch>
             </Patches>
@@ -63,6 +118,21 @@
             </Files>
         </Package>
         <History>
+            <Update release="14">
+                <Date>2010-07-25</Date>
+                <Version>2.8.8</Version>
+                <Comment>- Version bump
+               - Enable IPv6 support</Comment>
+                <Name>Burak Çalışkan</Name>
+                <Email>burakclskn@gmail.com</Email>
+            </Update>
+            <Update release="13">
+                <Date>2010-01-30</Date>
+                <Version>2.8.6</Version>
+                <Comment>Add freenode&apos;s SSL-IRC addresses</Comment>
+                <Name>Burak Çalışkan</Name>
+                <Email>burakclskn@gmail.com</Email>
+            </Update>
             <Update release="12">
                 <Date>2010-01-27</Date>
                 <Version>2.8.6</Version>
@@ -152,6 +222,190 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>psi</Name>
+            <Homepage>http://psi-im.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>network.chat</PartOf>
+            <Summary xml:lang="en">Fast and lightweight jabber client</Summary>
+            <Summary xml:lang="tr">Hızlı ve hafif jabber istemcisi</Summary>
+            <Description xml:lang="en">Psi is a fast and lightweight jabber instant messaging client that utilises the best in open source technologies.</Description>
+            <Description xml:lang="tr">Psi, açık kaynak teknolojilerinin en iyilerinden faydalanan hızlı ve hafif bir jabber anında mesajlaşma istemcisidir.</Description>
+            <Icon>psi</Icon>
+            <Archive type="tarbz2" sha1sum="f5f8e1a427339a4e9113b5fa513b01a42ae1be4b">mirrors://sourceforge/psi/psi-0.14.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>qca2</Dependency>
+                <Dependency>qca2-ossl</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency versionFrom="4.6.2">qt-devel</Dependency>
+            </BuildDependencies>
+            <SourceURI>network/chat/psi/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>psi</Name>
+            <RuntimeDependencies>
+                <Dependency>qca2</Dependency>
+                <Dependency>qca2-ossl</Dependency>
+                <Dependency>enchant</Dependency>
+                <Dependency versionFrom="4.6.2">qt</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/psi</Path>
+                <Path fileType="doc">/usr/share/doc/psi</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="18">
+                <Date>2010-05-13</Date>
+                <Version>0.14</Version>
+                <Comment>Write strict dependency to new version of kdepimlibs,qt,kdebase,kdebase-runtime,kdebase-workspace,kdelibs,kdelibs-devel,kdepimlibs-devel</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="17">
+                <Date>2009-12-03</Date>
+                <Version>0.14</Version>
+                <Comment>Version bump to stable for various bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="16">
+                <Date>2009-11-26</Date>
+                <Version>0.14_rc3</Version>
+                <Comment>Version bump to new RC for various bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="15">
+                <Date>2009-11-18</Date>
+                <Version>0.14_rc2</Version>
+                <Comment>Version bump to new RC for various bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="14">
+                <Date>2009-11-09</Date>
+                <Version>0.14_rc1</Version>
+                <Comment>New development release:
+             - Added color options to the chat window.
+             - Can now specify a reason for kick/ban in groupchat.
+             - Improved User Info window, to show more fields and photo view/save.
+             - Commandline interface now supports choosing profile and setting status.
+             - Switch to Enchant library for spell checking.
+             - D-BUS interface now supports setting status and indicating sleep/wake.
+             - Fixed voice calling compatibility bugs with Pidgin and Empathy.
+             - Various other minor improvements and bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="13">
+                <Date>2009-08-02</Date>
+                <Version>0.13</Version>
+                <Comment>Add missing aspell dependency.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="12">
+                <Date>2009-07-28</Date>
+                <Version>0.13</Version>
+                <Comment>Version bump:
+             - Optional voice calls support (Jingle RTP).
+             - Basic XMPP URI handler.
+             - Ability to permanently trust certificates at connect time.
+             - Mini command system (Ctrl+7 in chat window).
+             - Various bugfixes.
+             - Don&apos;t include docs twice</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="11">
+                <Date>2009-06-09</Date>
+                <Version>0.12.1</Version>
+                <Comment>Update doc path for 2009, remove patch since 2009 has lsb_release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="10" type="security">
+                <Date>2009-04-19</Date>
+                <Version>0.12.1</Version>
+                <Comment>Version bump : Bugfix for DOS vulnerability in the file transfer code.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="9">
+                <Date>2008-08-08</Date>
+                <Version>0.12</Version>
+                <Comment>Stable bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2008-07-05</Date>
+                <Version>0.12_p1170</Version>
+                <Comment>Version bump to latest svn to fix chat window crashes in new Qt4.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2008-04-12</Date>
+                <Version>0.12_rc2</Version>
+                <Comment>Version bump for testing.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-03-02</Date>
+                <Version>0.12_rc1</Version>
+                <Comment>Version bump for testing.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-10-28</Date>
+                <Version>0.11</Version>
+                <Comment>Use external QCA</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-10-16</Date>
+                <Version>0.11</Version>
+                <Comment>Version bump to Qt4 port.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-08-16</Date>
+                <Version>0.10</Version>
+                <Comment>Add patch for determining Pardus release. It is used as client name.</Comment>
+                <Name>Eren Türkay</Name>
+                <Email>turkay.eren@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-05-29</Date>
+                <Version>0.10</Version>
+                <Comment>Fix path issues.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-10-26</Date>
+                <Version>0.10</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>sylpheed</Name>
             <Homepage>http://sylpheed.sraoss.jp/en/</Homepage>
             <Packager>
@@ -166,7 +420,7 @@
             <Description xml:lang="en">Sylpheed is a simple and lightweight but featureful and easy-to-use e-mail client.</Description>
             <Description xml:lang="tr">GTK+ tabanlı, X-Window Sistemi üzerinde çalışan bir e-posta ve haber istemcisi</Description>
             <Icon>sylpheed-128x128</Icon>
-            <Archive type="tarbz2" sha1sum="798cbfcb2d61a534e4cc4146ab8a362e5f885323">http://sylpheed.sraoss.jp/sylpheed/v3.1beta/sylpheed-3.1.0beta2.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="d4a998bd83bcb6b88bc384740e3cfd73884c3ff8">http://sylpheed.sraoss.jp/sylpheed/v3.1beta/sylpheed-3.1.0beta3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>shared-mime-info</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
@@ -211,6 +465,37 @@
             </Files>
         </Package>
         <History>
+            <Update release="44">
+                <Date>2010-08-18</Date>
+                <Version>3.1.0_beta3</Version>
+                <Comment>Version bump to new beta for testing:
+              * Drag and drop of addresses on the address book is supported now.
+              * New plug-in &apos;Attachment Tool Plug-in&apos; enables the removal of attachments in messages.
+              * MS Outlook Express mail stores (dbx) can be imported now.
+              * &apos;Alias&apos; attribute can be selected on CSV addressbook import.
+              * When modification of templates are cancelled, confirm dialog will be displayed now.
+              * The order of templates can be changed now.
+              * Virtual folders can be moved now.
+              * &apos;Always show messages in summary when selected&apos; was improved, and it is enabled by default.
+              * Automatically selected messages will not be marked as read anymore.
+              * The message view will not be cleared on multiple selection.
+              * &quot;mark_as_read_on_new_window&quot; setting became a hidden option.
+              * Redundant menu items are not displayed on the context menu of the folder view now.
+              * &apos;Junk&apos; special folder was added. It will be automatically created if not exist.
+              * &apos;Empty junk&apos; context menu will be displayed on the Junk folder.
+              * A new account option &apos;Put signature before quote&apos; was added.
+              * A new option &apos;Change current account on folder open&apos; was added, and it is enabled by default.
+              * &apos;Cancel all&apos; button was added to the POP3 receive dialog.
+              * The POP3 receive dialog will display only the number and size of messages in current session, not including previously received ones.
+              * On &apos;File - Save as...&apos; dialog, &apos;.eml&apos; extension was added for the default file name.
+              * New plug-in APIs for summary view and alert panel were added.
+              * English Sylpheed FAQ was updated.
+              * The bug that accepted SSL certs were not loaded when using --configdir option was fixed.
+              * The IMAP4 response parser was fixed.
+              * The LDIF parser was modified.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="43">
                 <Date>2010-07-16</Date>
                 <Version>3.1.0_beta2</Version>
@@ -1129,7 +1414,7 @@
             <Description xml:lang="en">This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
             <Description xml:lang="tr">Açık Sokak Haritası (OpenStreetMap) için bir Qt4 tabanlı harita düzenleyicisi olan Merkaartor&apos;un stil düzenleyici, harita özelliklerinin saydam gösterilmesi, bağımsız otoyol desteği, NMEA dosyalarının içe aktarılmabilesi, WYSIWYG tarzı düzenleme gibi birçok özelliği bulunuyor.</Description>
             <Icon>merkaartor</Icon>
-            <Archive type="tarbz2" sha1sum="fdd595e99f22545973e1b73d8503c34e52f92a11">http://www.merkaartor.be/attachments/download/2/merkaartor-0.16.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="1aadaeac2369502e2bb929a7a86a2916b711dd99">http://merkaartor.be/attachments/download/29/merkaartor-0.16.3.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>boost-devel</Dependency>
                 <Dependency>qt-devel</Dependency>
@@ -1154,6 +1439,34 @@
             </Files>
         </Package>
         <History>
+            <Update release="11">
+                <Date>2010-09-29</Date>
+                <Version>0.16.3</Version>
+                <Comment>Fix inability to switch languages.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="10">
+                <Date>2010-08-18</Date>
+                <Version>0.16.2</Version>
+                <Comment>* Fix initial viewport issue
+             * Do not export incomplete features
+             * Fix CSV import bugs
+             * Use &quot;GPX track width&quot; setting even when not in &quot;Simple track appearance&quot;
+             * Allow to pan with middle mouse button
+             * Lat/lon grid fixes for non-othogonal projections
+             * Fix for non-rthogonal projections, maximize the viewport in lat/lon
+             * Handle empty style list in editor
+             * Fix scale bar to take latitude into account.
+             * Do not tag-match relation&apos;s children unless the type is &quot;multippolygon&quot;
+             * Fix problem with &quot;Bottom-left standard&quot; TMS
+             * Draw relations children dashed to avoid multiple parent drawing
+             * Fix several issues with features dock.
+             * Fix reappearance of deleted features.
+             * Fix WayRemoveNodeCommand reversibility.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="9">
                 <Date>2010-07-21</Date>
                 <Version>0.16.1</Version>
@@ -1870,6 +2183,679 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>dreamchess</Name>
+            <Homepage>http://www.dreamchess.org</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv3</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.board</PartOf>
+            <Summary xml:lang="en">XBoard-compatible 3D chess interface and engine</Summary>
+            <Summary xml:lang="tr">XBoard-uyumlu 3B satranç arayüzü ve motoru</Summary>
+            <Description xml:lang="en">Dreamchess is a 3D chess game with its own moderately strong chess engine. You can also use any other XBoard-compatible chess engine, including the popular Crafty and GNU Chess.</Description>
+            <Description xml:lang="tr">Dreamchess kendi satranç motoruna sahip üç boyutlu bir satranç oyunudur. Dreamchess ile Crafty ve GNU Chess gibi XBoard-uyumlu başka herhangi bir satranç motorunu da kullanabilirsiniz.</Description>
+            <Icon>dreamchess</Icon>
+            <Archive type="targz" sha1sum="0e27c9d7cb20104367edc5aabe3076b70d989374">mirrors://berlios/dreamchess/dreamchess-0.2.0.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glut</Dependency>
+                <Dependency versionFrom="1.2.6">sdl-image</Dependency>
+                <Dependency versionFrom="1.2.13">libsdl</Dependency>
+                <Dependency>minixml</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/board/dreamchess/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>dreamchess</Name>
+            <RuntimeDependencies>
+                <Dependency>glut</Dependency>
+                <Dependency versionFrom="1.2.6">sdl-image</Dependency>
+                <Dependency versionFrom="1.2.13">libsdl</Dependency>
+                <Dependency>minixml</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2007-12-17</Date>
+                <Version>0.2.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-12-23</Date>
+                <Version>0.1.0</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>freeciv</Name>
+            <Homepage>http://www.freeciv.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.strategy</PartOf>
+            <Summary xml:lang="en">Multiplayer strategy game</Summary>
+            <Summary xml:lang="tr">Çok oyuncu destekli strateji oyunu</Summary>
+            <Description xml:lang="en">Freeciv is a free turn-based multiplayer strategy game in which each player becomes the leader of a civilization, fighting to obtain the ultimate goal: To become the greatest civilization.</Description>
+            <Description xml:lang="tr">Çok oyuncu destekli, tarafların sıra ile oynadığı strateji oyunu. Her oyuncu bir ulusu yöneterek en yüksek amaca, yani en güçlü ırk olmaya çalışıyor.</Description>
+            <Icon>freeciv-client</Icon>
+            <Archive type="tarbz2" sha1sum="b306374d5e2e118393b23ff9a0b1a8d391b36c82">mirrors://sourceforge/freeciv/freeciv-2.2.2.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency versionFrom="2.18.5">gtk2</Dependency>
+                <Dependency versionFrom="1.2.11">libsdl</Dependency>
+                <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
+                <Dependency versionFrom="1.2.5">sdl-image</Dependency>
+                <Dependency versionFrom="9.4">bind-tools</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/strategy/freeciv/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>freeciv</Name>
+            <RuntimeDependencies>
+                <Dependency versionFrom="2.18.5">gtk2</Dependency>
+                <Dependency versionFrom="1.2.11">libsdl</Dependency>
+                <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
+                <Dependency versionFrom="1.2.5">sdl-image</Dependency>
+                <Dependency versionFrom="9.4">bind-tools</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/freeciv</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+            </Files>
+            <Conflicts>
+                <Package>freeciv-stdsounds</Package>
+            </Conflicts>
+        </Package>
+        <History>
+            <Update release="15">
+                <Date>2010-08-30</Date>
+                <Version>2.2.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="14">
+                <Date>2010-06-25</Date>
+                <Version>2.2.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="13">
+                <Date>2009-03-30</Date>
+                <Version>2.1.9</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="12">
+                <Date>2008-11-24</Date>
+                <Version>2.1.7</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="11">
+                <Date>2008-08-11</Date>
+                <Version>2.1.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="10">
+                <Date>2008-06-19</Date>
+                <Version>2.1.5</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="9">
+                <Date>2008-04-25</Date>
+                <Version>2.1.4</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="8">
+                <Date>2008-01-25</Date>
+                <Version>2.1.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="7">
+                <Date>2007-12-24</Date>
+                <Version>2.1.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-11-29</Date>
+                <Version>2.1.1</Version>
+                <Comment>Include GTK client</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-11-29</Date>
+                <Version>2.1.1</Version>
+                <Comment>Version bump to maintenance release, switch to better SDL client, fixes bug #6612</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-10-29</Date>
+                <Version>2.1.0</Version>
+                <Comment>Version bump to new stable with fancy graphics, fixes bug #6470</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="3" type="security">
+                <Date>2007-02-19</Date>
+                <Version>2.0.9</Version>
+                <Comment>Version bump to fix security problem in attributes code</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2" type="security">
+                <Date>2006-03-16</Date>
+                <Version>2.0.8</Version>
+                <Comment>Fix CVE-2006-0047</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-13</Date>
+                <Version>2.0.7</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wormux</Name>
+            <Homepage>http://www.wormux.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.strategy</PartOf>
+            <Summary xml:lang="en">Worms clone</Summary>
+            <Summary xml:lang="tr">Worms oyununun özgür yazılım eşdeğeri</Summary>
+            <Description xml:lang="en">Have the mascots of your favorite free softwares battle in the Wormux arena. Exterminate your opponent in a 2D toon style scenery and a funny environment using dynamite, grenades, baseball bat, bazookas, ...</Description>
+            <Description xml:lang="tr">Dinamit, el bombası, beyzbol sopası, bazuka ve diğer birçok silahı kullanarak, 2 boyutlu karton stili alanlarda rakiplerinizi yok edin.</Description>
+            <Icon>wormux_128x128</Icon>
+            <Archive type="tarbz2" sha1sum="9fc39f61f2c1eb4ddd1d7ad5238e3728b9604e45">http://download.gna.org/wormux/wormux-0.9.2.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>libxmlpp</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-gfx</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>fribidi</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">nostrip.patch</Patch>
+            </Patches>
+            <SourceURI>game/strategy/wormux/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wormux</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>libxmlpp</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>sdl-gfx</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>fribidi</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/wormux</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="data">/usr/share/wormux</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/wormux.desktop" permission="0644" owner="root">wormux.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="20">
+                <Date>2010-08-29</Date>
+                <Version>0.9.2.1</Version>
+                <Comment>Fix archive address, 64 bit fixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="19">
+                <Date>2010-04-17</Date>
+                <Version>0.9.2</Version>
+                <Comment>Version bump:
+             * Bugfixes:
+             * New skin: bugzilla; New map: chess map, New music: circux, diabolicux, exoticux, woodlux
+             * Menu improvement: better management of tabs on small screen.
+             * Update translations
+             * The rope of grapple no longer gets stuck in ground.
+             * Fix network games between specific computers
+             * A bug has been fixed which prevented the Bugzilla team to have more then three players.
+             * Poisoned characters die now when they have to less health.
+             * Fix shoot key handling when user exceeds the weapon max strength
+             * Fix: Do not apply damage from explosion twice
+             * Fix rope size check when attaching
+             * Fix some memory leaks
+             * Many other bug fixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="18">
+                <Date>2010-01-28</Date>
+                <Version>0.9.0</Version>
+                <Comment>Version bump:
+             * New artificial intelligence is smart.
+             * Improved quality of network games
+             * Two new teams: Postfix and Hexley
+             * Add 3 new maps. Delete 3 old ones.
+             * Some display and gameplay improvements
+             * A lot of other improvements and bug fixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="17">
+                <Date>2009-09-23</Date>
+                <Version>0.8.5</Version>
+                <Comment>Version bump :
+             * Fix handling of key event during the game
+             * Fix new sound player warning
+             * Fix several network bugs related to random generator
+             * Fix keep-alive connexion to index server when hosting a server from the game
+             * Fix crash when invalid display resolution requested
+             * Fix &quot;play in loop&quot; options for network games
+             * Multi-layer sky
+             * New maps
+             * Small skin animation enhancements
+             * Camera enhancement
+             * Refresh the public network games list
+             * Weapon behavior: gnu, supertux and polecat now explode when pressing space, M16 repeats shoot
+             * Lefthand-operated mouse option
+             * Automatically create personal directories for maps, teams and game_mode
+             * Do not overlink index server and game server binaries
+             * Translation updates</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="16">
+                <Date>2009-07-16</Date>
+                <Version>0.8.4</Version>
+                <Comment>Version bump :
+             - Dedicated game server
+             - Camera improvements
+             - New sounds
+             - Key repeat handling in menu
+             - Various bug fixes
+             - Translations updates
+             - Move to strategy game section in desktop menu</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="15">
+                <Date>2009-05-07</Date>
+                <Version>0.8.3</Version>
+                <Comment>Update doc path, remove strict deps, change dep name for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="14">
+                <Date>2009-03-09</Date>
+                <Version>0.8.3</Version>
+                <Comment>Version bump :
+             - New skins with new animations, new sounds
+             - Better team menu editor
+             - New game interface
+             - Small AI enhancements
+             - Fix somes crashes and small graphical bugs</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="13">
+                <Date>2008-11-11</Date>
+                <Version>0.8.2</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="12">
+                <Date>2008-10-26</Date>
+                <Version>0.8.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="11">
+                <Date>2008-09-19</Date>
+                <Version>0.8.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Faik Uygur</Name>
+                <Email>faik@pardus.org.tr</Email>
+            </Update>
+            <Update release="10">
+                <Date>2008-05-23</Date>
+                <Version>0.8</Version>
+                <Comment>Version bump</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="9">
+                <Date>2007-10-07</Date>
+                <Version>0.8_beta2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="8">
+                <Date>2007-06-23</Date>
+                <Version>0.8_beta1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="7">
+                <Date>2007-03-26</Date>
+                <Version>0.7.9</Version>
+                <Comment>Bump for libxmlpp2.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-03-08</Date>
+                <Version>0.7.9</Version>
+                <Comment>Bump for sdl-gfx.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-01-30</Date>
+                <Version>0.7.9</Version>
+                <Comment>Remove compilation patch.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-01-28</Date>
+                <Version>0.7.9</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-08-19</Date>
+                <Version>0.7.4</Version>
+                <Comment>Version bump</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-04-08</Date>
+                <Version>0.7</Version>
+                <Comment>Version bump</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-21</Date>
+                <Version>0.7_beta3</Version>
+                <Comment>First release</Comment>
+                <Name>Furkan Duman</Name>
+                <Email>coderlord@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wesnoth</Name>
+            <Homepage>http://www.wesnoth.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.strategy</PartOf>
+            <Summary xml:lang="en">A fantasy turn-based strategy game</Summary>
+            <Summary xml:lang="tr">Fantezi temalı sıralı oynanan bir strateji oyunu</Summary>
+            <Description xml:lang="en">The Battle for Wesnoth is a turn-based strategy game with a fantasy theme. Build up a great army, gradually turning raw recruits into hardened veterans. In later games, recall your toughest warriors and form a deadly host against whom none can stand! Choose units from a large pool of specialists, and hand-pick a force with the right strengths to fight well on different terrains against all manner of opposition.</Description>
+            <Description xml:lang="tr">The Battle for Wesnoth;sıra tabanlı,fantezi konulu,strateji oyunudur.Büyük ordular oluşturup, derece derece acemi askerleri kıdemli birliklere dahil eder. Sonraki oyunda en dayanıklı savaşçı askerlerinizi önünde hiç kimsenin duramayacağı öldürücü bir güce dönüştürür. Birliklerinizi profesyonellerin olduğu ekip içinden seçip, farklı savaş alanlarında her türlü düşman kuvvetlerine karşı savaşacak doğru güçteki birliklerinizi oluşturun.</Description>
+            <Icon>wesnoth-icon</Icon>
+            <Archive type="tarbz2" sha1sum="30b82e06523f9a82b770a6fc4e2d4251bd358eca">mirrors://sourceforge/wesnoth/wesnoth-1.8.4.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>fribidi</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>boost-devel</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>lua</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/strategy/wesnoth/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wesnoth</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>fribidi</Dependency>
+                <Dependency>boost</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>cairo</Dependency>
+                <Dependency>fontconfig</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/wesnoth</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/</Path>
+                <Path fileType="data">/var/run/wesnothd</Path>
+                <Path fileType="man">/usr/share/man/</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="data">/usr/share/applnk</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="21">
+                <Date>2010-08-29</Date>
+                <Version>1.8.4</Version>
+                <Comment>Version bump for bugfixes and translation updates.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="20">
+                <Date>2010-04-12</Date>
+                <Version>1.8</Version>
+                <Comment>- Add missing dependencies.
+                - Major version bump to latest stable version 1.8.
+                - Wesnoth local server is now available with many enhancements.</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
+            <Update release="19">
+                <Date>2009-07-08</Date>
+                <Version>1.6.4</Version>
+                <Comment>Stable version bump to maintenance release.</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="18">
+                <Date>2009-06-23</Date>
+                <Version>1.6.3</Version>
+                <Comment>Stable version bump to maintenance release.</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="17">
+                <Date>2009-05-14</Date>
+                <Version>1.6.2</Version>
+                <Comment>Stable version bump.</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="16" type="security">
+                <Date>2009-03-14</Date>
+                <Version>1.4.7</Version>
+                <Comment>Fix Denial of Service (memory consumption) vulnerability (CVE-2009-0878), (bug#9398).</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="15" type="security">
+                <Date>2009-03-04</Date>
+                <Version>1.4.7</Version>
+                <Comment>Stable version bump to campaigns, graphics, misc. bug fixes and fix Python security issue (CVE-2009-0366,CVE-2009-0367), (bug#9301).</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="14">
+                <Date>2008-12-16</Date>
+                <Version>1.4.6</Version>
+                <Comment>Stable version bump to fix several small bugs and update many translations.</Comment>
+                <Name>Pınar Yanardağ</Name>
+                <Email>pinar@pardus.org.tr</Email>
+            </Update>
+            <Update release="13">
+                <Date>2008-09-11</Date>
+                <Version>1.4.5</Version>
+                <Comment>Stable version bump</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="12">
+                <Date>2008-09-08</Date>
+                <Version>1.4.4</Version>
+                <Comment>Fix installation dirs, desktop files and icons</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="11">
+                <Date>2008-08-01</Date>
+                <Version>1.4.4</Version>
+                <Comment>Version bump, remove i10l patch as it is not needed for new SDL, Thanks to İhsan Akın</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="10">
+                <Date>2008-06-14</Date>
+                <Version>1.4.3</Version>
+                <Comment>Version bump</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="9">
+                <Date>2008-05-27</Date>
+                <Version>1.4.2</Version>
+                <Comment>Version bump</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="8" type="security">
+                <Date>2007-11-28</Date>
+                <Version>1.2.8</Version>
+                <Comment>Stable update to fix CVE-2007-5742</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="7" type="security">
+                <Date>2007-10-10</Date>
+                <Version>1.2.7</Version>
+                <Comment>Stable update to fix CVE-2007-3917</Comment>
+                <Name>İsmail Dönmez</Name>
+                <Email>ismail@pardus.org.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2007-08-26</Date>
+                <Version>1.2.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ahmet AYGÜN</Name>
+                <Email>ahmet@zion.gen.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-04-01</Date>
+                <Version>1.2.3</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ahmet AYGÜN</Name>
+                <Email>ahmet@zion.gen.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-01-10</Date>
+                <Version>1.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Ahmet AYGÜN</Name>
+                <Email>ahmet@zion.gen.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-06-21</Date>
+                <Version>1.0.2</Version>
+                <Comment>Fix #2180, .desktop file problem.</Comment>
+                <Name>Ahmet AYGÜN</Name>
+                <Email>ahmet@zion.gen.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-02-05</Date>
+                <Version>1.0.2</Version>
+                <Comment>Add build deps.</Comment>
+                <Name>Barış Metin</Name>
+                <Email>baris@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-01-31</Date>
+                <Version>1.0.2</Version>
+                <Comment>First build</Comment>
+                <Name>Koray Löker</Name>
+                <Email>loker@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>freecol</Name>
             <Homepage>http://www.freecol.org</Homepage>
             <Packager>
@@ -1884,7 +2870,7 @@
             <Description xml:lang="en">Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King&apos;s forces.</Description>
             <Description xml:lang="tr">Oyun 1492&apos;de başlıyor. Oyunun amacı Amerika&apos;yı kolonileştirmek, güçlü bir ulus inşa etmek, bağımsızlığınızı ilan etmek ve kralın kuvvetlerinin saldırısına karşı ayakta kalmak.</Description>
             <Icon>freecol</Icon>
-            <Archive type="zip" sha1sum="a4505d7a3222c986c902fe178570f56b4688047e">mirrors://sourceforge/freecol/freecol-0.9.3-src.zip</Archive>
+            <Archive type="zip" sha1sum="7db1a8907a04467fd26b8edb51416c461739dd93">mirrors://sourceforge/freecol/freecol-0.9.4-src.zip</Archive>
             <BuildDependencies>
                 <Dependency>sun-jdk</Dependency>
                 <Dependency>ant</Dependency>
@@ -1911,6 +2897,16 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="25">
+                <Date>2010-07-18</Date>
+                <Version>0.9.4</Version>
+                <Comment>Bump to latest stable:
+             * Several serious bugs, including a memory or reference leak have been fixed
+             * A graphical modification (mod) adds new graphics for goods and resources.
+             * Translation updates</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="24">
                 <Date>2010-06-20</Date>
                 <Version>0.9.3</Version>
@@ -2114,6 +3110,400 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>hedgewars</Name>
+            <Homepage>http://www.hedgewars.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.strategy</PartOf>
+            <Summary xml:lang="en">Worms-like Strategy Game</Summary>
+            <Summary xml:lang="tr">Worms Benzeri Strateji Oyunu</Summary>
+            <Description xml:lang="en">Hedgewars is a turn based strategy game but the real buzz is from watching the devastation caused by those pesky hedgehogs with those fantastic weapons - sneaky little blighters with a bad attitude!.</Description>
+            <Description xml:lang="tr">Hedgewars, tur tabanlı bir strateji oyunu ama işin esas eğlencesi o sinir bozucu kirpilerin ellerindeki çeşit çeşit silahlarla yarattıkları yıkımı izlemekte.</Description>
+            <Icon>hedgewars</Icon>
+            <Archive type="tarbz2" sha1sum="812510e51939e90b41b0e9ec31cccfceb94466d1">http://download.gna.org/hedgewars/hedgewars-src-0.9.13.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>qt-devel</Dependency>
+                <Dependency>fpc</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>default_fullscreen.patch</Patch>
+            </Patches>
+            <SourceURI>game/strategy/hedgewars/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>hedgewars</Name>
+            <RuntimeDependencies>
+                <Dependency>qt</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>sdl-net</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc/hedgewars</Path>
+                <Path fileType="data">/usr/share/hedgewars</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/hedgewars.desktop" permission="0644" owner="root">hedgewars.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="10">
+                <Date>2010-04-17</Date>
+                <Version>0.9.13</Version>
+                <Comment>Version bump:
+             * Many new hats, hats visible while using rope and blowtorch
+             * New weapons: Exploding barrels, birdy weapon, poisoning effect, dud mines, 
+             * Alt weapon preview on rope, parachute
+             * UFO changed to homing bee
+             * AI uses new weapons, aware of fire, can fight in artillery mode
+             * New options in ammo editing - crate probability, delays
+             * Option of semi-opaque hog name tags to avoid fail when land is hidden by name
+             * New sounds: British voicepack, walk sound for hedgehogs, additional bounce sounds
+             * Notification sound when people join your room
+             * Hogs react to throwing grenades / dynamite and when near them
+             * New visual effects: dust on fall impact, smoke, shotgun shells, blink team name on start of turn, hogs pulling weapons out, falling flakes kicked by explosion and more
+             * View ammo menu when not your turn
+             * Contextual help when using weapons menu
+             * 3D effect for waves
+             * Fade effect when starting/stopping game
+             * New game modes - place hedgehog, king mode, randomise starts, allies share ammo, disable girders
+             * Shift + direction to turn without moving
+             * New font for CJK text and better CJK detection
+             * Team flags
+             * Graphic of crate contents when picking up weapon/utility
+             * Splashes/droplets when things fall in the water
+             * 45 degree bounce when throwing grenades
+             * Information on game rules when starting game
+             * Knockball map (scripted map)
+             * Maze generator for new random maps
+             * new crazy map template
+             * New olympics, desert themes, visual updates to many other themes
+             * Background texture for land for a 3d effect on explosions
+             * Frontend able to delete teams
+             * Ignore/friends lists in frontend
+             * Updated options in frontend: independent toggles for frontend/game sound/music, select locale
+             * Lua scripting for easy creation of missions and special maps.
+             * Many bug fixes, speed optimizations, translation updates</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="9">
+                <Date>2009-12-25</Date>
+                <Version>0.9.12</Version>
+                <Comment>* New weapons, maps, theme, visual effects, sounds, training modes
+             * Dynamically zoom in/out in the battlefield with mouse wheel.
+             * Updated graphics
+             * Team chat
+             * Remember net password
+             * Implement room control delegation when host&apos;s connection fails
+             * Colorize chat events in engine
+             * Frontend improvements
+             * Fix crash in replay caused by speech bubbles
+             * Fix some desync causes
+             * Fix rope bugs
+             * Fix bugs in weapon selection code</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="8">
+                <Date>2009-06-21</Date>
+                <Version>0.9.11</Version>
+                <Comment>Update doc path, remove strict deps for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-05-29</Date>
+                <Version>0.9.11</Version>
+                <Comment>Version bump :
+             * Speech Bubbles - during your turn, have your hedgehog express himself.  In chat, use &quot;regular speech&quot;  &apos;thought bubbles&apos;  -action bubbles-  with the quote marks completely surrounding the entire typed text.  You can also use /hsa /hta /hya to fire off a bubble at the moment of your attack.
+             * New graves and hats. Animated stars in the frontend and a new theme. Add missing graphics and maps.
+             * Two new taunts - a /shrug and /juggle -ing.
+             * New mobster voice! A remake of the default voice set. New theme music.
+             * New game modes. Karma, any injury you caused (not including drowning) is dealt to you too, unless invulnerable.  Vampirism, where you feed off damage you deal, gaining 80% of it.  Artillery, where your hog can not move about.
+             * Options to control mine quantity and timer.  Those are made use of in a Minefield scheme/weapon set as one of the default sets.
+             * The sniper rifle demonstrated in previous news post.
+             * Various fixes such as: prevent desync when a player quits, fix a crash at end of game in reduced quality, bug in synching changes to map and scheme in room, fix bug in disconnection from server, hedgehogs keep hats while jumping, bug in rope/parachute when drowning with active girder/teleport, bug in rope that on rare occasion deleted it on firing.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2009-04-16</Date>
+                <Version>0.9.10</Version>
+                <Comment>Updated Turkish translation.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="5">
+                <Date>2009-04-16</Date>
+                <Version>0.9.10</Version>
+                <Comment>Version bump :
+             * Many many more terrain generation options, maps can be huge, very small, caverns, caves, stepping stones, etc.
+             * To accompany these new terrain generation options there are new themes and musical tracks
+             * On top of this there are a ton of brand new preset maps, have your hogs fight on city scapes and lazy old men in hammocks!
+             * Lots of new hats (total of 79 now!) and to add to the hats, some new voice work
+             * A new type of weapon called a utility has been added, these weapons drop in utiltiy crates and boost your hedgehogs abilities, low gravity, laser sight, extra time, extra damage, forcefield
+             * Alongside weaponsets we now have &quot;scheme sets&quot;, this means you can save gameplay options into a scheme for later use. We&apos;ve also added a whole load more options for you to use in your schemes, you can add borders to any map, disable mines, enable low gravity, make all hogs invincible, and more.
+             * The server has been given a major upgrade, you can now reserve your name with your hedgewars.org account. At the moment there are no stats in game, but we may already begin tracking them to display them later, so remember to log in! We are also integrating the game with the website.
+             * A new Despeckling gameplay feature removes stray pixels from the terrain after fires/big explosions
+             * Graphics updates, language updates, music and sound updates across the board
+             * Demos can now be played without the frontend
+             * Weapons and hogs can now bounce off of the water if they hit it at the right speed/angle.. this can be used in a very interesting way with the rope ;)
+             * Hedgewars can now generate your team for you if you&apos;re feeling lazy, it also generates random teams for &quot;quick play&quot; mode, and even uses appropriate hats. I.e. it will generate a ninja team, with ninja names/hats!
+             * Changed girder functionality completely to make it a much more interesting and fun weapon!
+             * Many more fixes and feature.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-01-20</Date>
+                <Version>0.9.9</Version>
+                <Comment>Version bump :
+             * Voicepacks, customize your teams voice!
+             * Nice new visual statistics page after the match
+             * Precise aiming, hold shift to aim more accurately
+             * Improved lobby chat
+             * Remote Control Plane weapon
+             * A couple of additions to customization content (i.e. grave / fort / hat content)
+             * Additional sound effects
+             * Various tweaks and bug fixes</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-01-08</Date>
+                <Version>0.9.8</Version>
+                <Comment>Version bump :
+             * Better menu icon
+             * Massive number of network play bugfixes
+             * Now spectating works for those who joined after game start
+             * New Drill rocket weapon
+             * New Napalm strike weapon
+             * New Super awesome super weapon
+             * Land can now be set to be indestructable
+             * Six brand new maps using new themes
+             * Lots of new forts
+             * Hellish hand grenade reworked
+             * Brand new lobby and lobby chat
+             * Spread of Melon Bomb fragments improved
+             * Blowtorch bug fixes and improvements
+             * Fixed a crash bug that occured when the engine had no room to place all Hedgehogs
+             * More delay after jump, less delay after small fall for hedgehog
+             * Limit max chat message length to 300 characters
+             * Ammo menu no longer closes when user clicks on not yet available weapon
+             * Ammo scheme bug fixes
+             * Fire effect improved</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-11-11</Date>
+                <Version>0.9.7</Version>
+                <Comment>Start fullscreen by default.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2008-11-10</Date>
+                <Version>0.9.7</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>wormux-bonusmaps</Name>
+            <Homepage>http://www.wormux.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>game.strategy</PartOf>
+            <Summary xml:lang="en">Wormux Bonus Maps</Summary>
+            <Summary xml:lang="tr">Wormux Ek Haritalar</Summary>
+            <Description xml:lang="en">wormux-bonusmaps contains extra maps for Wormux.</Description>
+            <Description xml:lang="tr">wormux-bonusmaps Wormux için ek haritalar içerir.</Description>
+            <Archive type="targz" sha1sum="67b91b0871d35275e42bfbb31a203572e4e09130">http://download.gna.org/wormux/Wormux-BonusMaps-20100501.tar.gz</Archive>
+            <SourceURI>game/strategy/wormux-bonusmaps/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>wormux-bonusmaps</Name>
+            <RuntimeDependencies>
+                <Dependency>wormux</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="data">/usr/share/wormux/map</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-09-29</Date>
+                <Version>0.1_20100501</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2010-04-17</Date>
+                <Version>0.1_20100221</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2010-01-28</Date>
+                <Version>0.1_20100107</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2009-10-24</Date>
+                <Version>0.1</Version>
+                <Comment>Remove redundant maps</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2009-05-08</Date>
+                <Version>0.1</Version>
+                <Comment>First release</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>pingus</Name>
+            <Homepage>http://pingus.seul.org/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">Lemmings clone</Summary>
+            <Summary xml:lang="tr">Lemmings benzeri beceri oyunu</Summary>
+            <Description xml:lang="en">Pingus is a free clone of the famous Lemmings game.</Description>
+            <Description xml:lang="tr">Pingus ünlü Lemmings oyununun benzeridir.</Description>
+            <Icon>pingus</Icon>
+            <Archive type="tarbz2" sha1sum="ca7fe5cea65fb3392d1e81056a879831925502f2">http://pingus.seul.org/files/pingus-0.7.3.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>physfs</Dependency>
+                <Dependency>boost-devel</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">datadir.patch</Patch>
+                <Patch level="1">fullscreen.patch</Patch>
+                <Patch>pingus-0.7.2-gcc44.patch</Patch>
+            </Patches>
+            <SourceURI>game/puzzle/pingus/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>pingus</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>sdl-image</Dependency>
+                <Dependency>physfs</Dependency>
+                <Dependency>boost</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc/pingus</Path>
+                <Path fileType="data">/usr/share/pingus</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/pingus.desktop" permission="0644" owner="root">pingus.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/pingus.png" permission="0644" owner="root">pingus.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2010-08-29</Date>
+                <Version>0.7.3</Version>
+                <Comment>Version bump, strict doc dir.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-07-26</Date>
+                <Version>0.7.2</Version>
+                <Comment>Remove strict part of dependencies
+                Fix for gcc44</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-11-11</Date>
+                <Version>0.7.2</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-04-04</Date>
+                <Version>0.7.2</Version>
+                <Comment>gcc-4.3 patch added</Comment>
+                <Name>Gökçen Eraslan</Name>
+                <Email>gokcen@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-11-01</Date>
+                <Version>0.7.2</Version>
+                <Comment>Version bump, many new small but nice features and some bugfixes</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-09-24</Date>
+                <Version>0.7.1</Version>
+                <Comment>Version bump, many core components have been rewritten and cleaned up</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-09-04</Date>
+                <Version>0.6.0</Version>
+                <Comment>Remove buggy translation</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-12</Date>
+                <Version>0.6.0</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>ltris</Name>
             <Homepage>http://lgames.sourceforge.net/?project=LTris</Homepage>
             <Packager>
@@ -2215,6 +3605,107 @@
                 <Comment>First release</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>neverball</Name>
+            <Homepage>http://icculus.org/neverball/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">3D roll-the-ball game</Summary>
+            <Summary xml:lang="tr">3B top yuvarlama oyunu</Summary>
+            <Description xml:lang="en">Neverball is a 3D puzzle and action game in which you roll a ball by tilting the table to get the ball to a destination location.</Description>
+            <Description xml:lang="tr">Neverball masayı hareket ettirerek topun hareketlerinin yönetildiği 3B zeka ve beceri oyunudur.</Description>
+            <Archive type="targz" sha1sum="619c227e1958bd60738f12dbbde9b30c91dd79a7">http://icculus.org/neverball/neverball-1.5.4.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>physfs</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/puzzle/neverball/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>neverball</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-ttf</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>physfs</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/neverball</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="localedata">/usr/share/locale</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/neverball.desktop" permission="0644" owner="root">neverball.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/neverputt.desktop" permission="0644" owner="root">neverputt.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="6">
+                <Date>2009-12-15</Date>
+                <Version>1.5.4</Version>
+                <Comment>Add missing physfs dependency, close the bug #11726.</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2009-09-23</Date>
+                <Version>1.5.4</Version>
+                <Comment>Version bump to fix inconsistent quoting in error messages</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-09-13</Date>
+                <Version>1.5.3</Version>
+                <Comment>Version bump to fix game startup</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-08-26</Date>
+                <Version>1.5.2</Version>
+                <Comment>Version bump
+                Drag-and-drop ZIP archive support for installing game data (including level sets)
+                No limits on the number of replays and sets you can have
+                A more organized user directory layout
+                The long-awaited ball selection screen was finally added
+                Much improved ball control while in air
+                A new volcano environment accompanied with original background music
+                Slightly improved fake shadow
+                UI tweaks across the board and many bug fixes</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2009-07-26</Date>
+                <Version>1.5.1</Version>
+                <Comment>Version bump</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-09</Date>
+                <Version>1.4.0</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2577,6 +4068,77 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>blockout2</Name>
+            <Homepage>http://www.blockout.net/blockout2/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">3D Tetris Game</Summary>
+            <Summary xml:lang="tr">Üç boyutlu tetris oyunu</Summary>
+            <Description xml:lang="en">Blockout2 is a free adaptation of the original BlockOut DOS game edited by California Dreams in 1989. BlockOut II has the same features of the original game with few graphic improvements. The score calculation is also nearly similar to the original game. BlockOut II has been designed by an addicted player for addicted players.</Description>
+            <Description xml:lang="tr">Blockout2, California Dreams şirketinin 1989 yılında piyasaya sürdüğü Blockout oyununun özgür adaptasyonudur. Grafik geliştirmeler içerir. Skor hesaplaması neredeyse aynıdır.</Description>
+            <Icon>blockout2</Icon>
+            <Archive type="targz" sha1sum="07cb842db02f16e946f81da75d69a99231f3e393">mirrors://sourceforge/blockout/bl24-src-linux-i586.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">datadir.patch</Patch>
+                <Patch level="1">sdlroot.patch</Patch>
+                <Patch level="1">imagelib.patch</Patch>
+                <Patch level="1">imagelib-flags.patch</Patch>
+                <Patch level="1">exename.patch</Patch>
+            </Patches>
+            <SourceURI>game/puzzle/blockout2/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>blockout2</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/blockout2</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/blockout2.desktop" permission="0644" owner="root">blockout2.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/blockout2.png" permission="0644" owner="root">blockout2.png</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2008-11-11</Date>
+                <Version>2.4</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-01-09</Date>
+                <Version>2.4</Version>
+                <Comment>Version bump to stable tarball</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-09-13</Date>
+                <Version>0.0_200709123</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>pathological</Name>
             <Homepage>http://pathological.sourceforge.net/</Homepage>
             <Packager>
@@ -2651,6 +4213,78 @@
                 <Comment>First release</Comment>
                 <Name>Onur Küçük</Name>
                 <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>amoebax</Name>
+            <Homepage>http://www.emma-soft.com/games/amoebax</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>FreeArt</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.puzzle</PartOf>
+            <Summary xml:lang="en">A cute and addictive action-puzzle game</Summary>
+            <Description xml:lang="en">Due to an awful mutation, some amoeba&apos;s have started to multiply and they will take hold of the world if you can&apos;t stop them. Fortunately the mutation made them too unstable and lining up four or more will kill them.</Description>
+            <Icon>amoebax</Icon>
+            <Archive type="tarbz2" sha1sum="0d0e38dac1280bed3a16f5bc4e60b69ba513180e">http://www.emma-soft.com/games/amoebax/download/amoebax-0.2.1.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency versionFrom="1.2.11">libsdl</Dependency>
+                <Dependency versionFrom="1.2.5">sdl-image</Dependency>
+                <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
+                <Dependency>libvorbis</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/puzzle/amoebax/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>amoebax</Name>
+            <RuntimeDependencies>
+                <Dependency versionFrom="1.2.11">libsdl</Dependency>
+                <Dependency versionFrom="1.2.5">sdl-image</Dependency>
+                <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
+                <Dependency>libvorbis</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/amoebax</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/icons</Path>
+                <Path fileType="man">/usr/share/man</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2009-07-20</Date>
+                <Version>0.2.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-04-17</Date>
+                <Version>0.2.0</Version>
+                <Comment>gcc43 patch added</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-09-29</Date>
+                <Version>0.2.0</Version>
+                <Comment>Removed a music file which made strange noises on some systems.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-09-17</Date>
+                <Version>0.2.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Uğur Çetin</Name>
+                <Email>jnmbk@users.sourceforge.net</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2775,6 +4409,106 @@
                 <Comment>First release</Comment>
                 <Name>Onur Küçük</Name>
                 <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>teeworlds</Name>
+            <Homepage>http://www.teeworlds.com</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.action</PartOf>
+            <Summary xml:lang="en">Online multi-player platform 2D shooter</Summary>
+            <Summary xml:lang="tr">Ağ üzerinden oynanabilen 2 boyutlu ateş etme oyunu</Summary>
+            <Description xml:lang="en">Teeworlds features cartoon-themed graphics and physics, and relies heavily on classic shooter weaponry and gameplay.</Description>
+            <Description xml:lang="tr">Teeworld eğlenceli grafik ve fizik kuralları olan, klasik ateş etme oyunu ve silahlarına dayanan 2 boyutlu bir oyundur.</Description>
+            <Icon>teeworlds</Icon>
+            <Archive type="targz" sha1sum="26d8059b1ad81ca6959b96fd3ff881f9db7550ef">http://www.teeworlds.com/files/teeworlds-0.5.2-src.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glut</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>alsa-lib</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>mesa</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">bam.patch</Patch>
+                <Patch level="1">respect-flags.patch</Patch>
+                <Patch level="1">png_alloc.patch</Patch>
+                <Patch level="1">use-system-libs.patch</Patch>
+            </Patches>
+            <SourceURI>game/action/teeworlds/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>teeworlds</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>mesa</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/teeworlds</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/teeworlds.desktop" permission="0644" owner="root">teeworlds.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/pixmaps/teeworlds.png" permission="0644" owner="root">teeworlds.png</AdditionalFile>
+                <AdditionalFile target="/usr/share/teeworlds/cfg/sample-dm.cfg" permission="0644" owner="root">sample-dm.cfg</AdditionalFile>
+                <AdditionalFile target="/usr/share/teeworlds/cfg/sample-tdm.cfg" permission="0644" owner="root">sample-tdm.cfg</AdditionalFile>
+                <AdditionalFile target="/usr/share/teeworlds/cfg/sample-ctf.cfg" permission="0644" owner="root">sample-ctf.cfg</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-03-07</Date>
+                <Version>0.5.2</Version>
+                <Comment>Reown and version bump. Fixes #11557. ChangeLog:
+                 - Purely a maintenance release, addresses a server crash bug,
+                 - Clears up some GUI issues and many small improvements.</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-05-04</Date>
+                <Version>0.5.1</Version>
+                <Comment>Remove unnecessary exports and strict dependencies, add missing mesa dependency</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-04-04</Date>
+                <Version>0.5.1</Version>
+                <Comment>Remove unused patch, update summary and description, add translations.xml</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2009-02-10</Date>
+                <Version>0.5.1</Version>
+                <Comment>* Version bump, add libsdl and glut dependency, takeover package
+                * Add sample config files, update icons, overhaul patches
+                * Move from glfw+portaudio to SDL
+                * Voting, ban, demo play/recording support
+                * Game balance fixes, support up to 16 players
+                * Vsync fixed, tab completion in console
+                * Prediction and game timer fixed so the game should be a lot smoother now.</Comment>
+                <Name>H. İbrahim Güngör</Name>
+                <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2008-09-20</Date>
+                <Version>0.4.3</Version>
+                <Comment>First release</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3018,6 +4752,86 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>foobillard</Name>
+            <Homepage>http://foobillard.sunsite.dk/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.sports</PartOf>
+            <Summary xml:lang="de">3D Billiardspiel</Summary>
+            <Summary xml:lang="en">3D billard game</Summary>
+            <Summary xml:lang="tr">3B bilardo oyunu</Summary>
+            <Description xml:lang="en">FooBillard is a 3D 8ball, 9ball, snooker and carambol game.</Description>
+            <Description xml:lang="tr">FooBillard, 8 top, 9 top, snooker ve karambol oynanabilen üç boyutlu bilardo oyunudur.</Description>
+            <Archive type="targz" sha1sum="1caa51a201b55883640b5c5b1e9fde20fc71a095">ftp://ftp.pardus.org.tr/pub/source/2009/foobillard-3.0a.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libXaw</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>foobillard-3.0a-no_nvidia.patch</Patch>
+                <Patch level="1">foobillard-3.0a-as-needed.patch</Patch>
+            </Patches>
+            <SourceURI>game/sports/foobillard/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>foobillard</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>mesa</Dependency>
+                <Dependency>libXi</Dependency>
+                <Dependency>libXaw</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/foobillard</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/foobillard.desktop" permission="0644" owner="root">foobillard.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2010-08-29</Date>
+                <Version>3.0a</Version>
+                <Comment>Fix archive url</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-07-26</Date>
+                <Version>3.0a</Version>
+                <Comment>Make package as-needed compatible</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-11-11</Date>
+                <Version>3.0a</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-02-14</Date>
+                <Version>3.0a</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>maniadrive</Name>
             <Homepage>http://maniadrive.raydium.org/</Homepage>
             <Packager>
@@ -3176,6 +4990,77 @@
                 <Comment>First release.</Comment>
                 <Name>H. İbrahim Güngör</Name>
                 <Email>h.ibrahim.gungor@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>funnyboat</Name>
+            <Homepage>http://funnyboat.sourceforge.net/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <License>MIT</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Steamboat arcade</Summary>
+            <Summary xml:lang="tr">Buharlı gemi oyunu</Summary>
+            <Description xml:lang="en">Funnyboat is a side scrolling arcade shooter game on a steamboat equipped with a cannon and the ability to jump.</Description>
+            <Description xml:lang="tr">Güllesiyle ateş etme ve zıplama yeteneğiyle buharlı geminizi kullanarak denizlerde ilerleyin.</Description>
+            <Icon>funnyboat</Icon>
+            <Archive type="zip" sha1sum="f4a29004cba58237919c8f0f52bf6c39a5521d0d">mirrors://sourceforge/funnyboat/funnyboat-1.5-src.zip</Archive>
+            <BuildDependencies>
+                <Dependency>pygame</Dependency>
+            </BuildDependencies>
+            <SourceURI>game/arcade/funnyboat/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>funnyboat</Name>
+            <RuntimeDependencies>
+                <Dependency>pygame</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/funnyboat</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/funnyboat.desktop" permission="0644" owner="root">funnyboat.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/bin/funnyboat" permission="0755" owner="root">funnyboat</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2008-11-11</Date>
+                <Version>1.5</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-04-18</Date>
+                <Version>1.5</Version>
+                <Comment>Stable bump</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-03-15</Date>
+                <Version>1.4</Version>
+                <Comment>Bump to fix gamepad play and use the new licensed game data</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-09-06</Date>
+                <Version>1.3</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -3662,6 +5547,62 @@
     </SpecFile>
     <SpecFile>
         <Source>
+            <Name>crack-attack-sounds</Name>
+            <Homepage>http://www.miguev.net/misc/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Sounds for Crack Attack</Summary>
+            <Summary xml:lang="tr">Crack Attack sesleri</Summary>
+            <Description xml:lang="en">Additional files for Crack Attack game to add sound in-game.</Description>
+            <Description xml:lang="tr">Paket, Crack Attack oyunu ses dosyalarını içerir.</Description>
+            <Icon>crack-attack</Icon>
+            <Archive type="targz" sha1sum="cdbd5b0f7ebda50d38969506cbf47ee528ed1571">ftp://ftp.pardus.org.tr/pub/source/2009/crack-attack-sounds.tar.gz</Archive>
+            <SourceURI>game/arcade/crack-attack-sounds/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>crack-attack-sounds</Name>
+            <Files>
+                <Path fileType="data">/usr/share/crack-attack</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="4">
+                <Date>2010-08-29</Date>
+                <Version>1</Version>
+                <Comment>Update archive address.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2009-07-20</Date>
+                <Version>1</Version>
+                <Comment>Update archive address, add icon tag</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-11-21</Date>
+                <Version>1</Version>
+                <Comment>Changed isa tag</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-03-05</Date>
+                <Version>1</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
             <Name>lbreakout2</Name>
             <Homepage>http://lgames.sourceforge.net</Homepage>
             <Packager>
@@ -3753,6 +5694,99 @@
                 <Date>2006-02-15</Date>
                 <Version>2.6_beta5</Version>
                 <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>crack-attack</Name>
+            <Homepage>http://www.nongnu.org/crack-attack/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">3D Tetris Attack like game</Summary>
+            <Summary xml:lang="tr">3B Tetris Attack oyunu</Summary>
+            <Description xml:lang="en">Crack Attack! is a fast-paced puzzle game inspired by the classic Super NES title Tetris Attack.</Description>
+            <Description xml:lang="tr">Crack Attack, Tetris Attack oyunundan esinlenerek yazılmış heyecanlı bir bulmaca oyunudur.</Description>
+            <Icon>crack-attack</Icon>
+            <Archive type="targz" sha1sum="fbf445f95d77267d23a766a485fd55edbd333bb4">http://savannah.nongnu.org/download/crack-attack/crack-attack-1.1.14.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>glut</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency versionFrom="2.18.5">gtk2</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>crack-attack-1.1.14-glut.patch</Patch>
+                <Patch>crack-attack-1.1.14-gcc43.patch</Patch>
+            </Patches>
+            <SourceURI>game/arcade/crack-attack/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>crack-attack</Name>
+            <RuntimeDependencies>
+                <Dependency>glut</Dependency>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency versionFrom="2.18.5">gtk2</Dependency>
+                <Dependency>crack-attack-sounds</Dependency>
+                <Dependency>crack-attack-music</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="data">/usr/share/crack-attack</Path>
+                <Path fileType="doc">/usr/share/doc/crack-attack</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/pixmaps/crack-attack.xpm" permission="0644" owner="root">crack-attack.xpm</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/crack-attack.desktop" permission="0644" owner="root">crack-attack.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/crack-attack/preview_normal.tga" permission="0644" owner="root">preview_normal.tga</AdditionalFile>
+                <AdditionalFile target="/usr/share/crack-attack/preview_reduced.tga" permission="0644" owner="root">preview_reduced.tga</AdditionalFile>
+                <AdditionalFile target="/usr/share/crack-attack/preview_extremely_reduced.tga" permission="0644" owner="root">preview_extremely_reduced.tga</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-04-28</Date>
+                <Version>1.1.14</Version>
+                <Comment>Fix TGA preview files (bug #12029).</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-07-20</Date>
+                <Version>1.1.14</Version>
+                <Comment>Update doc path, remove strict deps for 2009; add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2008-11-11</Date>
+                <Version>1.1.14</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-04-14</Date>
+                <Version>1.1.14</Version>
+                <Comment>Compile with gcc43</Comment>
+                <Name>Murat Şenel</Name>
+                <Email>muratasenel@gmail.com</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-03-04</Date>
+                <Version>1.1.14</Version>
+                <Comment>First release by Atamert Ölçgen + some fix ups</Comment>
                 <Name>Onur Küçük</Name>
                 <Email>onur@pardus.org.tr</Email>
             </Update>
@@ -3875,6 +5909,157 @@
                 <Comment>First release</Comment>
                 <Name>Furkan Duman</Name>
                 <Email>coderlord@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>crack-attack-music</Name>
+            <Homepage>http://www.miguev.net/misc/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>data</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Music for Crack Attack</Summary>
+            <Summary xml:lang="tr">Crack Attack müzikleri</Summary>
+            <Description xml:lang="en">Additional files for Crack Attack game to add music in-game.</Description>
+            <Description xml:lang="tr">Paket, Crack Attack oyununun müzik dosyalarını içerir.</Description>
+            <Icon>crack-attack</Icon>
+            <Archive type="targz" sha1sum="4bb95c0d0481e5b676b33f7ca6f35e92bf8319d6">ftp://ftp.pardus.org.tr/pub/source/2009/crack-attack-miguev-music.tar.gz</Archive>
+            <SourceURI>game/arcade/crack-attack-music/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>crack-attack-music</Name>
+            <Files>
+                <Path fileType="data">/usr/share/crack-attack</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2010-08-29</Date>
+                <Version>2</Version>
+                <Comment>Update archive address.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2009-07-20</Date>
+                <Version>2</Version>
+                <Comment>Update archive address, add icon tag.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2006-11-21</Date>
+                <Version>2</Version>
+                <Comment>Changed isa tag</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-04-17</Date>
+                <Version>2</Version>
+                <Comment>Switch to miguevs files</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-03-05</Date>
+                <Version>1</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>ppracer</Name>
+            <Homepage>http://developer.berlios.de/projects/ppracer/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>game.arcade</PartOf>
+            <Summary xml:lang="en">Penguin race on ice</Summary>
+            <Summary xml:lang="tr">Buz üzerinde penguen yarışı</Summary>
+            <Description xml:lang="en">Planet Penguin Racer is a race against time on ice, while collecting fish trying to finish courses.</Description>
+            <Description xml:lang="tr">Planet Penguin racer, buz üzerinde kayarak ve balık toplayarak zamana karşı yarışma oyunudur.</Description>
+            <Icon>ppracer</Icon>
+            <Archive type="targz" sha1sum="823997d62780c2010be59e9e7978d4f322acc822">http://cekirdek.pardus.org.tr/~onur/distfiles/ppracer-cvs.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>glut</Dependency>
+                <Dependency>tcl</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch level="1">ppracer-turkish.patch</Patch>
+                <Patch level="1">candy.patch</Patch>
+                <Patch>gcc43.patch</Patch>
+            </Patches>
+            <SourceURI>game/arcade/ppracer/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>ppracer</Name>
+            <RuntimeDependencies>
+                <Dependency>libsdl</Dependency>
+                <Dependency>sdl-mixer</Dependency>
+                <Dependency>glut</Dependency>
+                <Dependency>tcl</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="data">/usr/share/applications</Path>
+                <Path fileType="doc">/usr/share/doc</Path>
+                <Path fileType="data">/usr/share/ppracer</Path>
+                <Path fileType="data">/usr/share/pixmaps</Path>
+            </Files>
+            <AdditionalFiles>
+                <AdditionalFile target="/usr/share/applications/ppracer.desktop" permission="0644" owner="root">ppracer.desktop</AdditionalFile>
+                <AdditionalFile target="/usr/share/applications/ppracer-multiplayer.desktop" permission="0644" owner="root">ppracer-multiplayer.desktop</AdditionalFile>
+            </AdditionalFiles>
+        </Package>
+        <History>
+            <Update release="5">
+                <Date>2009-09-11</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>Change Name in multiuser desktop file to make sure both are seen on menu, fixes bug #11126</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2008-11-11</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>Fix desktop files to make them XDG compliant</Comment>
+                <Name>Ozan Çağlayan</Name>
+                <Email>ozan@pardus.org.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-01-13</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>Lots of bugfixes including #4595</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2006-08-23</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>Turkish translation by Uğur Çetin</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-08-20</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>First release</Comment>
+                <Name>Onur Küçük</Name>
+                <Email>onur@pardus.org.tr</Email>
             </Update>
         </History>
     </SpecFile>
