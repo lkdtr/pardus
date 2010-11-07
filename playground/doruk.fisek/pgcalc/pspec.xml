@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>pgcalc</Name>
+        <Homepage>http://www.pgcalc.net</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>pgcalc</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Powerful scientific skinnable calculator</Summary>
+        <Description>PG Calculator works in algebraic and RPN mode. This calculator recognizes real and complex numbers and allows simple vectors manipulations. The calculator works with 120 units of measure and other possibility to make easy conversions between consistent units. PG Calculator allows user-defined variables. The numbers can be used in binary, octal, hexadecimal and exponential formats. It has about 80 built-in functions.</Description>
+        <Archive sha1sum="9934716834f5f01fa388d189b15757018822c1e6" type="targz">http://www.pgcalc.net/pgcalc2-2.2-10.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>qt3</Dependency>
+        </BuildDependencies>
+            <!--
+        <Patches>
+            <Patch level="1"></Patch>
+        </Patches>
+            -->
+    </Source>
+
+    <Package>
+        <Name>pgcalc</Name>
+        <RuntimeDependencies>
+            <Dependency>kdelibs</Dependency>
+            <Dependency>qt3</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/</Path>
+        </Files>
+        <!--
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/pgcalc.desktop">pgcalc.desktop</AdditionalFile>
+        </AdditionalFiles>
+        -->
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-11-07</Date>
+            <Version>2.2</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

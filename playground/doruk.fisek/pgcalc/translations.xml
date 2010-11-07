@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>pgcalc</Name>
+        <Summary xml:lang="tr">Güçlü Bilimsel Hesap Makinesi</Summary>
+        <Description xml:lang="tr">PG Calculator cebir ya da RPN modunda çalışır. Gerçel ve karmaşık sayıları tanır ve basit vektörel işlemlerle olanak tanır. 120 ölçü birimi ile çalışabilir, birimler arası çevirim yapabilir. Kullanıcı tanımlı değişkenleri de destekler. Sayılar ikili, sekizli, onaltılı ve üstel olarak kullanılabilir. Tema desteği ile görüntüsü kolaylıkla değiştirilebilir. 80'e yakın hazır fonksiyonu bulunuyor.</Description>
+    </Source>
+</PISI>
