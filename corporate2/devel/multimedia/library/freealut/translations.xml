@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>freealut</Name>
+        <Summary xml:lang="tr">Açık ses kütüphanesi Openal aletleri</Summary>
+        <Description xml:lang="tr">freealut, OpenAL'nin ALUT standardının özgür bir uyarlamasıdır.</Description>
+        <Summary xml:lang="fr">Boîte à outils utilitaire d'OpenAL.</Summary>
+        <Description xml:lang="fr">Boîte à outils utilitaire d'OpenAL.</Description>
+        <Summary xml:lang="de">Die OpenAL Werkzeugsammlung</Summary>
+        <Description xml:lang="de">Die OpenAL Werkzeugsammlung</Description>
+    </Source>
+</PISI>
