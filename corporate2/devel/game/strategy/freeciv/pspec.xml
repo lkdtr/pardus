@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Multiplayer strategy game</Summary>
         <Description>Freeciv is a free turn-based multiplayer strategy game in which each player becomes the leader of a civilization, fighting to obtain the ultimate goal: To become the greatest civilization.</Description>
-        <Archive sha1sum="b306374d5e2e118393b23ff9a0b1a8d391b36c82" type="tarbz2">mirrors://sourceforge/freeciv/freeciv-2.2.2.tar.bz2</Archive>
+        <Archive sha1sum="8552c071c39f32c948a80ae74d95be4c9bdfcc16" type="tarbz2">mirrors://sourceforge/freeciv/freeciv-2.2.3.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency versionFrom="2.18.5">gtk2</Dependency>
             <Dependency versionFrom="1.2.11">libsdl</Dependency>
@@ -49,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="16">
+            <Date>2010-11-30</Date>
+            <Version>2.2.3</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="15">
             <Date>2010-08-30</Date>
             <Version>2.2.2</Version>
