@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Open Street Map (OSM) Offline Editor</Summary>
         <Description>JOSM is a feature-rich offline editor for the experienced OSM mapper. It supports stand alone GPX tracks, GPX track data from the OSM database and existing nodes, line segments and metadata tags from the OSM database.</Description>
-        <Archive sha1sum="20fd1aa505df8ca82105b04344b5b526d090f156" type="tarlzma">http://zzz.fisek.com.tr/files/sources/josm-3376.tar.lzma</Archive>
+        <Archive sha1sum="5cdcaa3dda5e82b13dfd80e4f0025239524c36a9" type="tarxz">http://josm.fabian-fingerle.de/josm-3592.tar.xz</Archive>
         <BuildDependencies>
             <Dependency>sun-jdk</Dependency>
             <Dependency>ant</Dependency>
@@ -39,6 +39,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2010-12-02</Date>
+            <Version>1.5_p3592</Version>
+            <Comment>Version bump to latest stable.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2010-07-21</Date>
             <Version>1.5_p3376</Version>
