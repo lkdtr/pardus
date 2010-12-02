@@ -22,6 +22,7 @@ def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
 
     pisitools.remove("/usr/share/icons/ltris48.gif")
+    pisitools.removeDir("/usr/share/icons")
     pisitools.insinto("/usr/share/pixmaps", "icons/ltris48.xpm")
     pisitools.domo("po/tr.po", "tr", "ltris.mo")
 
