@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Bouncing balls puzzle game</Summary>
         <Description>The polished successor to LBreakout offers you a new challenge in more than 50 levels with loads of new bonuses (goldshower, joker, explosive balls, bonus magnet, ...), maluses (chaos, darkness, weak balls, malus magnet, ...) and special bricks (growing bricks, explosive bricks, regenerative bricks, indestructible bricks, chaotic bricks). And if you're through with all the levels you can create complete new levelsets with the integrated easy-to-use level editor or challenge other people via LAN or Internet in either deathmatch or normal levelsets.</Description>
-        <Archive sha1sum="c2c6ed38345774dfef9bc88bc24df6c8a80ed428" type="targz">mirrors://sourceforge/lgames/lbreakout2-2.6.1.tar.gz</Archive>
+        <Archive sha1sum="dc0bdde272351945b48a09277275ac3fd5d513f4" type="targz">mirrors://sourceforge/lgames/lbreakout2-2.6.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
@@ -45,6 +45,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2010-12-02</Date>
+            <Version>2.6.2</Version>
+            <Comment>Version bump, remove empty dir</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2009-12-24</Date>
             <Version>2.6.1</Version>
