@@ -1,5 +1,5 @@
---- po/tr.po.orig	2009-12-24 13:16:21.000000000 +0200
-+++ po/tr.po	2009-12-25 00:10:11.000000000 +0200
+--- po/tr.po.orig	2010-12-02 22:41:50.647015379 +0200
++++ po/tr.po	2010-12-02 22:50:17.611014493 +0200
 @@ -17,27 +17,27 @@
  #: client/chart.c:159
  #, c-format
@@ -48,7 +48,7 @@
 -msgstr "Yüksek puanlar tablosunun kaydedildiği yer: %s\n"
 +msgstr "Yuksek puanlar tablosunun kaydedildigi yer: %s\n"
  
- #: client/chart.c:216 client/chart.c:346
+ #: client/chart.c:216 client/chart.c:347
  msgid "Name      Level Score"
 @@ -69,17 +69,17 @@
  #, c-format
@@ -57,13 +57,13 @@
 -"Yüksek puanlar tablosu düzgün olarak yüklendi ama kaydedilemiyor mu? (%s)\n"
 +"Yuksek puanlar tablosu duzgun olarak yuklendi ama kaydedilemiyor mu? (%s)\n"
  
- #: client/chart.c:406
+ #: client/chart.c:407
  #, c-format
  msgid "First chart query for '%s'. Creating this chart.\n"
 -msgstr "'%s' için ilk tablo sorgusu. Tablo oluşturuluyor.\n"
 +msgstr "'%s' icin ilk tablo sorgusu. Tablo olusturuluyor.\n"
  
- #: client/chart.c:419
+ #: client/chart.c:420
  #, c-format
  msgid "Chart index '%i' is out of range!\n"
 -msgstr "Tablo dizini '%i' kapsamdışı!\n"
@@ -540,12 +540,12 @@
  #: client/editor.c:484
  msgid "Discard All Changes? y/n"
 -msgstr "Tüm Değişiklikler İptal Edilsin mi? e/h"
-+msgstr "Tum DegisIklikler Iptal Edilsin mi? e/h"
++msgstr "Tum Degisiklikler Iptal Edilsin mi? e/h"
  
  #: client/editor.c:494
  msgid "Save Changes? y/n"
 -msgstr "Değişiklikler Kaydedilsin mi? e/h"
-+msgstr "DegisIklikler Kaydedilsin mi? e/h"
++msgstr "Degisiklikler Kaydedilsin mi? e/h"
  
  #: client/editor.c:498
  msgid "Clear Level? y/n"
@@ -1134,7 +1134,7 @@
 -"  - SDL_mixer etkin kanalların sesini kapatıyor gibi görünüyor. Sesleri çok "
 -"sık açıp kapatmamalısınız"
 +"  - SDL_mixer etkin kanallarin sesini kapatiyor gibi gorunuyor. Sesleri cok "
-+"sIk acip kapatmamalisiniz"
++"sik acip kapatmamalisiniz"
  
  #: client/help.c:259
  msgid "    sounds to often as you'll propably loose all channels then."
@@ -1191,7 +1191,7 @@
  msgid "                                                 Michael Speck"
 @@ -1112,31 +1112,31 @@
  
- #: client/main.c:192
+ #: client/main.c:193
  msgid "Set Name:"
 -msgstr "Küme Adı:"
 +msgstr "Kume Adi:"
@@ -1551,7 +1551,7 @@
 -"adıyla eski görünümün yanında Linux Oyun Kitabı yarışmasını kazanan üç tema "
 -"bulunmaktadır: 'absoluteB','Oz' ve 'Moiree'.#Daha fazla tema için http://"
 -"lgames.sf.net'e bakınız."
-+"Bu menude LBreakout'un gorunumunu degistirebilirsiniz. Bu surumde, 'KlasIk' "
++"Bu menude LBreakout'un gorunumunu degistirebilirsiniz. Bu surumde, 'Klasik' "
 +"adiyla eski gorunumun yaninda Linux Oyun Kitabi yarismasini kazanan uc tema "
 +"bulunmaktadir: 'absoluteB','Oz' ve 'Moiree'.#Daha fazla tema icin http://"
 +"lgames.sf.net'e bakiniz."
@@ -1568,11 +1568,11 @@
 -"geçebilir.#-- Eğer düzey çok karmaşıksa toplar bir kırılamaz tuğlalar "
 -"serisinde sonsuza dek sıkışabilir. Ancak, otomatik geri dönüş seçeneğiyle bu "
 -"bir sorun olmaktan çıkar bu yüzden 'Küresel' öntanımlıdır."
-+"Dogrusal:#++ Toplarin sonsuz bir tugla ziplama kombosu icinde sIkisip kalmak "
++"Dogrusal:#++ Toplarin sonsuz bir tugla ziplama kombosu icinde sikisip kalmak "
 +"gibi bir sanslari yoktur.#-- Toplarin dar gecitlere girmesi oldukca zordur."
 +"##Kuresel:#++ Daha iyi gibidir ve toplar kucuk acikliklardan kolayca "
-+"gecebilir.#-- Eger duzey cok karmasIksa toplar bir kirilamaz tuglalar "
-+"serisinde sonsuza dek sIkisabilir. Ancak, otomatik geri donus secenegiyle bu "
++"gecebilir.#-- Eger duzey cok karmasiksa toplar bir kirilamaz tuglalar "
++"serisinde sonsuza dek sikisabilir. Ancak, otomatik geri donus secenegiyle bu "
 +"bir sorun olmaktan cikar bu yuzden 'Kuresel' ontanimlidir."
  
  #: client/manager.c:118
@@ -1633,7 +1633,7 @@
  #: client/manager.c:130
  msgid "The complete levelset of LBreakout1 with just minor modifications."
 -msgstr "Sadece küçük değişikliklerle LBreakout1'in tüm düzey kümesi."
-+msgstr "Sadece kucuk degisIkliklerle LBreakout1'in tum duzey kumesi."
++msgstr "Sadece kucuk degisikliklerle LBreakout1'in tum duzey kumesi."
  
  #: client/manager.c:131
  msgid ""
@@ -1738,7 +1738,7 @@
 -"daha fazla sayıda vurdukça sonraki tuğla için alacağınız puan da artacaktır. "
 -"Sıradaki tuğlanın puan değerini ekranın sağ alt kısmında görebilirsiniz."
 -"##Topu kaybetmeniz sizi sonraki düzeye götürür."
-+"8 tugla bulunuyor ve top tavanin ortasinda yapisIk duruyor. Serbest "
++"8 tugla bulunuyor ve top tavanin ortasinda yapisik duruyor. Serbest "
 +"kaldiginda, bir tugla secili hale gelir ve goreviniz de iste bu tuglayi "
 +"vurmaktir. Eger bunu yapmayi basarabilirseniz, biraz puan alirsiniz ve topun "
 +"durumu sifirlanir. Eger ILK OLARAK renkli tuglayi vurmazsaniz bu tugla diger "
@@ -2406,13 +2406,7 @@
  
  #: server/server.c:609
  msgid "addset"
-@@ -2226,17 +2226,17 @@
- 
- #: server/server.c:611
- msgid "addset: name missing"
--msgstr "addset: ad eksik"
-+msgstr "addset: ad eksIk"
- 
+@@ -2231,12 +2231,12 @@
  #: server/server.c:627
  #, c-format
  msgid "addset: file %s corrupted"
@@ -2427,31 +2421,16 @@
  
  #: server/server.c:632
  msgid "addbot"
-@@ -2244,7 +2244,7 @@
- 
- #: server/server.c:634
- msgid "addbot: name missing"
--msgstr "addbot: ad eksik"
-+msgstr "addbot: ad eksIk"
- 
- #: server/server.c:638
- #, c-format
 @@ -2253,7 +2253,7 @@
  
  #: server/server.c:642
  msgid "addbot: strength missing"
 -msgstr "addbot: güç eksik"
-+msgstr "addbot: guc eksIk"
++msgstr "addbot: guc eksik"
  
  #: server/server.c:648
  msgid "delbot"
-@@ -2261,12 +2261,12 @@
- 
- #: server/server.c:650
- msgid "delbot: name missing"
--msgstr "delbot: ad eksik"
-+msgstr "delbot: ad eksIk"
- 
+@@ -2266,7 +2266,7 @@
  #: server/server.c:654
  #, c-format
  msgid "delbot: bot '%s' not found"
@@ -2465,12 +2444,12 @@
  #: server/server.c:661
  msgid "set: variable missing"
 -msgstr "set: değişken eksik"
-+msgstr "set: degisken eksIk"
++msgstr "set: degisken eksik"
  
  #: server/server.c:665
  msgid "set: value missing"
 -msgstr "set: değer eksik"
-+msgstr "set: deger eksIk"
++msgstr "set: deger eksik"
  
  #: server/server.c:669
  msgid "userlimit"
