@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Worms clone</Summary>
         <Description>Have the mascots of your favorite free softwares battle in the Wormux arena. Exterminate your opponent in a 2D toon style scenery and a funny environment using dynamite, grenades, baseball bat, bazookas, ...</Description>
-        <Archive sha1sum="9fc39f61f2c1eb4ddd1d7ad5238e3728b9604e45" type="tarbz2">http://download.gna.org/wormux/wormux-0.9.2.1.tar.bz2</Archive>
+        <Archive sha1sum="9fc39f61f2c1eb4ddd1d7ad5238e3728b9604e45" type="tarbz2">http://download.gna.org/warmux/wormux-0.9.2.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>libxmlpp</Dependency>
