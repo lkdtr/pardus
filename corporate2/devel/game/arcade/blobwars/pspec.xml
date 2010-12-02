@@ -50,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2010-12-03</Date>
+            <Version>1.17</Version>
+            <Comment>Rebuild for new Pisi</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2010-04-28</Date>
             <Version>1.17</Version>
