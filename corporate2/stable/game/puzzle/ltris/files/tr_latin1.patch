@@ -1,5 +1,5 @@
---- po/tr.po.orig	2010-01-15 20:55:59.944557773 +0200
-+++ po/tr.po	2010-01-15 21:00:11.303559070 +0200
+--- po/tr.po.orig	2010-12-03 00:01:17.713012907 +0200
++++ po/tr.po	2010-12-03 00:02:55.429016138 +0200
 @@ -18,11 +18,11 @@
  
  #: src/manager.c:65
@@ -505,7 +505,7 @@
  
  #: src/manager.c:435
  msgid "Visualization"
-@@ -610,7 +610,7 @@
+@@ -610,11 +610,11 @@
  #: src/tetris.c:130
  #, fuzzy
  msgid "n"
@@ -514,6 +514,11 @@
  
  #: src/tetris.c:392
  msgid "End Game? y/n"
+-msgstr "Oyun Bitsin mi? e/h"
++msgstr "Oyun Bitsin mi? y/n"
+ 
+ #: src/bowl.c:523 src/bowl.c:524
+ msgid "Game Over"
 @@ -639,7 +639,7 @@
  
  #: src/chart.c:187
