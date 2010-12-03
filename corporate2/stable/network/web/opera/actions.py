@@ -9,7 +9,7 @@ from pisi.actionsapi import pisitools
 from pisi.actionsapi import shelltools
 from pisi.actionsapi import get
 
-WorkDir="%s-%s-6386.i386.linux" % (get.srcNAME(), get.srcVERSION())
+WorkDir="%s-%s-6450.i386.linux" % (get.srcNAME(), get.srcVERSION())
 
 def install():
     pisitools.dosed("install", "dest=\$PREFIX", "dest=%s/usr" % get.installDIR())
