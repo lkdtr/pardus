@@ -11,7 +11,7 @@
         <License>GPLv2</License>
         <IsA>data</IsA>
         <Summary>FingerPrint and MoodinKDE KSplash Themes</Summary>
-        <Summary xml:lang="tr">FingerPrint ve MoodinKDE KSplash Temaları</Summary>
+        <Description>Two ksplash themes that can be shown during the initialization and loading process of KDE desktop environment.</Description>
         <Archive sha1sum="357b5f64257be45b02d588e13b9993e184885727" type="targz">http://zzz.fisek.com.tr/files/sources/ksplash-engine-moodin_0.4.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>kdebase</Dependency>
@@ -55,7 +55,7 @@
         <Update release="4">
             <Date>2010-12-03</Date>
             <Version>0.4.2</Version>
-            <Comment>Rebuild for new Pisi</Comment>
+            <Comment>Rebuild for new Pisi, add description, move translations to translations.xml, remove empty directory.</Comment>
             <Name>Doruk Fişek</Name>
             <Email>dfisek@fisek.com.tr</Email>
         </Update>

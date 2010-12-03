@@ -25,5 +25,6 @@ def install():
     # Avoid file-conflicts with kdebase
     pisitools.remove("/usr/kde/3.5/lib/kde3/ksplashmoodin.so")
     pisitools.remove("/usr/kde/3.5/share/services/ksplashmoodin.desktop")
+    pisitools.removeDir("/usr/kde/3.5/share/services")
 
     pisitools.dodoc("COPYING", "AUTHORS")   

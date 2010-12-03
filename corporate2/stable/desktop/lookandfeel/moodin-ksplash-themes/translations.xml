@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>moodin-ksplash-themes</Name>
+        <Summary xml:lang="tr">FingerPrint ve MoodinKDE KSplash Temaları</Summary>
+        <Description xml:lang="tr">KDE masaüstü ortamının yüklenmesi sırasında gösterilebilen iki adet ksplash teması.</Description>
+    </Source>
+</PISI>
