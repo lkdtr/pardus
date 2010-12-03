@@ -1,0 +1,59 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>t4k_common</Name>
+        <Homepage>http://tux4kids.alioth.debian.org/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>library</IsA>
+        <Summary>Tux4Kids Common Library</Summary>
+        <Description>t4kcommon is a library of code shared between Tux4Kids games, namely Tuxmath and Tuxtype.</Description>
+        <Archive sha1sum="c07e64c9386c1a44a63e3d2db5eb1ee5d4b3632f" type="targz">http://alioth.debian.org/frs/download.php/3439/t4k_common-0.0.3.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>sdl-net</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-pango</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>t4k_common</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>cairo</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>libsdl</Dependency>
+            <Dependency>librsvg</Dependency>
+            <Dependency>sdl-net</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-pango</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/t4k_common</Path>
+            <Path fileType="doc">/usr/share/doc/t4k_common</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2010-12-03</Date>
+            <Version>0.0.3</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
