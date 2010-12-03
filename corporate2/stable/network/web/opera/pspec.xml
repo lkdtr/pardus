@@ -13,10 +13,10 @@
         <IsA>app:gui</IsA>
         <Summary>Opera web browser</Summary>
         <Description>A standards-compliant graphical Web browser.</Description>
-        <Archive sha1sum="ff41947c1a3909db182069b8fc28e02fc96bf6da" type="targz">http://get.opera.com/pub/opera/linux/1060/opera-10.60-6386.i386.linux.tar.gz</Archive>
+        <Archive sha1sum="927eaddc52321864efa324193db98743d90bd2d7" type="targz">http://get.opera.com/pub/opera/linux/1063/opera-10.63-6450.i386.linux.tar.gz</Archive>
         <Patches>
-            <Patch>remove_unused_langs_and_uninstall_file.patch</Patch>
             <Patch level="1">add_nsbrowserplugins.patch</Patch>
+            <Patch>remove_uninstall_file.patch</Patch>
             <Patch level="1">tr_desktop.patch</Patch>
         </Patches>
     </Source>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="30">
+            <Date>2010-10-20</Date>
+            <Version>10.63</Version>
+            <Comment>Version bump, see http://www.opera.com/docs/changelogs/unix/1063/ .</Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
         <Update release="29">
             <Date>2010-07-06</Date>
             <Version>10.60</Version>
