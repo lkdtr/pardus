@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>An image viewer specifically designed to handle comic books</Summary>
         <Description>QComicBook is a viewer for comic book archives (cbz, cbr, cbt). QComicBook has specific features like page preview, thumbnails view, bookmarks, manga mode for easing comicbook reading.</Description>
-        <Archive sha1sum="6ff393d09d4285ab693e1f0279b9cfce930aae56" type="targz">http://qcomicbook.linux-projects.net/releases/qcomicbook-0.7.1.tar.gz</Archive>
+        <Archive sha1sum="ac641029390ed159098f3b86421a8a18b441f833" type="targz">http://qcomicbook.linux-projects.net/releases/qcomicbook-0.7.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>qt</Dependency>
         </BuildDependencies>
@@ -36,6 +36,13 @@
     </Package>
 
     <History>
+        <Update release="9">
+            <Date>2010-12-18</Date>
+            <Version>0.7.2</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="8">
             <Date>2010-12-02</Date>
             <Version>0.7.1</Version>
