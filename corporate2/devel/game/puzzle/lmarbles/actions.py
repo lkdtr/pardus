@@ -19,5 +19,6 @@ def build():
 def install():
     autotools.rawInstall('DESTDIR="%s"' % get.installDIR())
     pisitools.remove("/usr/share/icons/lmarbles48.gif")
+    pisitools.removeDir("/usr/share/icons")
 
     pisitools.dodoc("AUTHORS", "ChangeLog", "README", "TODO")
