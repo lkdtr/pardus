@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Educational Math Game</Summary>
         <Description>"Tux, of Math Command" ("TuxMath," for short) is an educational arcade game where you have to solve math problems, starring Tux, the Linux mascot!</Description>
-        <Archive sha1sum="31c1b6160cf92ff425230dedb1ddb44aa56b61ce" type="targz">http://alioth.debian.org/frs/download.php/3470/tuxmath_w_fonts-1.9.0.tar.gz</Archive>
+        <Archive sha1sum="4cd16ac2e580bba52382351d6e01f290f6568fa3" type="targz">http://alioth.debian.org/frs/download.php/2971/tuxmath_w_fonts-1.7.2.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>sdl-image</Dependency>
             <Dependency>sdl-mixer</Dependency>
@@ -45,9 +45,9 @@
 
     <History>
         <Update release="9">
-            <Date>2010-12-03</Date>
-            <Version>1.9.0</Version>
-            <Comment>Version bump: LAN multiplayer support</Comment>
+            <Date>2010-12-30</Date>
+            <Version>1.7.2</Version>
+            <Comment>Rebuild for new Pisi</Comment>
             <Name>Doruk Fişek</Name>
             <Email>dfisek@fisek.com.tr</Email>
         </Update>
