@@ -13,11 +13,15 @@
         <IsA>app:gui</IsA>
         <Summary>Opera web browser</Summary>
         <Description>A standards-compliant graphical Web browser.</Description>
-        <Archive sha1sum="927eaddc52321864efa324193db98743d90bd2d7" type="targz">http://get.opera.com/pub/opera/linux/1063/opera-10.63-6450.i386.linux.tar.gz</Archive>
+        <Archive sha1sum="e28f416a18b04248e9a1e9a99fd8b373df3d0499" type="tarbz2">http://get.opera.com/pub/opera/linux/1100/opera-11.00-1156.i386.linux.tar.bz2</Archive>
+        <AdditionalFiles>
+            <AdditionalFile target="opera-flash-workaround.c">opera-flash-workaround.c</AdditionalFile>
+        </AdditionalFiles>
+        <BuildDependencies>
+            <Dependency>flashplugin</Dependency>
+        </BuildDependencies>
         <Patches>
-            <Patch level="1">add_nsbrowserplugins.patch</Patch>
-            <Patch>remove_uninstall_file.patch</Patch>
-            <Patch level="1">tr_desktop.patch</Patch>
+            <Patch level="1">tr-desktop.patch</Patch>
         </Patches>
     </Source>
 
@@ -53,6 +57,20 @@
     </Package>
 
     <History>
+        <Update release="32">
+            <Date>2010-12-28</Date>
+            <Version>11.00</Version>
+            <Comment>Add flashplugin hack to fix pardus #13989. Thanks to Onur Küçük for his magics ;)</Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
+        <Update release="31">
+            <Date>2010-12-27</Date>
+            <Version>11.00</Version>
+            <Comment>Version bump, see http://www.opera.com/docs/changelogs/unix/1100/ . Fixes pardus #15848.</Comment>
+            <Name>Serdar Dalgıç</Name>
+            <Email>serdar@pardus.org.tr</Email>
+        </Update>
         <Update release="30">
             <Date>2010-10-20</Date>
             <Version>10.63</Version>
