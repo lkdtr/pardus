@@ -13,7 +13,7 @@
         <IsA>data</IsA>
         <Summary>Fish Fillets NG data files</Summary>
         <Description>Contains Fish Fillets NG data files.</Description>
-        <Archive sha1sum="fc4522de5fe674c658b6fe8dd0d597dc43f9c572" type="targz">mirrors://sourceforge/fillets/fillets-ng-data-0.9.2.tar.gz</Archive>
+        <Archive sha1sum="66c5d9d9b3e8bf5159eb82efc34fcbe4c45c258d" type="targz">mirrors://sourceforge/fillets/fillets-ng-data-1.0.0.tar.gz</Archive>
     </Source>
 
     <Package>
@@ -26,6 +26,13 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>2010-12-29</Date>
+            <Version>1.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="7">
             <Date>2010-12-03</Date>
             <Version>0.9.2</Version>
