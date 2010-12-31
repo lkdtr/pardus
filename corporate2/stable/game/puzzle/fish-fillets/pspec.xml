@@ -13,7 +13,7 @@
         <IsA>app:gui</IsA>
         <Summary>Underwater puzzle game</Summary>
         <Description>Next generation of Fish Fillets Underwater puzzle game. Find your way out! You can toggle fullscreen with the F11 key.</Description>
-        <Archive sha1sum="fc535f8f00618db03e7181fd25f5efabad56255e" type="targz">mirrors://sourceforge/fillets/fillets-ng-0.9.2.tar.gz</Archive>
+        <Archive sha1sum="d7a0f9d0b53e4c88018f7fffe0a67169a20b590e" type="targz">mirrors://sourceforge/fillets/fillets-ng-1.0.0.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
@@ -24,7 +24,6 @@
         </BuildDependencies>
         <Patches>
             <Patch>fish-fillets_luaopen.patch</Patch>
-            <Patch level="1">fillets-ng-0.8.0-fribidi.patch</Patch>
         </Patches>
     </Source>
 
@@ -37,7 +36,7 @@
             <Dependency>sdl-ttf</Dependency>
             <Dependency>lua</Dependency>
             <Dependency>fribidi</Dependency>
-            <Dependency version="0.9.2">fish-fillets-data</Dependency>
+            <Dependency version="1.0.0">fish-fillets-data</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -51,6 +50,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2010-12-30</Date>
+            <Version>1.0.0</Version>
+            <Comment>Version bump</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2010-12-03</Date>
             <Version>0.9.2</Version>
