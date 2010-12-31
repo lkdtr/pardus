@@ -12,7 +12,7 @@
         <IsA>app:console</IsA>
         <Summary>NaviGPS Data Transfer via Serial USB</Summary>
         <Description>This is a simple perl script that implements the NaviLink protocol to communicate with a Locosys NaviGPS via serial USB.</Description>
-        <Archive sha1sum="9a79997916e836cdfe70d43a8de020084569d3d6" type="binary">http://dev.splitbrain.org/darcs/navilink/navilink.pl</Archive>
+        <Archive sha1sum="9a79997916e836cdfe70d43a8de020084569d3d6" type="binary">http://github.com/splitbrain/navilink/raw/master/navilink.pl</Archive>
     </Source>
 
     <Package>
