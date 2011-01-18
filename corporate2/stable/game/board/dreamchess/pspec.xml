@@ -15,7 +15,7 @@
         <Description>Dreamchess is a 3D chess game with its own moderately strong chess engine. You can also use any other XBoard-compatible chess engine, including the popular Crafty and GNU Chess.</Description>
         <Archive sha1sum="0e27c9d7cb20104367edc5aabe3076b70d989374" type="targz">mirrors://berlios/dreamchess/dreamchess-0.2.0.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency versionFrom="1.2.6">sdl-image</Dependency>
             <Dependency versionFrom="1.2.13">libsdl</Dependency>
             <Dependency>minixml</Dependency>
@@ -26,7 +26,7 @@
     <Package>
         <Name>dreamchess</Name>
         <RuntimeDependencies>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency versionFrom="1.2.6">sdl-image</Dependency>
             <Dependency versionFrom="1.2.13">libsdl</Dependency>
             <Dependency>minixml</Dependency>
@@ -41,6 +41,13 @@
     </Package>
 
     <History>
+        <Update release="4">
+            <Date>2011-01-19</Date>
+            <Version>0.2.0</Version>
+            <Comment>Depend on freeglut instead of glut</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="3">
             <Date>2010-12-03</Date>
             <Version>0.2.0</Version>

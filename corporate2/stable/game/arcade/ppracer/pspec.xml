@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency>tcl</Dependency>
         </BuildDependencies>
         <Patches>
@@ -32,7 +32,7 @@
         <RuntimeDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency>tcl</Dependency>
         </RuntimeDependencies>
         <Files>
@@ -49,6 +49,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2011-01-19</Date>
+            <Version>0.5_alpha1</Version>
+            <Comment>Depend on freeglut instead of glut</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2010-12-03</Date>
             <Version>0.5_alpha1</Version>
