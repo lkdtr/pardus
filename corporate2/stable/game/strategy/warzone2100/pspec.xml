@@ -17,7 +17,7 @@
         <BuildDependencies>
             <Dependency>openal</Dependency>
             <Dependency>physfs</Dependency>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency>quesoglc</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>openmotif</Dependency>
@@ -34,7 +34,7 @@
         <RuntimeDependencies>
             <Dependency>openal</Dependency>
             <Dependency>physfs</Dependency>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency>quesoglc</Dependency>
             <Dependency>mesa</Dependency>
             <Dependency>openmotif</Dependency>
@@ -58,6 +58,13 @@
     </Package>
 
     <History>
+        <Update release="16">
+            <Date>2011-01-19</Date>
+            <Version>2.3.6</Version>
+            <Comment>Depend on freeglut instead of glut.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="15">
             <Date>2010-05-06</Date>
             <Version>2.3.6</Version>
