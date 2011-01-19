@@ -47,7 +47,6 @@
             <Dependency>libvorbis</Dependency>
             <Dependency>shorten</Dependency>
             <Dependency>speex</Dependency>
-            <Dependency>streamripper</Dependency>
             <Dependency>twolame</Dependency>
             <Dependency>wavpack</Dependency>
             <Dependency>xine-lib</Dependency>
@@ -66,7 +65,7 @@
         <Update release="8">
             <Date>2011-01-19</Date>
             <Version>0.7</Version>
-            <Comment>Fix sandbox violations, add qt3 and kdelibs dependencies.</Comment>
+            <Comment>Fix sandbox violations, add qt3 and kdelibs dependencies, remove non-mandatory streamripper dependency.</Comment>
             <Name>Doruk Fişek</Name>
             <Email>dfisek@fisek.com.tr</Email>
         </Update>
