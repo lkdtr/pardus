@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>libmowgli</Name>
-        <Summary xml:lang="tr">C için bir geliştirme çatısı.</Summary>
-        <Description xml:lang="tr">Mowgli kitaplığı yüksek performanslı ve çok esnek algoritmalar sunar. Glib'i tamamlayıcı olarak da kullanılabilir (ek fonkisyonlar eklemek için (sözlükler, hashler), ya da Glib'in bazı yavaş liste işleme fonksiyonlarının yerine), tek başına da. Aynı zamanda güçlü bir hook sistemi ve kodunuz için pratik kayıt tutma ile yüksek performanslı öbek tahsis edici sağlar.</Description>
-    </Source>
-</PISI>
