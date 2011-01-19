@@ -17,7 +17,7 @@
             <Dependency versionFrom="2.3">libaudacious</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>libglade</Dependency>
-            <Dependency>libmowgli</Dependency>
+            <Dependency>libmowgli-devel</Dependency>
             <Dependency>taglib</Dependency>
             <Dependency>libmpcdec</Dependency>
             <Dependency>sidplay2</Dependency>
@@ -91,6 +91,13 @@
     </Package>
 
     <History>
+        <Update release="30">
+            <Date>2011-01-19</Date>
+            <Version>2.3</Version>
+            <Comment>Depend on libmowgli-devel</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="29">
             <Date>2010-12-03</Date>
             <Version>2.3</Version>
