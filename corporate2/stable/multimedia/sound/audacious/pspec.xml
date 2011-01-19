@@ -20,7 +20,7 @@
             <Dependency>fluidsynth</Dependency>
             <Dependency>gtk2</Dependency>
             <Dependency>libmcs</Dependency>
-            <Dependency>libmowgli</Dependency>
+            <Dependency>libmowgli-devel</Dependency>
             <Dependency>libglade</Dependency>
             <Dependency>libsamplerate</Dependency>
         </BuildDependencies>
@@ -65,6 +65,13 @@
     </Package>
 
     <History>
+        <Update release="26">
+            <Date>2011-01-19</Date>
+            <Version>2.3</Version>
+            <Comment>Depend on libmowgli-devel</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="25">
             <Date>2010-12-03</Date>
             <Version>2.3</Version>
