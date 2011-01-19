@@ -16,7 +16,7 @@
         <Archive sha1sum="f0f147f3175d6e0d9e8e2ddb0918dde65b96c86b" type="targz">http://distfiles.atheme.org/libmcs-0.7.2.tgz</Archive>
         <BuildDependencies>
             <Dependency>kdelibs</Dependency>
-            <Dependency>libmowgli</Dependency>
+            <Dependency>libmowgli-devel</Dependency>
         </BuildDependencies>
     </Source>
 
@@ -35,6 +35,13 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2011-01-19</Date>
+            <Version>0.7.2</Version>
+            <Comment>Depend on libmowgli-devel</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2010-12-03</Date>
             <Version>0.7.2</Version>
