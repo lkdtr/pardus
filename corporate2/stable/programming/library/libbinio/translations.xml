@@ -1,8 +1,0 @@
-<?xml version="1.0" ?>
-<PISI>
-    <Source>
-        <Name>libbinio</Name>
-        <Summary xml:lang="tr">İkili I/O yayın sınıfı kütüphanesi</Summary>
-        <Description xml:lang="tr">libbinio, C++'da ikili veri akımlarına erişmek için platform-bağımsız bir yöntem sunar. Kitaplık donanım bağımsızdır, transparan bir biçimde makinaların iç ikili veri gösterimleri arasında dönüşüm yapar. Özel bir girdi-çıktı protokolü kullanmaz, birbirini takip eden rastgele seçilmiş veri kaynaklarında kullanılabilir.</Description>
-    </Source>
-</PISI>
