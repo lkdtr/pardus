@@ -88,11 +88,15 @@
             <Description xml:lang="en">A standards-compliant graphical Web browser.</Description>
             <Description xml:lang="tr">Opera, standartlarla uyumlu, grafik arayüzlü bir internet tarayıcısıdır.</Description>
             <Icon>opera</Icon>
-            <Archive type="targz" sha1sum="927eaddc52321864efa324193db98743d90bd2d7">http://get.opera.com/pub/opera/linux/1063/opera-10.63-6450.i386.linux.tar.gz</Archive>
+            <Archive type="tarbz2" sha1sum="e28f416a18b04248e9a1e9a99fd8b373df3d0499">http://get.opera.com/pub/opera/linux/1100/opera-11.00-1156.i386.linux.tar.bz2</Archive>
+            <AdditionalFiles>
+                <AdditionalFile target="opera-flash-workaround.c">opera-flash-workaround.c</AdditionalFile>
+            </AdditionalFiles>
+            <BuildDependencies>
+                <Dependency>flashplugin</Dependency>
+            </BuildDependencies>
             <Patches>
-                <Patch level="1">add_nsbrowserplugins.patch</Patch>
-                <Patch>remove_uninstall_file.patch</Patch>
-                <Patch level="1">tr_desktop.patch</Patch>
+                <Patch level="1">tr-desktop.patch</Patch>
             </Patches>
             <SourceURI>network/web/opera/pspec.xml</SourceURI>
         </Source>
@@ -127,6 +131,20 @@
             </Files>
         </Package>
         <History>
+            <Update release="32">
+                <Date>2010-12-28</Date>
+                <Version>11.00</Version>
+                <Comment>Add flashplugin hack to fix pardus #13989. Thanks to Onur Küçük for his magics ;)</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
+            <Update release="31">
+                <Date>2010-12-27</Date>
+                <Version>11.00</Version>
+                <Comment>Version bump, see http://www.opera.com/docs/changelogs/unix/1100/ . Fixes pardus #15848.</Comment>
+                <Name>Serdar Dalgıç</Name>
+                <Email>serdar@pardus.org.tr</Email>
+            </Update>
             <Update release="30">
                 <Date>2010-10-20</Date>
                 <Version>10.63</Version>
@@ -909,92 +927,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>libprojectM</Name>
-            <Homepage>http://projectm.sourceforge.net</Homepage>
-            <Packager>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Packager>
-            <License>LGPLv2</License>
-            <IsA>library</IsA>
-            <PartOf>multimedia.library</PartOf>
-            <Summary xml:lang="en">An advanced MilkDrop-compatible music visualization library</Summary>
-            <Summary xml:lang="tr">Gelişmiş Milkdrop-uyumlu ses görselleştirme kitaplığı</Summary>
-            <Description xml:lang="en">libprojectm is an iterative music visualization library which uses OpenGL for hardware acceleration. It is a reimplementation of Winamp visualization plug-in MilkDrop which uses 3D graphics hardware, combined with iterative image-based rendering techniques and compatible with MilkDrop presets.</Description>
-            <Description xml:lang="tr">libprojectM, OpenGL&apos;i donanım hızlandıması için kullanan yinelemeli bir müzik görselleştirme kitaplığıdır. Winamp görselleştirme eklentisi olan Milkdrop&apos;un yeniden uyarlamasıdır; ona ek olarak 3 boyutlu grafik donanımları, yinelenen görüntü temelli render teknikleri kullanır ve hazır Milkdrop setleri ile uyumludur.</Description>
-            <Archive type="tarbz2" sha1sum="e8264009e7c6c588e6f4f2e51a10498e0b1d07b7">mirrors://sourceforge/projectm/libprojectM-1.2.0.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>glew</Dependency>
-                <Dependency>ftgl</Dependency>
-                <Dependency>mesa</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch>gcc43.patch</Patch>
-                <Patch level="1">ftgl.patch</Patch>
-            </Patches>
-            <SourceURI>multimedia/library/libprojectM/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>libprojectM</Name>
-            <RuntimeDependencies>
-                <Dependency>glew</Dependency>
-                <Dependency>ftgl</Dependency>
-                <Dependency>mesa</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="data">/usr/share/projectM</Path>
-                <Path fileType="doc">/usr/share/doc/libprojectM</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="6">
-                <Date>2010-12-03</Date>
-                <Version>1.2.0</Version>
-                <Comment>Rebuild for new Pisi</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="5">
-                <Date>2010-07-21</Date>
-                <Version>1.2.0</Version>
-                <Comment>Strict file paths, add translations.xml and Turkish package info.</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="4">
-                <Date>2010-02-28</Date>
-                <Version>1.2.0</Version>
-                <Comment>Moved to pardus repository from Contrib</Comment>
-                <Name>Mehmet Nur Olcay</Name>
-                <Email>mnurolcay@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2009-06-22</Date>
-                <Version>1.2.0</Version>
-                <Comment>Stable bump, remove strict dependencies, add mesa dependency</Comment>
-                <Name>Mehmet Nur Olcay</Name>
-                <Email>mnurolcay@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2008-05-31</Date>
-                <Version>1.1</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2007-12-25</Date>
-                <Version>1.01</Version>
-                <Comment>First release</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>aucdtect</Name>
             <Homepage>http://www.true-audio.com/</Homepage>
             <Packager>
@@ -1054,306 +986,6 @@
     </SpecFile>
     <SpecFile>
         <Source>
-            <Name>audacity</Name>
-            <Homepage>http://audacity.sourceforge.net/</Homepage>
-            <Packager>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Packager>
-            <License>GPLv2</License>
-            <IsA>app:gui</IsA>
-            <PartOf>multimedia.sound</PartOf>
-            <Summary xml:lang="en">Multi-track audio editor and recorder</Summary>
-            <Summary xml:lang="tr">Özgür ses düzenleyici ve kaydedici</Summary>
-            <Description xml:lang="en">With Audacity, you can cut, copy, splice or mix sounds together; change the speed or pitch of a recording and much more. Editing is very fast and provides unlimited undo/redo. There are digital effects and spectrum analysis tools. Supported file formats include Ogg Vorbis, MP3, WAV, AIFF, and AU..</Description>
-            <Description xml:lang="tr">Audacity ses dosyalarını kaydetmek ve düzenlemek için özgür, açık kodlu bir yazılımdır.</Description>
-            <Archive type="tarbz2" sha1sum="3df2187c9e869be6745fb1e1396586b9b0486485">http://audacity.googlecode.com/files/audacity-minsrc-1.3.12-beta.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency releaseFrom="73">ffmpeg</Dependency>
-                <Dependency>flac</Dependency>
-                <Dependency versionFrom="2.18.5">gtk2</Dependency>
-                <Dependency>jack-audio-connection-kit</Dependency>
-                <Dependency>libid3tag</Dependency>
-                <Dependency>libmad</Dependency>
-                <Dependency>libogg</Dependency>
-                <Dependency>libsamplerate</Dependency>
-                <Dependency>libsndfile</Dependency>
-                <Dependency>libvorbis</Dependency>
-                <Dependency>soundtouch</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>twolame</Dependency>
-                <Dependency>wxGTK-devel</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch level="1">library-paths.patch</Patch>
-                <Patch level="1">desktopfile.patch</Patch>
-                <Patch>CVE-2009-0490.diff</Patch>
-                <Patch>ffmpeg.patch</Patch>
-            </Patches>
-            <SourceURI>multimedia/sound/audacity/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>audacity</Name>
-            <RuntimeDependencies>
-                <Dependency>alsa-lib</Dependency>
-                <Dependency releaseFrom="73">ffmpeg</Dependency>
-                <Dependency>flac</Dependency>
-                <Dependency versionFrom="2.18.5">gtk2</Dependency>
-                <Dependency>jack-audio-connection-kit</Dependency>
-                <Dependency>libid3tag</Dependency>
-                <Dependency>libmad</Dependency>
-                <Dependency>libogg</Dependency>
-                <Dependency>libsamplerate</Dependency>
-                <Dependency>libsndfile</Dependency>
-                <Dependency>libvorbis</Dependency>
-                <Dependency>soundtouch</Dependency>
-                <Dependency>taglib</Dependency>
-                <Dependency>twolame</Dependency>
-                <Dependency>wxGTK</Dependency>
-                <Dependency>lame</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="data">/usr/share/audacity</Path>
-                <Path fileType="data">/usr/share/applications</Path>
-                <Path fileType="data">/usr/share/mime</Path>
-                <Path fileType="data">/usr/share/pixmaps</Path>
-                <Path fileType="data">/usr/share/icons</Path>
-                <Path fileType="localedata">/usr/share/locale</Path>
-                <Path fileType="doc">/usr/share/doc/audacity</Path>
-                <Path fileType="man">/usr/share/man</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="20">
-                <Date>2010-12-03</Date>
-                <Version>1.3.12</Version>
-                <Comment>Rebuild for new Pisi</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="19">
-                <Date>2010-07-21</Date>
-                <Version>1.3.12</Version>
-                <Comment>Work with ffmpeg 0.6</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="18">
-                <Date>2010-04-17</Date>
-                <Version>1.3.12</Version>
-                <Comment>New beta release:
-             * Better summary/description
-             * Fix: WMA exports corrupted if they contained metadata
-             * Fix: Metadata Editor appeared before the Export window when exporting to any format
-             * Fix: Crash or hang using Equalization on longer tracks
-             * Fix: Reverse did not reverse clip boundaries
-             * Fix: Nyquist excessive memory consumption led to slow processing or crashes
-             * Fix: Values appearing in Nyquist effects text boxes were not always the default or previously entered values
-             * Fix: Errors running Nyquist effects in European locales where comma used as decimal separator
-             * Fix: VST effects remained in Effect menu even when re-scanned and no longer available
-             * Fix: Truncate Silence produced incorrect results if silences spanned a block boundary
-             * Fix: purious &quot;not writable/disk full&quot; errors when saving projects
-             * Fix: Playing, rendering or exporting multiple tracks led to desynchronised playback or loss of audio data
-             * Fix: Crash opening Preferences when no recording and/or playback devices enabled or connected
-             * Fix: OK button did not respond to ENTER when a tab selected in left-hand panel in preferences window
-             * Fix: Mixer Board solo button handling
-             * Fix: Undoing or redoing a label edit could cause a crash
-             * Bug when exporting partial selections caused too much audio to be exported is fixed.
-             * Fix corrupt files exported through FFmpeg when metadata included
-             * Prevent saving a new Audacity Project over an existing one as this could corrupt both projects.
-             * Improved help for files that cannot be imported because the relevant optional library is missing.
-             * Allow effects which change the length of the audio they work on to also be applied to selected label tracks, thus keeping them synchronized.
-             * Fixed inability in Nyquist plug-ins to add labels to an existing label track
-             * Fixed bug causing recording to stop short when the recording sample rate is not supported by the sound device
-             * Fix crash when opening Preferences on a machine where there are no available audio devices.
-             * Fixes for bugs using Timer Record and Sound Activated Recording
-             * Sizes of some dialogs adjusted to ensure they fit on the screen.
-             * Fix for supposedly &quot;hidden&quot; items appearing on screen with large monitors.
-             * Various keyboard shortcut and translation fixes.
-             * Fix: Cutting or deleting a region in the waveform and label track did not move the labels in advance of the cut
-             * Fix: Incorrect behavior snapping to labels and boundaries with Snap To enabled
-             * Fix: Projects froze if files imported via On-Demand were no longer available
-             * A hover tooltip is now provided if the Mixer Toolbar input selector cannot control the system slider for the selected input
-             * More intuitive behavior when moving and resizing labels by dragging
-             * Export Multiple: new option to use a numerical prefix before existing label or track names
-             * New Equalization preset &quot;Inverse RIAA&quot;, with new button to invert other curves
-             * New Preferences choice for &quot;System&quot; language which is used on first run instead of asking user to choose language
-             * Several timing-dependent crashes and minor incorrect behaviors have been fixed
-             * New SoundFinder plug-in to label regions of audio between silences, so allowing silences between tracks to be excluded when exporting multiple
-             * Fix: Freeze importing audio files when Default View Mode set to Pitch (EAC)
-             * Fix: Simultaneous On-Demand imports sorted incorrectly
-             * Fix: WAV or AIFF files imported as noise if Preferences set to copy in the data at 24-bit quality
-             * Input volume slider will be disabled if it doesn&apos;t have proper control of system slider; use the system slider instead
-             * Proper support for copying/pasting label-with-audio including label text; new Edit &gt; Paste Text to New Label menu item to paste system clipboard
-             * Contrast Tool now modeless, more intuitive handling of multiple project windows, various other minor improvements
-             * VST instrument plug-ins should now be correctly ignored
-             * VST effects now scanned only at start of first session that detects them, then cached; effects are now not loaded or opened until needed
-             * New &quot;Effects&quot; tab in Preferences to enable/disable VST effects and enable VST rescan on next launch
-             * Default View Mode now works
-             * Fix: Chains now always apply their stored parameters rather than those last used in Effect menu
-             * Fix: Non-MP3 files imported via drag or Recent Files caused crash if filter in file open window set to MP3
-             * Fix: AAC exports were silenced
-             * Generating audio always fitted the project in the window; fit now done only if generating in new track
-             * Fix: View menu items/shortcuts incorrectly disabled when playing or recording
-             * Fix: DTMF generator defaulted to zero duration on open
-             * Fix: Unwanted interactions between linked audio and label tracks
-             * Compressor: new option to compress based on peaks, improved attack and decay time support
-             * Mixer Board: improved design, more responsive meters and now interacts fully with Track Panel in main window</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="17" type="security">
-                <Date>2009-08-26</Date>
-                <Version>1.3.8</Version>
-                <Comment>Fix stack-based buffer overflow, #10993</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="16">
-                <Date>2009-08-21</Date>
-                <Version>1.3.8</Version>
-                <Comment>New development release. Changes:
-                - VST Effects now display in GUI mode by default
-                - Updated Nyquist implementation
-                - Improvements to Equalization, Noise Removal, Truncate Silence, Click Track and effects chains
-                - Improved Plot Spectrum analysis and new preferences for Spectrograms
-                - Record more than 16 channels (hardware/drivers permitting)
-                - New &quot;Mixer Board&quot; view with per-track VU meters
-                - AMR NB export support via the optional FFmpeg library
-                - 32-bit float data over 0 dB handled without clipping
-                - Draft Manual/Quick Help included in Windows and Mac installers
-                - Faster waveform drawing and better response in multi-track projects
-                - Various bug fixes, stability and accessibility improvements</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="15">
-                <Date>2009-07-05</Date>
-                <Version>1.3.7</Version>
-                <Comment>Add missing ffmpeg dependency</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="14">
-                <Date>2009-05-14</Date>
-                <Version>1.3.7</Version>
-                <Comment>Bump to the latest development release</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="13">
-                <Date>2008-11-16</Date>
-                <Version>1.3.6</Version>
-                <Comment>Bump to latest development release. Changes:
-
-                 - FFmpeg support (downloadable separately) permits import and export
-                   of a much wider range of file formats, including WMA, M4A and AC3,
-                   plus import of audio from video files
-                 - On-demand loading of uncompressed files eliminates the wait before
-                   files can be played or edited
-                 - Linked audio and label tracks allow labels to move with their
-                   corresponding audio when cutting, pasting or changing speed or tempo
-                 - Hierarchical plug-in grouping for built-in plug-ins
-                 - Sound activated recording
-                 - Ability to save smaller, compressed project files
-                 - MIDI files can now be imported, cut-and-paste edited, then exported
-                 - Transport menu for easy access to frequently used recording/playback
-                   commands and preferences
-                 - Default View Mode Preference to choose Waveform, Spectrum or Pitch view
-                 - Several bug fixes</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="12">
-                <Date>2008-11-11</Date>
-                <Version>1.3.5</Version>
-                <Comment>Fix desktop files to make them XDG compliant</Comment>
-                <Name>Ozan Çağlayan</Name>
-                <Email>ozan@pardus.org.tr</Email>
-            </Update>
-            <Update release="11">
-                <Date>2008-06-25</Date>
-                <Version>1.3.5</Version>
-                <Comment>Fix missing dependency.</Comment>
-                <Name>Pınar Yanardağ</Name>
-                <Email>pinar@pardus.org.tr</Email>
-            </Update>
-            <Update release="10">
-                <Date>2008-06-05</Date>
-                <Version>1.3.5</Version>
-                <Comment>Version bump</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih@pardus.org.tr</Email>
-            </Update>
-            <Update release="9" type="security">
-                <Date>2008-01-26</Date>
-                <Version>1.2.6</Version>
-                <Comment>Update patch for CVE-2007-6061</Comment>
-                <Name>İsmail Dönmez</Name>
-                <Email>ismail@pardus.org.tr</Email>
-            </Update>
-            <Update release="8" type="security">
-                <Date>2008-01-21</Date>
-                <Version>1.2.6</Version>
-                <Comment>Fix CVE-2007-6061</Comment>
-                <Name>İsmail Dönmez</Name>
-                <Email>ismail@pardus.org.tr</Email>
-            </Update>
-            <Update release="7">
-                <Date>2007-05-19</Date>
-                <Version>1.2.6</Version>
-                <Comment>Use system expat library</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih.asici@gmail.com</Email>
-            </Update>
-            <Update release="6">
-                <Date>2007-03-09</Date>
-                <Version>1.2.6</Version>
-                <Comment>Remove unneeded flac dependency</Comment>
-                <Name>İsmail Dönmez</Name>
-                <Email>ismail@pardus.org.tr</Email>
-            </Update>
-            <Update release="5">
-                <Date>2006-11-16</Date>
-                <Version>1.2.6</Version>
-                <Comment>Version bump</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih.asici@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2006-09-01</Date>
-                <Version>1.2.4b</Version>
-                <Comment>Ladspa, swh/tap plugins and soundtouch support added</Comment>
-                <Name>Ali Erdinç Köroğlu</Name>
-                <Email>erdinc@pardus.org.tr</Email>
-            </Update>
-            <Update release="3">
-                <Date>2006-07-10</Date>
-                <Version>1.2.4b</Version>
-                <Comment>Do not use wrapper (fixes #3058).</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih.asici@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2006-03-12</Date>
-                <Version>1.2.4b</Version>
-                <Comment>Add Turkish translation</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih.asici@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2006-02-18</Date>
-                <Version>1.2.4b</Version>
-                <Comment>First release.</Comment>
-                <Name>Fatih Aşıcı</Name>
-                <Email>fatih.asici@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
             <Name>audacious</Name>
             <Homepage>http://audacious-media-player.org</Homepage>
             <Packager>
@@ -1375,7 +1007,7 @@
                 <Dependency>fluidsynth</Dependency>
                 <Dependency>gtk2</Dependency>
                 <Dependency>libmcs</Dependency>
-                <Dependency>libmowgli</Dependency>
+                <Dependency>libmowgli-devel</Dependency>
                 <Dependency>libglade</Dependency>
                 <Dependency>libsamplerate</Dependency>
             </BuildDependencies>
@@ -1418,6 +1050,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="26">
+                <Date>2011-01-19</Date>
+                <Version>2.3</Version>
+                <Comment>Depend on libmowgli-devel</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="25">
                 <Date>2010-12-03</Date>
                 <Version>2.3</Version>
@@ -1592,6 +1231,50 @@
                 <Comment>First release.</Comment>
                 <Name>Murat Şenel</Name>
                 <Email>muratasenel@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>mac</Name>
+            <Homepage>http://supermmx.org/linux/mac/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>MonkeysAudio</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.sound</PartOf>
+            <Summary xml:lang="en">Monkey&apos;s Audio (APE) Library</Summary>
+            <Summary xml:lang="tr">Monkey&apos;s Audio (APE) Kütüphanesi</Summary>
+            <Description xml:lang="en">Monkey&apos;s Audio (APE) is a fast and easy way to losslessly compress digital music.</Description>
+            <Description xml:lang="tr">Monkey&apos;s Audio (APE), müzikleri kayıpsız sıkıştırmanın hızlı ve kolay bir yoludur.</Description>
+            <Archive type="targz" sha1sum="f215c265c2cba719834c989498d5a8d2457b54de">http://supermmx.org/resources/linux/mac/mac-3.99-u4-b5.tar.gz</Archive>
+            <SourceURI>multimedia/sound/mac/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>mac</Name>
+            <Files>
+                <Path fileType="library">/usr/lib</Path>
+                <Path fileType="header">/usr/include/mac</Path>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="doc">/usr/share/doc/mac</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="2">
+                <Date>2009-05-07</Date>
+                <Version>3.99.4_p5</Version>
+                <Comment>Update doc path and add autoreconf to remove unused direct deps for 2009, fix dodoc.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-12-28</Date>
+                <Version>3.99.4_p5</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -1816,7 +1499,7 @@
                 <Dependency versionFrom="2.3">libaudacious</Dependency>
                 <Dependency>gtk2</Dependency>
                 <Dependency>libglade</Dependency>
-                <Dependency>libmowgli</Dependency>
+                <Dependency>libmowgli-devel</Dependency>
                 <Dependency>taglib</Dependency>
                 <Dependency>libmpcdec</Dependency>
                 <Dependency>sidplay2</Dependency>
@@ -1889,6 +1572,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="30">
+                <Date>2011-01-19</Date>
+                <Version>2.3</Version>
+                <Comment>Depend on libmowgli-devel</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="29">
                 <Date>2010-12-03</Date>
                 <Version>2.3</Version>
@@ -2277,7 +1967,7 @@
             <Description xml:lang="en">QComicBook is a viewer for comic book archives (cbz, cbr, cbt). QComicBook has specific features like page preview, thumbnails view, bookmarks, manga mode for easing comicbook reading.</Description>
             <Description xml:lang="tr">QComicBook cbz, cbr, cbt biçimindeki çizgi roman arşivlerini görüntülemek için kullanılır. Sayfa ön görünümü, sayfa döşeme, yer imi, mangalar için sayfa sırasını ters gösterme gibi çizgi roman okumayı kolaylaştırıcı özellikleri bulunuyor.</Description>
             <Icon>qcomicbook</Icon>
-            <Archive type="targz" sha1sum="6ff393d09d4285ab693e1f0279b9cfce930aae56">http://qcomicbook.linux-projects.net/releases/qcomicbook-0.7.1.tar.gz</Archive>
+            <Archive type="targz" sha1sum="ac641029390ed159098f3b86421a8a18b441f833">http://qcomicbook.linux-projects.net/releases/qcomicbook-0.7.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>qt</Dependency>
             </BuildDependencies>
@@ -2299,6 +1989,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="9">
+                <Date>2010-12-18</Date>
+                <Version>0.7.2</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="8">
                 <Date>2010-12-02</Date>
                 <Version>0.7.1</Version>
@@ -2370,6 +2067,281 @@
                 <Comment>First release.</Comment>
                 <Name>Furkan Duman</Name>
                 <Email>coderlord@gmail.com</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>transKode</Name>
+            <Homepage>http://sourceforge.net/projects/transkode/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:gui</IsA>
+            <PartOf>multimedia.converter</PartOf>
+            <Summary xml:lang="en">KDE/QT frontend for various audio transcoding tools</Summary>
+            <Summary xml:lang="tr">Çeşitli ses dönüştürme araçları için KDE/QT arayüzü</Summary>
+            <Description xml:lang="fr">transKode est une façade (frontend) KDE/QT pour différents outils de transcodage audio. Il contien également un script utilisable au sein d&apos;Amarok.</Description>
+            <Description xml:lang="en">transKode is a KDE/QT frontend for various audio transcoding (conversion) tools. It also contains a script for use within Amarok.</Description>
+            <Description xml:lang="tr">transKode çeşitli ses dönüştürme araçları için KDE/QT arayüzüdür. Amarok&apos;un içinden kullanılabilmesini de sağlayan bir betik ile beraber geliyor.</Description>
+            <Icon>transkode</Icon>
+            <Archive type="tarbz2" sha1sum="7d06419f8e62b924355869a1fb11996746bcae1b">mirrors://sourceforge/transkode/transkode-0.7.tar.bz2</Archive>
+            <BuildDependencies>
+                <Dependency>qt3</Dependency>
+                <Dependency>kdelibs</Dependency>
+                <Dependency versionFrom="1.3.0">amarok</Dependency>
+                <Dependency versionFrom="1.4.0">taglib</Dependency>
+            </BuildDependencies>
+            <Patches>
+                <Patch>turkish.patch</Patch>
+                <Patch level="1">gcc4.patch</Patch>
+                <Patch>desktop.patch</Patch>
+            </Patches>
+            <SourceURI>multimedia/converter/transKode/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>transKode</Name>
+            <RuntimeDependencies>
+                <Dependency>qt3</Dependency>
+                <Dependency>kdelibs</Dependency>
+                <Dependency versionFrom="1.4.9.1">amarok</Dependency>
+                <Dependency versionFrom="1.5">taglib</Dependency>
+                <Dependency>faac</Dependency>
+                <Dependency>faad2</Dependency>
+                <Dependency>ffmpeg</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>gstreamer</Dependency>
+                <Dependency>lame</Dependency>
+                <Dependency>libkexif</Dependency>
+                <Dependency>mac</Dependency>
+                <Dependency>mplayer</Dependency>
+                <Dependency>libmpcdec</Dependency>
+                <Dependency>libvorbis</Dependency>
+                <Dependency>shorten</Dependency>
+                <Dependency>speex</Dependency>
+                <Dependency>twolame</Dependency>
+                <Dependency>wavpack</Dependency>
+                <Dependency>xine-lib</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/kde/3.5/bin</Path>
+                <Path fileType="data">/usr/kde/3.5/share/applnk</Path>
+                <Path fileType="data">/usr/kde/3.5/share/apps</Path>
+                <Path fileType="config">/usr/kde/3.5/share/config</Path>
+                <Path fileType="data">/usr/kde/3.5/share/icons</Path>
+                <Path fileType="localedata">/usr/kde/3.5/share/locale</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2011-01-19</Date>
+                <Version>0.7</Version>
+                <Comment>Fix sandbox violations, add qt3 and kdelibs dependencies, remove non-mandatory streamripper dependency.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2008-10-02</Date>
+                <Version>0.7</Version>
+                <Comment>Fixed for adding to pardus (kde) menu.</Comment>
+                <Name>Ertan Argüden</Name>
+                <Email>ert976@gmail.com</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-03-27</Date>
+                <Version>0.7</Version>
+                <Comment>Fix dependencies and file paths.</Comment>
+                <Name>Gökmen Görgen</Name>
+                <Email>gkmngrgn@gmail.com</Email>
+            </Update>
+            <Update release="5">
+                <Date>2007-12-13</Date>
+                <Version>0.7</Version>
+                <Comment>Version bump and update Turkish translation.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2007-03-27</Date>
+                <Version>0.6</Version>
+                <Comment>Add SHN support.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-02-19</Date>
+                <Version>0.6</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-01-11</Date>
+                <Version>0.6_beta2</Version>
+                <Comment>Add APE support.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2006-10-22</Date>
+                <Version>0.6_beta2</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>shntool</Name>
+            <Homepage>http://etree.org/shnutils/shntool/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>GPLv2</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.converter</PartOf>
+            <Summary xml:lang="en">Wave data processor/reporter</Summary>
+            <Summary xml:lang="tr">Wav dosyası işleyici/raporlayıcı</Summary>
+            <Description xml:lang="en">Shntool is a multi-purpose wave data processing and reporting utility.</Description>
+            <Description xml:lang="tr">Shntool çok işlevli bir wav dosyası işleme ve raporlama aracıdır.</Description>
+            <Archive type="targz" sha1sum="7a2bc8801e180cf582f0e39775603582e35d50d2">http://www.etree.org/shnutils/shntool/dist/src/shntool-3.0.10.tar.gz</Archive>
+            <BuildDependencies>
+                <Dependency>shorten</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>mac</Dependency>
+                <Dependency>sox</Dependency>
+                <Dependency>wavpack</Dependency>
+            </BuildDependencies>
+            <SourceURI>multimedia/converter/shntool/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>shntool</Name>
+            <RuntimeDependencies>
+                <Dependency>shorten</Dependency>
+                <Dependency>flac</Dependency>
+                <Dependency>mac</Dependency>
+                <Dependency>sox</Dependency>
+                <Dependency>wavpack</Dependency>
+            </RuntimeDependencies>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc/shntool</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="8">
+                <Date>2009-05-07</Date>
+                <Version>3.0.10</Version>
+                <Comment>Update doc path for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="7">
+                <Date>2009-04-30</Date>
+                <Version>3.0.10</Version>
+                <Comment>Add more docs + Version bump :
+             * cat mode: fixed bug that prevented use of the -d option
+             * allow fix mode to fix (essentially postpad) just one file
+             * added new global -F option to specify a file containing input filenames</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="6">
+                <Date>2008-10-02</Date>
+                <Version>3.0.8</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="5">
+                <Date>2008-03-29</Date>
+                <Version>3.0.7</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="4">
+                <Date>2008-02-27</Date>
+                <Version>3.0.6</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="3">
+                <Date>2007-06-06</Date>
+                <Version>3.0.3</Version>
+                <Comment>Version bump + add wavpack support.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2007-03-27</Date>
+                <Version>3.0.2</Version>
+                <Comment>Version bump + fix filetypes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-02-10</Date>
+                <Version>3.0.1</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+        </History>
+    </SpecFile>
+    <SpecFile>
+        <Source>
+            <Name>shorten</Name>
+            <Homepage>http://etree.org/shnutils/shorten/</Homepage>
+            <Packager>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Packager>
+            <License>as-is</License>
+            <IsA>app:console</IsA>
+            <PartOf>multimedia.converter</PartOf>
+            <Summary xml:lang="en">Fast compressor for waveform files</Summary>
+            <Summary xml:lang="tr">Wav dosyaları için hızlı sıkıştırıcı</Summary>
+            <Description xml:lang="en">Shorten is a fast, low complexity audio compressor. It can operate in both lossy and lossless modes.</Description>
+            <Description xml:lang="tr">Shorten hızlı ve basit bir ses sıkıştırıcısıdır. Hem kayıpsız hem kayıplı sıkıştıracak şekilde çalışabilir.</Description>
+            <Archive type="targz" sha1sum="bd525ced0b9ba99a7a178c11647a853147977fa5">http://etree.org/shnutils/shorten/dist/src/shorten-3.6.1.tar.gz</Archive>
+            <SourceURI>multimedia/converter/shorten/pspec.xml</SourceURI>
+        </Source>
+        <Package>
+            <Name>shorten</Name>
+            <Files>
+                <Path fileType="executable">/usr/bin</Path>
+                <Path fileType="man">/usr/share/man</Path>
+                <Path fileType="doc">/usr/share/doc/shorten</Path>
+            </Files>
+        </Package>
+        <History>
+            <Update release="3">
+                <Date>2009-04-30</Date>
+                <Version>3.6.1</Version>
+                <Comment>Update doc path for 2009.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="2">
+                <Date>2008-03-29</Date>
+                <Version>3.6.1</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="1">
+                <Date>2007-02-10</Date>
+                <Version>3.6.0</Version>
+                <Comment>First release.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
             </Update>
         </History>
     </SpecFile>
@@ -2540,7 +2512,7 @@
             <Summary xml:lang="tr">NaviGPS Seri USB Portundan Veri Aktarımı</Summary>
             <Description xml:lang="en">This is a simple perl script that implements the NaviLink protocol to communicate with a Locosys NaviGPS via serial USB.</Description>
             <Description xml:lang="tr">Navilink protokolüyle bir Locosys NaviGPS ile seri USB portundan bağlantı kurarak veri aktarımı yapan basit bir perl betiğidir.</Description>
-            <Archive type="binary" sha1sum="9a79997916e836cdfe70d43a8de020084569d3d6">http://dev.splitbrain.org/darcs/navilink/navilink.pl</Archive>
+            <Archive type="binary" sha1sum="9a79997916e836cdfe70d43a8de020084569d3d6">http://github.com/splitbrain/navilink/raw/master/navilink.pl</Archive>
             <SourceURI>science/gis/navilink/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -2606,7 +2578,7 @@
             <Description xml:lang="en">JOSM is a feature-rich offline editor for the experienced OSM mapper. It supports stand alone GPX tracks, GPX track data from the OSM database and existing nodes, line segments and metadata tags from the OSM database.</Description>
             <Description xml:lang="tr">JOSM, deneyimli OSM haritacılarına yönelik zengin özelliklere sahip bir çevirim-dışı düzenleyicisidir. Bağımsız GPX izlerinin yanı sıra; OSM veritabanından GPX izlerini, mevcut düğümlerini, hat parçalarını ve etiketlerini kullanabilir.</Description>
             <Icon>josm</Icon>
-            <Archive type="tarxz" sha1sum="5cdcaa3dda5e82b13dfd80e4f0025239524c36a9">http://josm.fabian-fingerle.de/josm-3592.tar.xz</Archive>
+            <Archive type="tarxz" sha1sum="523934b937444b1283d3fa4ac51ffd9e444da721">http://josm.fabian-fingerle.de/josm-3751.tar.xz</Archive>
             <BuildDependencies>
                 <Dependency>sun-jdk</Dependency>
                 <Dependency>ant</Dependency>
@@ -2631,6 +2603,20 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2011-01-01</Date>
+                <Version>1.5_p3751</Version>
+                <Comment>Version bump to latest stable.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
+            <Update release="11">
+                <Date>2010-12-29</Date>
+                <Version>1.5_p3701</Version>
+                <Comment>Version bump to latest stable.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="10">
                 <Date>2010-12-02</Date>
                 <Version>1.5_p3592</Version>
@@ -2718,7 +2704,7 @@
             <Summary xml:lang="tr">GPS/Harita Biçemleri Dönüştürücü ve İşleyicisi</Summary>
             <Description xml:lang="en">GPSBabel converts waypoints, tracks, and routes between popular GPS receivers and mapping programs. It also has powerful manipulation tools for such data.</Description>
             <Description xml:lang="tr">GPSBabel durak noktaları, izler ve rotaların yaygın GPS alıcılar ve haritalama programları arasında biçem dönüşümlerini yapar. Bu verileri işlemek için güçlü araçlara da sahiptir.</Description>
-            <Archive type="targz" sha1sum="8ff86e356539ca493b33527b91032adb3b452a78">http://www.gpsbabel.org/plan9.php?dl=gpsbabel-1.3.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="8ff86e356539ca493b33527b91032adb3b452a78">http://mirrors.kernel.org/gentoo/distfiles/gpsbabel-1.3.6.tar.gz</Archive>
             <SourceURI>science/gis/gpsbabel/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -4111,7 +4097,7 @@
             <BuildDependencies>
                 <Dependency>libsdl</Dependency>
                 <Dependency>sdl-mixer</Dependency>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>tcl</Dependency>
             </BuildDependencies>
             <Patches>
@@ -4126,7 +4112,7 @@
             <RuntimeDependencies>
                 <Dependency>libsdl</Dependency>
                 <Dependency>sdl-mixer</Dependency>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>tcl</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -4142,6 +4128,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2011-01-19</Date>
+                <Version>0.5_alpha1</Version>
+                <Comment>Depend on freeglut instead of glut</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="6">
                 <Date>2010-12-03</Date>
                 <Version>0.5_alpha1</Version>
@@ -4204,7 +4197,7 @@
             <Icon>crack-attack</Icon>
             <Archive type="targz" sha1sum="fbf445f95d77267d23a766a485fd55edbd333bb4">http://savannah.nongnu.org/download/crack-attack/crack-attack-1.1.14.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>libsdl</Dependency>
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
@@ -4218,7 +4211,7 @@
         <Package>
             <Name>crack-attack</Name>
             <RuntimeDependencies>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>libsdl</Dependency>
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
@@ -4242,6 +4235,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2011-01-19</Date>
+                <Version>1.1.14</Version>
+                <Comment>Depend on freeglut instead of glut</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="6">
                 <Date>2010-12-03</Date>
                 <Version>1.1.14</Version>
@@ -4907,6 +4907,7 @@
                 <Path fileType="data">/usr/share/applications</Path>
                 <Path fileType="data">/usr/share/pixmaps</Path>
                 <Path fileType="data">/var/lib/tuxtype</Path>
+                <Path fileType="data">/var/tuxtype/words</Path>
             </Files>
         </Package>
         <History>
@@ -5013,7 +5014,7 @@
             <Description xml:lang="en">&quot;Tux, of Math Command&quot; (&quot;TuxMath,&quot; for short) is an educational arcade game where you have to solve math problems, starring Tux, the Linux mascot!</Description>
             <Description xml:lang="tr">Başrolde Linux maskotu Tux&apos;ın olduğu, çocuklara özel eğitim amaçlı, matematik problemlerinin çözüldüğü bir oyun</Description>
             <Icon>tuxmath</Icon>
-            <Archive type="targz" sha1sum="31c1b6160cf92ff425230dedb1ddb44aa56b61ce">http://alioth.debian.org/frs/download.php/3470/tuxmath_w_fonts-1.9.0.tar.gz</Archive>
+            <Archive type="targz" sha1sum="4cd16ac2e580bba52382351d6e01f290f6568fa3">http://alioth.debian.org/frs/download.php/2971/tuxmath_w_fonts-1.7.2.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-mixer</Dependency>
@@ -5044,9 +5045,9 @@
         </Package>
         <History>
             <Update release="9">
-                <Date>2010-12-03</Date>
-                <Version>1.9.0</Version>
-                <Comment>Version bump: LAN multiplayer support</Comment>
+                <Date>2010-12-30</Date>
+                <Version>1.7.2</Version>
+                <Comment>Rebuild for new Pisi</Comment>
                 <Name>Doruk Fişek</Name>
                 <Email>dfisek@fisek.com.tr</Email>
             </Update>
@@ -5130,7 +5131,7 @@
             <Description xml:lang="en">Next generation of Fish Fillets Underwater puzzle game. Find your way out! You can toggle fullscreen with the F11 key.</Description>
             <Description xml:lang="tr">Yeni nesil Fish Fillets zeka oyunu. Küçük balıkların doğru yolu bulmasına yardım edin. Çıkış acaba nerede... Oyunu tam ekran yapmak için F11 tuşunu kullanabilirsiniz.</Description>
             <Icon>fillets</Icon>
-            <Archive type="targz" sha1sum="fc535f8f00618db03e7181fd25f5efabad56255e">mirrors://sourceforge/fillets/fillets-ng-0.9.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="d7a0f9d0b53e4c88018f7fffe0a67169a20b590e">mirrors://sourceforge/fillets/fillets-ng-1.0.0.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>libsdl</Dependency>
                 <Dependency>sdl-mixer</Dependency>
@@ -5141,7 +5142,6 @@
             </BuildDependencies>
             <Patches>
                 <Patch>fish-fillets_luaopen.patch</Patch>
-                <Patch level="1">fillets-ng-0.8.0-fribidi.patch</Patch>
             </Patches>
             <SourceURI>game/puzzle/fish-fillets/pspec.xml</SourceURI>
         </Source>
@@ -5154,7 +5154,7 @@
                 <Dependency>sdl-ttf</Dependency>
                 <Dependency>lua</Dependency>
                 <Dependency>fribidi</Dependency>
-                <Dependency version="0.9.2">fish-fillets-data</Dependency>
+                <Dependency version="1.0.0">fish-fillets-data</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -5167,6 +5167,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="10">
+                <Date>2010-12-30</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="9">
                 <Date>2010-12-03</Date>
                 <Version>0.9.2</Version>
@@ -5915,7 +5922,7 @@
             <Description xml:lang="en">Contains Fish Fillets NG data files.</Description>
             <Description xml:lang="tr">Fish Fillets NG oyununun veri dosyalarını içerir.</Description>
             <Icon>fillets</Icon>
-            <Archive type="targz" sha1sum="fc4522de5fe674c658b6fe8dd0d597dc43f9c572">mirrors://sourceforge/fillets/fillets-ng-data-0.9.2.tar.gz</Archive>
+            <Archive type="targz" sha1sum="66c5d9d9b3e8bf5159eb82efc34fcbe4c45c258d">mirrors://sourceforge/fillets/fillets-ng-data-1.0.0.tar.gz</Archive>
             <SourceURI>game/puzzle/fish-fillets-data/pspec.xml</SourceURI>
         </Source>
         <Package>
@@ -5927,6 +5934,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="8">
+                <Date>2010-12-29</Date>
+                <Version>1.0.0</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="7">
                 <Date>2010-12-03</Date>
                 <Version>0.9.2</Version>
@@ -6301,7 +6315,7 @@
             <Description xml:lang="en">Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King&apos;s forces.</Description>
             <Description xml:lang="tr">Oyun 1492&apos;de başlıyor. Oyunun amacı Amerika&apos;yı kolonileştirmek, güçlü bir ulus inşa etmek, bağımsızlığınızı ilan etmek ve kralın kuvvetlerinin saldırısına karşı ayakta kalmak.</Description>
             <Icon>freecol</Icon>
-            <Archive type="zip" sha1sum="03657634af3c6b7f26abccd73c6eaa75eb37999a">mirrors://sourceforge/freecol/freecol-0.9.5-src.zip</Archive>
+            <Archive type="zip" sha1sum="7db1a8907a04467fd26b8edb51416c461739dd93">mirrors://sourceforge/freecol/freecol-0.9.4-src.zip</Archive>
             <BuildDependencies>
                 <Dependency>sun-jdk</Dependency>
                 <Dependency>ant</Dependency>
@@ -6328,13 +6342,6 @@
             </AdditionalFiles>
         </Package>
         <History>
-            <Update release="26">
-                <Date>2010-10-29</Date>
-                <Version>0.9.5</Version>
-                <Comment>Bump to latest stable: More memory leaks that caused the game to slow down have been found and fixed, as have a number of annoying bugs.</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
             <Update release="25">
                 <Date>2010-07-18</Date>
                 <Version>0.9.4</Version>
@@ -6562,7 +6569,7 @@
             <Description xml:lang="en">Hedgewars is a turn based strategy game but the real buzz is from watching the devastation caused by those pesky hedgehogs with those fantastic weapons - sneaky little blighters with a bad attitude!.</Description>
             <Description xml:lang="tr">Hedgewars, tur tabanlı bir strateji oyunu ama işin esas eğlencesi o sinir bozucu kirpilerin ellerindeki çeşit çeşit silahlarla yarattıkları yıkımı izlemekte.</Description>
             <Icon>hedgewars</Icon>
-            <Archive type="tarbz2" sha1sum="b957bf231e767a2dc0805f261a93680c72589ab2">http://download.gna.org/hedgewars/hedgewars-src-0.9.14.1.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="c6e8fb136ff450a7f36ad2dca3b0963373dd003b">http://download.gna.org/hedgewars/hedgewars-src-0.9.15.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>qt-devel</Dependency>
                 <Dependency>fpc</Dependency>
@@ -6598,6 +6605,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="12">
+                <Date>2010-12-28</Date>
+                <Version>0.9.15</Version>
+                <Comment>Version bump</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="11">
                 <Date>2010-11-30</Date>
                 <Version>0.9.14.1</Version>
@@ -6955,7 +6969,7 @@
             <BuildDependencies>
                 <Dependency>openal</Dependency>
                 <Dependency>physfs</Dependency>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>quesoglc</Dependency>
                 <Dependency>mesa</Dependency>
                 <Dependency>openmotif</Dependency>
@@ -6972,7 +6986,7 @@
             <RuntimeDependencies>
                 <Dependency>openal</Dependency>
                 <Dependency>physfs</Dependency>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency>quesoglc</Dependency>
                 <Dependency>mesa</Dependency>
                 <Dependency>openmotif</Dependency>
@@ -6995,6 +7009,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="16">
+                <Date>2011-01-19</Date>
+                <Version>2.3.6</Version>
+                <Comment>Depend on freeglut instead of glut.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="15">
                 <Date>2010-05-06</Date>
                 <Version>2.3.6</Version>
@@ -7134,7 +7155,7 @@
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency>sdl-ttf</Dependency>
-                <Dependency>sdl-gfx</Dependency>
+                <Dependency versionFrom="2.0.21">sdl-gfx</Dependency>
                 <Dependency>sdl-net</Dependency>
                 <Dependency>fribidi</Dependency>
             </BuildDependencies>
@@ -7151,7 +7172,7 @@
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency>sdl-ttf</Dependency>
-                <Dependency>sdl-gfx</Dependency>
+                <Dependency versionFrom="2.0.21">sdl-gfx</Dependency>
                 <Dependency>sdl-net</Dependency>
                 <Dependency>fribidi</Dependency>
             </RuntimeDependencies>
@@ -7169,6 +7190,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="21">
+                <Date>2011-01-17</Date>
+                <Version>0.9.2.1</Version>
+                <Comment>Depend on new sdl-gfx.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="20">
                 <Date>2010-08-29</Date>
                 <Version>0.9.2.1</Version>
@@ -7595,7 +7623,7 @@
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-ttf</Dependency>
-                <Dependency>sdl-gfx</Dependency>
+                <Dependency versionFrom="2.0.21">sdl-gfx</Dependency>
                 <Dependency>physfs</Dependency>
                 <Dependency>jam</Dependency>
             </BuildDependencies>
@@ -7607,7 +7635,7 @@
                 <Dependency>sdl-mixer</Dependency>
                 <Dependency>sdl-image</Dependency>
                 <Dependency>sdl-ttf</Dependency>
-                <Dependency>sdl-gfx</Dependency>
+                <Dependency versionFrom="2.0.21">sdl-gfx</Dependency>
                 <Dependency>physfs</Dependency>
             </RuntimeDependencies>
             <Files>
@@ -7622,6 +7650,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="7">
+                <Date>2011-01-17</Date>
+                <Version>2.0</Version>
+                <Comment>Depend on new sdl-gfx.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="6">
                 <Date>2009-07-29</Date>
                 <Version>2.0</Version>
@@ -7687,7 +7722,7 @@
             <Icon>dreamchess</Icon>
             <Archive type="targz" sha1sum="0e27c9d7cb20104367edc5aabe3076b70d989374">mirrors://berlios/dreamchess/dreamchess-0.2.0.tar.gz</Archive>
             <BuildDependencies>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency versionFrom="1.2.6">sdl-image</Dependency>
                 <Dependency versionFrom="1.2.13">libsdl</Dependency>
                 <Dependency>minixml</Dependency>
@@ -7698,7 +7733,7 @@
         <Package>
             <Name>dreamchess</Name>
             <RuntimeDependencies>
-                <Dependency>glut</Dependency>
+                <Dependency>freeglut</Dependency>
                 <Dependency versionFrom="1.2.6">sdl-image</Dependency>
                 <Dependency versionFrom="1.2.13">libsdl</Dependency>
                 <Dependency>minixml</Dependency>
@@ -7712,6 +7747,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="4">
+                <Date>2011-01-19</Date>
+                <Version>0.2.0</Version>
+                <Comment>Depend on freeglut instead of glut</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="3">
                 <Date>2010-12-03</Date>
                 <Version>0.2.0</Version>
@@ -7835,262 +7877,6 @@
                 <Comment>First release.</Comment>
                 <Name>Eren Türkay</Name>
                 <Email>turkay.eren@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>libbinio</Name>
-            <Homepage>http://libbinio.sourceforge.net</Homepage>
-            <Packager>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Packager>
-            <License>LGPLv2.1</License>
-            <IsA>library</IsA>
-            <PartOf>programming.library</PartOf>
-            <Summary xml:lang="en">Binary I/O stream class library</Summary>
-            <Summary xml:lang="tr">İkili I/O yayın sınıfı kütüphanesi</Summary>
-            <Description xml:lang="en">The binary I/O stream class library presents a platform-independent way to access binary data streams in C++. The library is hardware independent in the form that it transparently converts between the different forms of machine-internal binary data representation. It further employs no special I/O protocol and can be used on arbitrary binary data sources.</Description>
-            <Description xml:lang="tr">libbinio, C++&apos;da ikili veri akımlarına erişmek için platform-bağımsız bir yöntem sunar. Kitaplık donanım bağımsızdır, transparan bir biçimde makinaların iç ikili veri gösterimleri arasında dönüşüm yapar. Özel bir girdi-çıktı protokolü kullanmaz, birbirini takip eden rastgele seçilmiş veri kaynaklarında kullanılabilir.</Description>
-            <Archive type="tarbz2" sha1sum="47db5f7448245f38b9d26c8b11f53a07b6f6da73">mirrors://sourceforge/libbinio/libbinio-1.4.tar.bz2</Archive>
-            <Patches>
-                <Patch level="1">gcc44.patch</Patch>
-                <Patch level="1">string-conversion.patch</Patch>
-            </Patches>
-            <SourceURI>programming/library/libbinio/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>libbinio</Name>
-            <Files>
-                <Path fileType="header">/usr/include</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="doc">/usr/share/doc/libbinio</Path>
-                <Path fileType="info">/usr/share/info</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2010-12-03</Date>
-                <Version>1.4</Version>
-                <Comment>Rebuild for new Pisi</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="4">
-                <Date>2010-07-21</Date>
-                <Version>1.4</Version>
-                <Comment>Fix package description, use sourceforge mirror, strict doc dir</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="3">
-                <Date>2009-06-22</Date>
-                <Version>1.4</Version>
-                <Comment>Add gcc44 and string-conversion patches</Comment>
-                <Name>Mehmet Nur Olcay</Name>
-                <Email>mnurolcay@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2007-04-29</Date>
-                <Version>1.4</Version>
-                <Comment>Disable static libs</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2006-09-06</Date>
-                <Version>1.4</Version>
-                <Comment>First release.</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>gtkglext</Name>
-            <Homepage>http://www.k-3d.org/gtkglext/Main_Page</Homepage>
-            <Packager>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Packager>
-            <License>LGPLv2+</License>
-            <IsA>library</IsA>
-            <PartOf>programming.library</PartOf>
-            <Summary xml:lang="en">OpenGL extension to GTK+</Summary>
-            <Summary xml:lang="tr">GTK+ için OpenGL eklentisi</Summary>
-            <Description xml:lang="en">GtkGLExt is an OpenGL extension to GTK+ 2.0 or later</Description>
-            <Description xml:lang="tr">GTK+ 2.0 veya sonraki sürümler için OpenGL eklentisi</Description>
-            <Archive type="tarbz2" sha1sum="d84c9472af3438fbce84189613e5370b97d9d1e7">mirrors://sourceforge/gtkglext/gtkglext-1.2.0.tar.bz2</Archive>
-            <BuildDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>glut</Dependency>
-                <Dependency>mesa</Dependency>
-                <Dependency>libXmu</Dependency>
-                <Dependency>libXt</Dependency>
-                <Dependency>atk</Dependency>
-                <Dependency>cairo</Dependency>
-                <Dependency>fontconfig</Dependency>
-                <Dependency>pango</Dependency>
-            </BuildDependencies>
-            <Patches>
-                <Patch>support-pango.diff</Patch>
-            </Patches>
-            <SourceURI>programming/library/gtkglext/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>gtkglext</Name>
-            <RuntimeDependencies>
-                <Dependency>gtk2</Dependency>
-                <Dependency>glut</Dependency>
-                <Dependency>mesa</Dependency>
-                <Dependency>libXmu</Dependency>
-                <Dependency>pango</Dependency>
-            </RuntimeDependencies>
-            <Files>
-                <Path fileType="header">/usr/include/gtkglext-1.0</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="data">/usr/share/aclocal</Path>
-                <Path fileType="doc">/usr/share/doc/gtkglext</Path>
-                <Path fileType="doc">/usr/share/gtk-doc/html/gtkglext</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="5">
-                <Date>2010-12-03</Date>
-                <Version>1.2.0</Version>
-                <Comment>Rebuild for new Pisi</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="4">
-                <Date>2010-07-21</Date>
-                <Version>1.2.0</Version>
-                <Comment>Remove unnecessary runtime deps, strict dirs, use sourceforge mirrors.</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="3">
-                <Date>2009-06-22</Date>
-                <Version>1.2.0</Version>
-                <Comment>Add pango support, fix linkage, add all direct dependencies</Comment>
-                <Name>Mehmet Nur Olcay</Name>
-                <Email>mnurolcay@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2006-09-02</Date>
-                <Version>1.2.0</Version>
-                <Comment>Fix depends and paths</Comment>
-                <Name>Uğur Çetin</Name>
-                <Email>jnmbk@users.sourceforge.net</Email>
-            </Update>
-            <Update release="1">
-                <Date>2006-08-11</Date>
-                <Version>1.2.0</Version>
-                <Comment>First release</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-        </History>
-    </SpecFile>
-    <SpecFile>
-        <Source>
-            <Name>libmowgli</Name>
-            <Homepage>http://www.atheme.org/projects/libmowgli</Homepage>
-            <Packager>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Packager>
-            <License>BSD</License>
-            <IsA>library</IsA>
-            <PartOf>programming.library</PartOf>
-            <Summary xml:lang="en">A development framework for C</Summary>
-            <Summary xml:lang="tr">C için bir geliştirme çatısı.</Summary>
-            <Description xml:lang="en">Mowgli provides high performance and highly flexible algorithms. It can be used as a suppliment to GLib (to add additional functions (dictionaries, hashes), or replace some of the slow GLib list manipulation functions), or stand alone. It also provides a powerful hook system and convenient logging for your code, as well as a high performance block allocator.</Description>
-            <Description xml:lang="tr">Mowgli kitaplığı yüksek performanslı ve çok esnek algoritmalar sunar. Glib&apos;i tamamlayıcı olarak da kullanılabilir (ek fonkisyonlar eklemek için (sözlükler, hashler), ya da Glib&apos;in bazı yavaş liste işleme fonksiyonlarının yerine), tek başına da. Aynı zamanda güçlü bir hook sistemi ve kodunuz için pratik kayıt tutma ile yüksek performanslı öbek tahsis edici sağlar.</Description>
-            <Archive type="targz" sha1sum="62ef22d3ff101e369c6424a130a7af83a840deee">http://distfiles.atheme.org/libmowgli-0.7.1.tgz</Archive>
-            <SourceURI>programming/library/libmowgli/pspec.xml</SourceURI>
-        </Source>
-        <Package>
-            <Name>libmowgli</Name>
-            <Files>
-                <Path fileType="executable">/usr/bin</Path>
-                <Path fileType="doc">/usr/share/doc/libmowgli</Path>
-                <Path fileType="library">/usr/lib</Path>
-                <Path fileType="header">/usr/include</Path>
-            </Files>
-        </Package>
-        <History>
-            <Update release="10">
-                <Date>2010-12-03</Date>
-                <Version>0.7.1</Version>
-                <Comment>Rebuild for new Pisi</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="9">
-                <Date>2009-06-22</Date>
-                <Version>0.7.1</Version>
-                <Comment>Version bump, fix home page, add translations.xml and Turkish package translation, use strict doc dir, Turkish packege info translation.</Comment>
-                <Name>Doruk Fişek</Name>
-                <Email>dfisek@fisek.com.tr</Email>
-            </Update>
-            <Update release="8">
-                <Date>2009-06-22</Date>
-                <Version>0.6.1</Version>
-                <Comment>Fix home page</Comment>
-                <Name>Mehmet Nur Olcay</Name>
-                <Email>mnurolcay@gmail.com</Email>
-            </Update>
-            <Update release="7">
-                <Date>2008-03-29</Date>
-                <Version>0.6.1</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="6">
-                <Date>2008-01-23</Date>
-                <Version>0.6.0</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="5">
-                <Date>2007-11-09</Date>
-                <Version>0.5.0</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="4">
-                <Date>2007-09-12</Date>
-                <Version>0.4.0</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="3">
-                <Date>2007-08-20</Date>
-                <Version>0.3.1</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="2">
-                <Date>2007-07-31</Date>
-                <Version>0.3.0</Version>
-                <Comment>Stable bump</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
-            </Update>
-            <Update release="1">
-                <Date>2007-06-13</Date>
-                <Version>0.2.0_20070613</Version>
-                <Comment>First release</Comment>
-                <Name>Murat Şenel</Name>
-                <Email>muratasenel@gmail.com</Email>
             </Update>
         </History>
     </SpecFile>
