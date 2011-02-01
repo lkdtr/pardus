@@ -1,0 +1,56 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>putty</Name>
+        <Homepage>http://www.chiark.greenend.org.uk/~sgtatham/putty/</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>MIT</License>
+        <Icon>putty</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>PuTTY: A Free Telnet/SSH Client</Summary>
+        <Description>PuTTY is a free implementation of Telnet and SSH for Windows and Unix platforms, along with an xterm terminal emulator.</Description>
+        <Archive sha1sum="f22b3f0250e0c2949e38390451cc0cc13ad70bf3" type="targz">http://zzz.fisek.com.tr/files/sources/putty-0.60-2011-02-01.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">font.patch</Patch>
+        </Patches>        
+    </Source>
+
+    <Package>
+        <Name>putty</Name>
+        <RuntimeDependencies>
+            <Dependency>gtk2</Dependency>
+            <Dependency>pango</Dependency>
+            <Dependency>gdk-pixbuf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="doc">/usr/share/doc/putty</Path>
+            <Path fileType="man">/usr/share/man/man1</Path>
+            <Path fileType="data">/usr/share/pixmaps</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/putty.desktop">putty.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/putty.png">putty.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-02-01</Date>
+            <Version>0.60_20110201</Version>
+            <Comment>First release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+    </History>
+</PISI>

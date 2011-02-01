@@ -1,0 +1,24 @@
+diff -Nur putty-0.60-2011-02-01-orig/unix/gtkfont.c putty-0.60-2011-02-01/unix/gtkfont.c
+--- putty-0.60-2011-02-01-orig/unix/gtkfont.c	2011-02-01 10:42:10.837000043 +0200
++++ putty-0.60-2011-02-01/unix/gtkfont.c	2011-02-01 10:42:40.461000067 +0200
+@@ -2500,7 +2500,7 @@
+      * Provide a default if given an empty or null font name.
+      */
+     if (!fontname || !*fontname)
+-	fontname = "server:fixed";
++	fontname = "Nimbus Mono L 12";
+ 
+     /*
+      * Call the canonify_fontname function.
+diff -Nur putty-0.60-2011-02-01-orig/unix/gtkwin.c putty-0.60-2011-02-01/unix/gtkwin.c
+--- putty-0.60-2011-02-01-orig/unix/gtkwin.c	2011-02-01 10:42:10.841000041 +0200
++++ putty-0.60-2011-02-01/unix/gtkwin.c	2011-02-01 10:51:51.245000062 +0200
+@@ -145,7 +145,7 @@
+ {
+     FontSpec ret;
+     if (!strcmp(name, "Font"))
+-	strcpy(ret.name, "server:fixed");
++	strcpy(ret.name, "Nimbus Mono L 12");
+     else
+ 	*ret.name = '\0';
+     return ret;
