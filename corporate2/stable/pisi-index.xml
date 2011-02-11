@@ -2056,7 +2056,7 @@
             <Description xml:lang="en">This is a Qt4-based editor for the OpenStreetMap with features such as map view near-WYSIWYG, style editor, transparent display of map features, support for handling seperate highways, import NMEA-files, etc.</Description>
             <Description xml:lang="tr">Açık Sokak Haritası (OpenStreetMap) için bir Qt4 tabanlı harita düzenleyicisi olan Merkaartor&apos;un stil düzenleyici, harita özelliklerinin saydam gösterilmesi, bağımsız otoyol desteği, NMEA dosyalarının içe aktarılmabilesi, WYSIWYG tarzı düzenleme gibi birçok özelliği bulunuyor.</Description>
             <Icon>merkaartor</Icon>
-            <Archive type="tarbz2" sha1sum="bd7a162a6bac0073e05b4960db2d941ae41b6e7e">http://merkaartor.be/attachments/download/192/merkaartor-0.17.0.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="bdf2b42144cedfde5363b4976adccc5af07bfede">http://merkaartor.be/attachments/download/246/merkaartor-0.17.1.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency>boost-devel</Dependency>
                 <Dependency>qt-devel</Dependency>
@@ -2083,6 +2083,13 @@
             </Files>
         </Package>
         <History>
+            <Update release="13">
+                <Date>2011-01-22</Date>
+                <Version>0.17.1</Version>
+                <Comment>Version bump for bugfixes.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="12">
                 <Date>2011-01-22</Date>
                 <Version>0.17.0</Version>
@@ -6121,13 +6128,15 @@
             <Description xml:lang="en">Freeciv is a free turn-based multiplayer strategy game in which each player becomes the leader of a civilization, fighting to obtain the ultimate goal: To become the greatest civilization.</Description>
             <Description xml:lang="tr">Çok oyuncu destekli, tarafların sıra ile oynadığı strateji oyunu. Her oyuncu bir ulusu yöneterek en yüksek amaca, yani en güçlü ırk olmaya çalışıyor.</Description>
             <Icon>freeciv-client</Icon>
-            <Archive type="tarbz2" sha1sum="8552c071c39f32c948a80ae74d95be4c9bdfcc16">mirrors://sourceforge/freeciv/freeciv-2.2.3.tar.bz2</Archive>
+            <Archive type="tarbz2" sha1sum="101b42b5f73516e9693c61ae826dd5fbe523edda">mirrors://sourceforge/freeciv/freeciv-2.2.4.tar.bz2</Archive>
             <BuildDependencies>
                 <Dependency versionFrom="2.18.5">gtk2</Dependency>
                 <Dependency versionFrom="1.2.11">libsdl</Dependency>
                 <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
                 <Dependency versionFrom="1.2.5">sdl-image</Dependency>
                 <Dependency versionFrom="9.4">bind-tools</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
             </BuildDependencies>
             <SourceURI>game/strategy/freeciv/pspec.xml</SourceURI>
         </Source>
@@ -6139,6 +6148,8 @@
                 <Dependency versionFrom="1.2.7">sdl-mixer</Dependency>
                 <Dependency versionFrom="1.2.5">sdl-image</Dependency>
                 <Dependency versionFrom="9.4">bind-tools</Dependency>
+                <Dependency>pango</Dependency>
+                <Dependency>gdk-pixbuf</Dependency>
             </RuntimeDependencies>
             <Files>
                 <Path fileType="executable">/usr/bin</Path>
@@ -6156,6 +6167,13 @@
             </Conflicts>
         </Package>
         <History>
+            <Update release="17">
+                <Date>2011-02-05</Date>
+                <Version>2.2.4</Version>
+                <Comment>Version bump, add missing dependencies.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="16">
                 <Date>2010-11-30</Date>
                 <Version>2.2.3</Version>
@@ -6286,7 +6304,7 @@
             <Description xml:lang="en">Warzone 2100 is a real-time strategy game developed by Pumpkin Studios and published by Eidos Interactive. Although comparable to Earth 2150 in many significant respects, it does contain aspects that are unique. These include various radar technologies, a greater focus on artillery and counter-battery technologies, more frequent in-game cinematic updates as gameplay progresses, and a different vehicle design method. It was released in 1999 for both PC and Playstation. It&apos;s suggested to set display depth to 24bit.</Description>
             <Description xml:lang="tr">Warzone 2100 Punpkin Studios tarafından geliştirilen ve Eidos Interactive tarafından dağıtılan, ilk sürümü 1999 yılında PC ve Playstation için hazırlanan bir gerçek zamanlı strateji oyunudur. Earth 2150 ile bir çok benzerlik gösterse de kendine özel bir çok özellik içermektedir. Bu özellikler arasında çeşitli radar teknikleri, değişik silah sistem teknolojileri, oyun ilerlerken konu ile ilgili gösterilen küçük videolar ve değişik araç tasarlama sistemi sayılabilir. Ekran renk derinliğinin 24bit olarak ayarlanması tavsiye edilir.</Description>
             <Icon>warzone2100</Icon>
-            <Archive type="targz" sha1sum="5afbab746b1c23a9563e93c954576eb710e2fb8a">mirrors://sourceforge/warzone2100/warzone2100/Warzone%202100%202.3.0/warzone2100-2.3.6.tar.gz</Archive>
+            <Archive type="targz" sha1sum="6000e7d79e1671aa9237cc01d8100da0e753808c">mirrors://sourceforge/warzone2100/warzone2100/Warzone%202100%202.3.0/warzone2100-2.3.7.tar.gz</Archive>
             <BuildDependencies>
                 <Dependency>openal</Dependency>
                 <Dependency>physfs</Dependency>
@@ -6330,6 +6348,13 @@
             </AdditionalFiles>
         </Package>
         <History>
+            <Update release="17">
+                <Date>2011-02-08</Date>
+                <Version>2.3.7</Version>
+                <Comment>Version bump.</Comment>
+                <Name>Doruk Fişek</Name>
+                <Email>dfisek@fisek.com.tr</Email>
+            </Update>
             <Update release="16">
                 <Date>2011-01-19</Date>
                 <Version>2.3.6</Version>
