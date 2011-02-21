@@ -5,5 +5,9 @@
     <Description xml:lang="en">Linux Users Association Pardus Corporate 2 Contrib Repository</Description>
     <Type>Core</Type>
     <Architecture>i686</Architecture>
+    <Obsoletes>
+        <!-- replaced by warmux -->
+        <Package>wormux</Package>
+    </Obsoletes>
 </PISI>
 
