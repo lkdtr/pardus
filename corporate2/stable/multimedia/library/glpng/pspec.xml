@@ -14,7 +14,7 @@
         <Description>A library for OpenGL to load PNG graphics files as an OpenGL texture as easily as possible. It also has a number of options for generating the alpha channel and mipmaps.</Description>
         <Archive sha1sum="7644769957d597032480e2d70d39f44b26c2b512" type="tarbz2">http://zzz.fisek.com.tr/files/sources/glpng-1.45.tar.bz2</Archive>
         <BuildDependencies>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">libglpng-1.45-CVE-2010-1519.patch</Patch>
@@ -24,7 +24,7 @@
     <Package>
         <Name>glpng</Name>
         <RuntimeDependencies>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="library">/usr/lib</Path>
@@ -33,6 +33,13 @@
     </Package>
 
     <History>
+        <Update release="3">
+            <Date>2011-02-21</Date>
+            <Version>1.45</Version>
+            <Comment>Depend of freeglut instead of glut.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="2" type="security">
             <Date>2010-11-01</Date>
             <Version>1.45</Version>
