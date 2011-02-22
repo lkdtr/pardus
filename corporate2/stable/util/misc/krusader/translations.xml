@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>krusader</Name>
+        <Summary xml:lang="tr">İkiz panel dosya yöneticisi</Summary>
+        <Description xml:lang="tr">Krusader gelişmiş bir ikiz panel (commander stili) dosya yöneticisidir. Arşiv dosyalarını destekler, dosya sistemi bağlayabilir. FTP, gelişmiş arama modülü, içn görüntüleyici/düzenleyici, dizin senkronizasyonu, dosya içerik karşılaştırması, güçlü toplu ad değiştirme ve daha nicelerini destekler. Geniş bir yelpazede arşiv biçemlerini destekler ve SMB, FISH gibi KIO aygıtlarını kullanabilir. Hemen hemen tamamen özelleştirilebilir, kullanıcı dostudur, hızlıdır ve masaüstünüzde güzel görünür!</Description>
+    </Source>
+</PISI>
