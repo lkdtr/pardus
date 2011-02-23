@@ -15,7 +15,7 @@
         <Description>Teeworlds features cartoon-themed graphics and physics, and relies heavily on classic shooter weaponry and gameplay.</Description>
         <Archive sha1sum="26d8059b1ad81ca6959b96fd3ff881f9db7550ef" type="targz">http://www.teeworlds.com/files/teeworlds-0.5.2-src.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>glut</Dependency>
+            <Dependency>freeglut</Dependency>
             <Dependency>libsdl</Dependency>
             <Dependency>alsa-lib</Dependency>
             <Dependency>wavpack</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2011-01-19</Date>
+            <Version>0.5.2</Version>
+            <Comment>Depend on freeglut instead of glut</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2010-12-03</Date>
             <Version>0.5.2</Version>
