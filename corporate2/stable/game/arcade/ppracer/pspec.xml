@@ -19,11 +19,15 @@
             <Dependency>sdl-mixer</Dependency>
             <Dependency>freeglut</Dependency>
             <Dependency>tcl</Dependency>
+            <Dependency>squirrel</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">ppracer-turkish.patch</Patch>
             <Patch level="1">candy.patch</Patch>
             <Patch>gcc43.patch</Patch>
+            <Patch level="1">external_squirrel.patch</Patch>
+            <Patch level="1">new_squirrel.patch</Patch>
+            <Patch level="1">new_openal.patch</Patch>
         </Patches>
     </Source>
 
@@ -34,11 +38,12 @@
             <Dependency>sdl-mixer</Dependency>
             <Dependency>freeglut</Dependency>
             <Dependency>tcl</Dependency>
+            <Dependency>squirrel</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
             <Path fileType="data">/usr/share/applications</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/doc/ppracer</Path>
             <Path fileType="data">/usr/share/ppracer</Path>
             <Path fileType="data">/usr/share/pixmaps</Path>
         </Files>
@@ -49,6 +54,13 @@
     </Package>
 
     <History>
+        <Update release="8">
+            <Date>2011-02-24</Date>
+            <Version>0.5_alpha1</Version>
+            <Comment>x86_64 rework, strict doc path.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="7">
             <Date>2011-01-19</Date>
             <Version>0.5_alpha1</Version>
