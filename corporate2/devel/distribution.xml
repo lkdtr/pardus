@@ -8,6 +8,8 @@
     <Obsoletes>
         <!-- replaced by warmux -->
         <Package>wormux</Package>
+        <!-- replaced by warmux-bonusmaps -->
+        <Package>wormux-bonusmaps</Package>
     </Obsoletes>
 </PISI>
 
