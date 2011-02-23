@@ -17,6 +17,7 @@
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
+            <Dependency>mesa</Dependency>
         </BuildDependencies>
         <Patches>
             <Patch level="1">datadir.patch</Patch>
@@ -24,6 +25,10 @@
             <Patch level="1">imagelib.patch</Patch>
             <Patch level="1">imagelib-flags.patch</Patch>
             <Patch level="1">exename.patch</Patch>
+            <Patch level="2">BlockOutII-2.3-syslibs.patch</Patch>
+            <Patch level="2">BlockOutII-jpegdecoder.patch</Patch>
+            <Patch>define_png_infopp_NULL.patch</Patch>
+            <Patch level="1">blockout2-2.4-alt-x86_64.patch</Patch>
         </Patches>
     </Source>
 
@@ -32,6 +37,7 @@
         <RuntimeDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>sdl-mixer</Dependency>
+            <Dependency>mesa</Dependency>
         </RuntimeDependencies>
         <Files>
             <Path fileType="executable">/usr/bin</Path>
@@ -46,6 +52,13 @@
     </Package>
 
     <History>
+        <Update release="5">
+            <Date>2011-02-24</Date>
+            <Version>2.4</Version>
+            <Comment>Rework for x86_64, link to system png, add mesa dependency.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
         <Update release="4">
             <Date>2010-12-03</Date>
             <Version>2.4</Version>
