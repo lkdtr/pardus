@@ -13,7 +13,13 @@ from pisi.actionsapi import get
 WorkDir = "ppracer-0.5alpha"
 
 def setup():
-    autotools.autoconf()
+    for i in ["src/sqstdlib", "src/squirrel"]:
+        if shelltools.isDirectory(i):
+            shelltools.unlinkDir(i)
+
+    pisitools.dosed("configure.in", "libpng12", "libpng14")
+    autotools.autoreconf("-vfi")
+
     autotools.configure("--disable-dependency-tracking \
                          --with-data-dir=/usr/share/ppracer \
                          --with-tcl=/usr/lib \
