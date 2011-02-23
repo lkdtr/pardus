@@ -22,6 +22,7 @@ def setup():
 
     pisitools.dosed("%s/Makefile" % mainsrc, "^CXX.*g\+\+", "CXX     = %s" % get.CXX())
     pisitools.dosed("%s/Makefile" % mainsrc, "-g -D_DEBUG", get.CXXFLAGS())
+    pisitools.dosed("%s/Makefile" % mainsrc, "../ImageLib/src/libimagelib.a", "../ImageLib/src/libimagelib.a -lpng")
 
 def build():
     shelltools.cd("ImageLib/src")
