@@ -21,7 +21,7 @@
             <Dependency>warmux</Dependency>
         </RuntimeDependencies>
         <Replaces>
-            <Package>warmux</Package>
+            <Package>warmux-bonusmaps</Package>
         </Replaces>
         <Files>
             <Path fileType="data">/usr/share/wormux/map</Path>
