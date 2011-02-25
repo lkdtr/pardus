@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnucap</Name>
+        <Summary xml:lang="tr">Devre Analizi Paketi</Summary>
+        <Description xml:lang="tr">GNUCAP genel amaçlı bir devre simülatörüdür. Doğrusal olmayan DC ve geçiş analizleri, Fourier analizi ve belirlenen bir noktada doğrusallaştırılmış AC analizi yapar. Tam etkileşimlidir ve komut satırından çalışır. Toplu işlem kipinde ya da sunucu olarak da çalıştırılabilir.</Description>
+    </Source>
+</PISI>
