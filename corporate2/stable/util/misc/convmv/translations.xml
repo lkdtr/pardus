@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>convmv</Name>
+        <Summary xml:lang="tr">Dosya adı kodlaması dönüştürücü</Summary>
+        <Description xml:lang="tr">convmv ile dosya isimlerini utf-8 ya da herhangi başka bir karakter kodlamasına dönüştürebilirsiniz.</Description>
+    </Source>
+</PISI>
