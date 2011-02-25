@@ -1,0 +1,28 @@
+diff -Naur a.orig/gcompris.desktop.in a/gcompris.desktop.in
+--- gcompris.desktop.in	2007-04-30 21:41:46.000000000 +0300
++++ gcompris.desktop.in	2007-04-30 21:44:07.000000000 +0300
+@@ -1,8 +1,11 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ _Name=Educational suite GCompris
++_Name[tr]=GCompris
+ _GenericName=Multi-activity educational game
++_GenericName[tr]= Eğitim Amaçlı Oyunlar
+ _Comment=Educational game for ages 2 to 10
++_Comment[tr]=2-10 yaş arası çocuklar için eğitim amaçlı oyunlar
+ Exec=gcompris
+ Icon=gcompris.png
+ Terminal=false
+diff -Naur a.orig/gcompris-edit.desktop.in a/gcompris-edit.desktop.in
+--- gcompris-edit.desktop.in	2007-04-30 21:41:58.000000000 +0300
++++ gcompris-edit.desktop.in	2007-04-30 21:44:45.000000000 +0300
+@@ -1,7 +1,9 @@
+ [Desktop Entry]
+ Encoding=UTF-8
+ _Name=GCompris Administration
++_Name[tr]=GCompris Yönetimi
+ _Comment=Administration for gcompris
++_Comment[tr]=GCompris için Yönetim
+ Exec=gcompris -a --nolockcheck
+ Icon=gcompris-edit.png
+ Terminal=false

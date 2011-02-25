@@ -1,0 +1,61 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnucap</Name>
+        <Homepage>http://geda.seul.org/tools/gnucap/index.html</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>GNU Circuit Analysis Package</Summary>
+        <Description>GNUCAP is a general purpose circuit simulator. It performs nonlinear dc and transient analyses, Fourier analysis, and ac analysis linearized at an operating point. It is fully interactive and command driven. It can also be run in batch mode or as a server.</Description>
+        <Archive sha1sum="fa4da0ca4a36ca509d00b7c7286ffb8a008ceaaf" type="targz">ftp://ftp.geda.seul.org/pub/geda/dist/gnucap-0.35.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>texlive-latex</Dependency>
+            <Dependency>dvipdfm</Dependency>
+        </BuildDependencies>
+        <Patches>
+            <Patch level="1">gcc4.3.patch</Patch>
+        </Patches>
+    </Source>
+
+    <Package>
+        <Name>gnucap</Name>
+        <RuntimeDependencies>
+            <Dependency>texlive-latex</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc/gnucap</Path>
+            <Path fileType="data">/usr/share/gnucap</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="3">
+            <Date>2011-02-25</Date>
+            <Version>0.35</Version>
+            <Comment>Add translations.xml, strict doc path, missing dvipdfm dependency.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="2">
+            <Date>2009-09-05</Date>
+            <Version>0.35</Version>
+            <Comment>Replace texlive with tetex, add Description</Comment>
+            <Name>Mehmet Nur Olcay</Name>
+            <Email>mnurolcay@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-05-25</Date>
+            <Version>0.35</Version>
+            <Comment>First release</Comment>
+            <Name>Türker Sezer</Name>
+            <Email>turkersezer@tsdesign.info</Email>
+        </Update>
+    </History>
+</PISI>
