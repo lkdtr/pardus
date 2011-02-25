@@ -1,0 +1,132 @@
+diff -Naur gnucap-0.35/modelgen/ap_construct.cc gnucap-0.35_patched/modelgen/ap_construct.cc
+--- gnucap-0.35/modelgen/ap_construct.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/modelgen/ap_construct.cc	2008-08-22 14:59:12.000000000 +0300
+@@ -22,6 +22,7 @@
+  * construction, copy, etc.
+  */
+ //testing=script,sparse 2006.07.17
++#include <cstring>
+ #include "ap.h"
+ /*--------------------------------------------------------------------------*/
+ CS::CS(CS_FILE, const std::string& name, int i)
+diff -Naur gnucap-0.35/modelgen/ap.h gnucap-0.35_patched/modelgen/ap.h
+--- gnucap-0.35/modelgen/ap.h	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/modelgen/ap.h	2008-08-22 15:01:34.000000000 +0300
+@@ -22,6 +22,7 @@
+  * stuff for the "ap" family of parsing functions
+  */
+ //testing=script,sparse 2006.07.17
++#include <cstring>
+ #ifndef AP_H
+ #define AP_H
+ #include "md.h"
+diff -Naur gnucap-0.35/modelgen/l_lib.h gnucap-0.35_patched/modelgen/l_lib.h
+--- gnucap-0.35/modelgen/l_lib.h	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/modelgen/l_lib.h	2008-08-22 15:22:06.000000000 +0300
+@@ -20,6 +20,7 @@
+  * 02110-1301, USA.
+  */
+ //testing=script 2006.07.13
++#include <cstring>
+ #ifndef L_LIB_H
+ #define L_LIB_H
+ #include "md.h"
+diff -Naur gnucap-0.35/src/ap_construct.cc gnucap-0.35_patched/src/ap_construct.cc
+--- gnucap-0.35/src/ap_construct.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/ap_construct.cc	2008-08-22 14:52:15.000000000 +0300
+@@ -22,6 +22,7 @@
+  * construction, copy, etc.
+  */
+ //testing=script,sparse 2006.07.17
++#include <cstring>
+ #include "ap.h"
+ /*--------------------------------------------------------------------------*/
+ CS::CS(CS_FILE, const std::string& name, int i)
+diff -Naur gnucap-0.35/src/ap.h gnucap-0.35_patched/src/ap.h
+--- gnucap-0.35/src/ap.h	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/ap.h	2008-08-22 14:56:15.000000000 +0300
+@@ -22,6 +22,7 @@
+  * stuff for the "ap" family of parsing functions
+  */
+ //testing=script,sparse 2006.07.17
++#include <cstring>
+ #ifndef AP_H
+ #define AP_H
+ #include "md.h"
+diff -Naur gnucap-0.35/src/e_base.h gnucap-0.35_patched/src/e_base.h
+--- gnucap-0.35/src/e_base.h	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/e_base.h	2008-08-22 15:06:38.000000000 +0300
+@@ -22,6 +22,7 @@
+  * real base for anything to do with a circuit
+  */
+ //testing=script,complete 2006.07.12
++#include <cstring>
+ #ifndef E_BASE_H
+ #define E_BASE_H
+ #include "l_compar.h"
+diff -Naur gnucap-0.35/src/io_findf.cc gnucap-0.35_patched/src/io_findf.cc
+--- gnucap-0.35/src/io_findf.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/io_findf.cc	2008-08-22 15:14:32.000000000 +0300
+@@ -32,6 +32,7 @@
+  * PATHSEP, ENDDIR are system dependent, defined in md.h
+  */
+ //testing=script,sparse 2006.07.17
++#include <cstring>
+ #include "l_lib.h"
+ /*--------------------------------------------------------------------------*/
+ std::string findfile(const std::string& filename, const std::string& path,
+diff -Naur gnucap-0.35/src/io_getln.cc gnucap-0.35_patched/src/io_getln.cc
+--- gnucap-0.35/src/io_getln.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/io_getln.cc	2008-08-22 15:12:08.000000000 +0300
+@@ -27,6 +27,7 @@
+  * start with + is extension line, spice compatibility.
+  */
+ //testing=script 2006.07.17
++#include <cstring>
+ #include "l_lib.h"
+ /*--------------------------------------------------------------------------*/
+ std::string getlines(FILE *fileptr)
+diff -Naur gnucap-0.35/src/l_ftos.cc gnucap-0.35_patched/src/l_ftos.cc
+--- gnucap-0.35/src/l_ftos.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/l_ftos.cc	2008-08-22 15:16:56.000000000 +0300
+@@ -37,6 +37,7 @@
+  * after that, the space is overwritten, every POOLSIZE calls
+  */
+ //testing=script 2005.10.11
++#include <cstring>
+ #include "l_lib.h"
+ #include "constant.h"
+ /*--------------------------------------------------------------------------*/
+diff -Naur gnucap-0.35/src/l_lib.h gnucap-0.35_patched/src/l_lib.h
+--- gnucap-0.35/src/l_lib.h	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/l_lib.h	2008-08-22 15:19:06.000000000 +0300
+@@ -20,6 +20,7 @@
+  * 02110-1301, USA.
+  */
+ //testing=script 2006.07.13
++#include <cstring>
+ #ifndef L_LIB_H
+ #define L_LIB_H
+ #include "md.h"
+diff -Naur gnucap-0.35/src/l_timer.cc gnucap-0.35_patched/src/l_timer.cc
+--- gnucap-0.35/src/l_timer.cc	2006-08-28 09:15:43.000000000 +0300
++++ gnucap-0.35_patched/src/l_timer.cc	2008-08-22 15:21:02.000000000 +0300
+@@ -22,6 +22,7 @@
+  * Time a command, or whatever
+  */
+ //testing=script,sparse 2006.07.13
++#include <cstring>
+ #include "l_timer.h"
+ /*--------------------------------------------------------------------------*/
+ //		TIMER::TIMER();
+diff -Naur gnucap-0.35/src/main.cc gnucap-0.35_patched/src/main.cc
+--- gnucap-0.35/src/main.cc	2006-09-20 20:18:52.000000000 +0300
++++ gnucap-0.35_patched/src/main.cc	2008-08-22 15:09:17.000000000 +0300
+@@ -23,6 +23,7 @@
+  * it all starts here
+  */
+ //testing=script 2006.07.14
++#include <cstring>
+ #include "patchlev.h"
+ #include "c_comand.h"
+ #include "declare.h"	/* lots */
