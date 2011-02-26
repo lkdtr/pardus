@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Encoding=UTF-8
+Name=Hangman
+Name[tr]=Hangman
+GenericName=Word guessing game
+GenericName[tr]=Sözcük tahmin oyunu
+Exec=hangman
+Icon=hangman
+Categories=Application;Game;

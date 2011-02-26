@@ -1,0 +1,75 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>hangman</Name>
+        <Homepage>http://www.brothersoft.com/games/shiftygames-hangman-for-linux.html</Homepage>
+        <Packager>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>hangman</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Word guessing game</Summary>
+        <Description>Hangman is a classic word guessing game. Challenge your spelling skills in the old western style.</Description>
+        <Archive sha1sum="70fe78f2c0e4c725895ec68d50cf0d5f96ee9323" type="targz">http://mirror.amdmi3.ru/distfiles/hangman-0.9.2.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>hangman</Name>
+        <RuntimeDependencies>
+            <Dependency>libsdl</Dependency>
+            <Dependency>sdl-mixer</Dependency>
+            <Dependency>sdl-image</Dependency>
+            <Dependency>sdl-ttf</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc/hangman</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/applications/hangman.desktop">hangman.desktop</AdditionalFile>
+            <AdditionalFile owner="root" permission="0644" target="/usr/share/pixmaps/hangman.png">hangman.png</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="4">
+            <Date>2011-02-26</Date>
+            <Version>0.9.2</Version>
+            <Comment>Adapt to C2, strict doc path, better summary/description, add icon tag.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@fisek.com.tr</Email>
+        </Update>
+        <Update release="3">
+            <Date>2010-05-08</Date>
+            <Version>0.9.2</Version>
+            <Comment>Change homepage and archive link</Comment>
+            <Name>Anıl Özbek</Name>
+            <Email>ozbekanil@gmail.com</Email>
+        </Update>
+        <Update release="2">
+            <Date>2007-05-04</Date>
+            <Version>0.9.2</Version>
+            <Comment>menu fix</Comment>
+            <Name>Ayan Öztürk</Name>
+            <Email>ayanozturk@gmail.com</Email>
+        </Update>
+        <Update release="1">
+            <Date>2007-01-23</Date>
+            <Version>0.9.2</Version>
+            <Comment>First release</Comment>
+            <Name>Ayan Öztürk</Name>
+            <Email>ayanozturk@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
