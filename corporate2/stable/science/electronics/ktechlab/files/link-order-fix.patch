@@ -1,0 +1,11 @@
+--- configure.orig	2011-02-26 00:50:25.044000156 +0200
++++ configure	2011-02-26 00:52:16.257000156 +0200
+@@ -33459,7 +33459,7 @@
+ 	for LIBREADLINE in "-lreadline" "-lreadline $LIBCURSES" "-lreadline -ltermcap" "-lreadline -lncurses" "-lreadline -lcurses"
+ 	do
+ 		LIBS="$ac_save_LIBS $LIBREADLINE"
+-		LIB_GPSIM="$LIBREADLINE -lgpsim -lgpsim_eXdbm "
++		LIB_GPSIM="-lgpsim -lgpsim_eXdbm -lgpsimcli $LIBREADLINE"
+ 		if test "$cross_compiling" = yes; then
+ 
+ 		# action if cross compiling
