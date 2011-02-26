@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>hangman</Name>
+        <Summary xml:lang="tr">Sözcük tahmin oyunu</Summary>
+        <Description xml:lang="tr">Hangman, klasik bir sözcük tahmin oyunudur. Sözcük dağarcığınızı vahşi batı stili sınayın.</Description>
+    </Source>
+</PISI>
