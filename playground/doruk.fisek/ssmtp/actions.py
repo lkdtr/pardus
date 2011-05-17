@@ -16,5 +16,5 @@ def build():
 
 def install():
     autotools.rawInstall("DESTDIR=%s" % get.installDIR())
-
+    pisitools.dosym"/usr/sbin/ssmtp", "/usr/sbin/sendmail")
     pisitools.dodoc("ChangeLog", "COPYING", "README", "CHANGELOG_OLD", "TLS")
