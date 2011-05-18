@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>radicale</Name>
+        <Homepage>http://www.radicale.org</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A Simple Calendar Server</Summary>
+        <Description>The Radicale Project is a complete CalDAV calendar server solution. It can store multiple calendars.</Description>
+        <Archive sha1sum="20a1998730b559f6c54f4b8359219484f3b9496d" type="targz">http://www.radicale.org/src/radicale/Radicale-0.5.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>python</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>radicale</Name>
+        <RuntimeDependencies>
+            <Dependency>python</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-05-18</Date>
+            <Version>0.5</Version>
+            <Comment>First release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
