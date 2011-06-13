@@ -17,7 +17,7 @@ def start():
 
 @synchronized
 def stop():
-    stopService(pidfile="/var/run/knockd",
+    stopService(pidfile="/var/run/knockd.pid",
                 donotify=True)
 
 def status():
