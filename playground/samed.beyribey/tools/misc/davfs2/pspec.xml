@@ -16,7 +16,6 @@
          <BuildDependencies>
             <Dependency>neon</Dependency>
         </BuildDependencies>
-
     </Source>
 
     <Package>
