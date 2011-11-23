@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-CPAN-Meta</Name>
+        <Homepage>http://search.cpan.org/dist/CPAN-Meta</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <!-- FIXME: Check licenses before merging to review -->
+        <License>Artistic-2</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>The distribution metadata for a CPAN dist</Summary>
+        <Description>perl-CPAN-Meta is a Perl module that provides the distribution metadata for a CPAN dist.</Description>
+        <Archive sha1sum="b7cd95fbacca569d067c13d862db8a1f89086b9a" type="targz">mirrors://cpan/authors/id/D/DA/DAGOLDEN/CPAN-Meta-2.110930.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-CPAN-Meta</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+            <Dependency>perl-JSON</Dependency>
+            <Dependency>perl-Version-Requirements</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-10</Date>
+            <Version>2.110930</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

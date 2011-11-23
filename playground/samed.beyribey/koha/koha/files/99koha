@@ -1,0 +1,2 @@
+KOHA_CONF="/etc/koha/koha-conf.xml"
+PERL5LIB="/usr/share/koha/lib"
