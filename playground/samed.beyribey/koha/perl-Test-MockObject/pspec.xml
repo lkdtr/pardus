@@ -1,0 +1,48 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Test-MockObject</Name>
+        <Homepage>http://search.cpan.org/dist/Test-MockObject</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Perl extension for emulating troublesome interfaces</Summary>
+        <Description>Test::MockObject allows you to control interfaces for writing tests in perl. It can emulate interfaces that you normally would use (such as a database or other external items). You don't have to recreate the functionality, but simply mimic the input and output. .</Description>
+        <Archive sha1sum="e31e426554a43b9e3bdf8abf3a6e854537406e13" type="targz">mirrors://cpan/authors/id/C/CH/CHROMATIC/Test-MockObject-1.20110612.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Test-MockObject</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+            <Dependency>perl-UNIVERSAL-can</Dependency>
+            <Dependency>perl-UNIVERSAL-isa</Dependency>
+            <Dependency>perl-Test-Exception</Dependency>
+        </RuntimeDependencies>
+     <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/perl</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-07-06</Date>
+            <Version>1.20110612</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

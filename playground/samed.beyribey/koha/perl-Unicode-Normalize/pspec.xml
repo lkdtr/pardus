@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Unicode-Normalize</Name>
+        <Homepage>http://search.cpan.org/dist/Unicode-Normalize</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Unicode Normalization Forms</Summary>
+        <Description>Unicode::Normalize - Unicode Normalization Forms.</Description>
+        <Archive sha1sum="74d2208fd83ee7a54afc244623bd859f0a0b7a93" type="targz">mirrors://cpan/authors/id/S/SA/SADAHIRO/Unicode-Normalize-1.12-withoutworldwriteables.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Unicode-Normalize</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-10</Date>
+            <Version>1.12</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

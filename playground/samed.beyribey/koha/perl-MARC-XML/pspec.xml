@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-MARC-XML</Name>
+        <Homepage>http://search.cpan.org/dist/MARC-XML</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>MARC-XML is an extension to the MARC-Record distribution for working with  XML</Summary>
+        <Description>MARC-XML is an extension to the MARC-Record distribution for working with XML data encoded using the MARC21slim XML schema from the Library of Congress.</Description>
+        <Archive sha1sum="7398735a993a90b8e23d981d1ca757c848c1e4e2" type="targz">mirrors://cpan/authors/id/G/GM/GMCHARLT/MARC-XML-0.93.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-MARC-XML</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+            <Dependency>perl-MARC-Charset</Dependency>
+            <Dependency>perl-MARC-Record</Dependency>
+            <Dependency>perl-XML-SAX</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-10</Date>
+            <Version>0.93</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

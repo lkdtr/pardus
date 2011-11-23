@@ -1,0 +1,81 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>zebra</Name>
+        <Homepage>http://www.indexdata.com/zebra</Homepage>
+        <Packager>
+            <Name>Gökçen Eraslan</Name>
+            <Email>gokcen@pardus.org.tr</Email>
+        </Packager>
+        <License>GPLv2+</License>
+        <IsA>library</IsA>
+        <IsA>app:console</IsA>
+        <Summary>Text indexing and retrieval engine</Summary>
+        <Description>Zebra is a high-performance, general-purpose structured text indexing and retrieval engine. It reads structured records in a variety of input formats (eg. email, XML, MARC) and allows access to them through exact boolean search expressions and relevance-ranked free-text queries.</Description>
+        <Archive sha1sum="f426d3f75ddaecd1139b020f6f64ffd089b07431" type="targz">http://ftp.indexdata.dk/pub/zebra/idzebra-2.0.48.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>yaz</Dependency>
+            <Dependency>icu4c-devel</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>docbook-dsssl</Dependency>
+            <Dependency>docbook-xsl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>zebra</Name>
+        <RuntimeDependencies>
+            <Dependency>yaz</Dependency>
+            <Dependency>tcl</Dependency>
+            <Dependency>icu4c</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="header">/usr/include</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/aclocal</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/usr/share</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile target="/etc/zebra/zebra.cfg" permission="0644" owner="root">zebra.cfg</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+</Package>
+
+<History>
+     <Update release="4">
+        <Date>2011-07-10</Date>  
+        <Version>2.0.48</Version>
+        <Comment>version bump.</Comment>
+        <Name>Samed Beyribey</Name>
+        <Email>samed.beyribey@linux.org.tr</Email>
+    </Update>
+    <Update release="3">
+        <Date>2011-07-06</Date>
+        <Version>2.0.43</Version>
+        <Comment>added icu4c-devel dependency</Comment>
+        <Name>Samed Beyribey</Name>
+        <Email>samed.beyribey@linux.org.tr</Email>
+    </Update>
+        <Update release="2">
+            <Date>2010-06-03</Date>
+            <Version>2.0.43</Version>
+            <Comment>Version bump to 2.0.43</Comment>
+            <Name>Gökçen Eraslan</Name>
+            <Email>gokcen@pardus.org.tr</Email>
+        </Update>
+    <Update release="1">
+        <Date>2009-09-03</Date>
+        <Version>2.0.41</Version>
+        <Comment>First release.</Comment>
+        <Name>Gökçen Eraslan</Name>
+            <Email>gokcen@pardus.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

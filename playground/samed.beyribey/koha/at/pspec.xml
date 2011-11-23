@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>at</Name>
+        <Homepage>http://www.debian.org</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>AT and batch delayed command scheduling utility and daemon</Summary>
+        <Description>at runs a command given at a specified time</Description>
+        <Archive sha1sum="1cf47df152e9d119e083c11eefaf6368c993a8af" type="targz">http://ftp.debian.org/debian/pool/main/a/at/at_3.1.12.orig.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>ssmtp</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>at</Name>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="data">/var/spool/atd</Path>
+        </Files>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-05-17</Date>
+            <Version>3.1.12</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
+

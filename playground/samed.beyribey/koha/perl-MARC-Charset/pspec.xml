@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-MARC-Charset</Name>
+        <Homepage>http://search.cpan.org/dist/MARC-Charset</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Convert MARC-8 encoded strings to UTF-8</Summary>
+        <Description>perl-MARC-Charset is a Perl module which converts MARC-8 encoded strings to UTF-8.</Description>
+        <Archive sha1sum="30093694d1ceefe4a0f6bae8cfa9cbea14cd60f2" type="targz">mirrors://cpan/authors/id/E/ES/ESUMMERS/MARC-Charset-1.31.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-MARC-Charset</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+            <Dependency>perl-Class-Accessor</Dependency>
+            <Dependency>perl-XML-SAX</Dependency>
+            <Dependency>perl-Unicode-Normalize</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-04-10</Date>
+            <Version>1.31</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
