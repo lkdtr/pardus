@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>KOHA Integrated Library System</Summary>
         <Description>Koha is the first free and open source software library automation package.</Description>
-        <Archive sha1sum="2aa576e3f785e98a5697cb6f198ac7fba757c26d" type="targz">http://download.koha-community.org/koha-3.04.03.tar.gz</Archive>
+        <Archive sha1sum="7521903c6d07e2a4a5bdb4feb4217183d78687fe" type="targz">http://download.koha-community.org/koha-3.04.06.tar.gz</Archive>
         <BuildDependencies>
             <Dependency version="5.10.1">perl</Dependency>
             <Dependency>GraphicsMagick</Dependency>
@@ -109,6 +109,9 @@
             <Dependency>perl-YAML-Syck</Dependency>
             <Dependency>perl-YAML</Dependency>
         </BuildDependencies>
+        <Patches>
+            <Patch>001-fix-password-comparison.patch</Patch>
+        </Patches>
     </Source>
 
     <Package>
@@ -231,10 +234,18 @@
             <AdditionalFile owner="root" permission="0644" target="/usr/share/koha/misc/translator/po/tr-TR-pref.po">tr-TR-pref.po</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/koha/misc/translator/po/tr-TR-i-opac-t-prog-v-3002000.po">tr-TR-i-opac-t-prog-v-3002000.po</AdditionalFile>
             <AdditionalFile owner="root" permission="0644" target="/usr/share/koha/misc/translator/po/tr-TR-i-staff-t-prog-v-3002000.po">tr-TR-i-staff-t-prog-v-3002000.po</AdditionalFile>
+            <AdditionalFile owner="root" permission="0600" target="/etc/cron.d/koha">koha.cron</AdditionalFile>
         </AdditionalFiles>
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2011-11-18</Date>
+            <Version>3.4.6</Version>
+            <Comment>Version bump with a patch to fix password comparison using LDAP authentication.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2011-08-05</Date>
             <Version>3.4.3</Version>
