@@ -52,7 +52,7 @@
      <Update release="4">
         <Date>2011-07-10</Date>  
         <Version>2.0.48</Version>
-        <Comment>version bump.</Comment>
+        <Comment>Version bump to satisfy Koha's Z39.50 settings.</Comment>
         <Name>Samed Beyribey</Name>
         <Email>samed.beyribey@linux.org.tr</Email>
     </Update>
