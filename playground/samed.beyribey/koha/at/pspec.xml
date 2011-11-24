@@ -14,7 +14,7 @@
         <Description>at runs a command given at a specified time</Description>
         <Archive sha1sum="1cf47df152e9d119e083c11eefaf6368c993a8af" type="targz">http://ftp.debian.org/debian/pool/main/a/at/at_3.1.12.orig.tar.gz</Archive>
         <BuildDependencies>
-            <Dependency>ssmtp</Dependency>
+            <Dependency>postfix</Dependency>
         </BuildDependencies>
     </Source>
 
