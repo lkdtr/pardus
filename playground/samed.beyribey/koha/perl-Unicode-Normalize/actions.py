@@ -7,7 +7,7 @@
 from pisi.actionsapi import perlmodules
 from pisi.actionsapi import pisitools
 
-WorkDir = "Unicode-Normalize-1.12"
+WorkDir = "Unicode-Normalize-1.13"
 
 def setup():
     perlmodules.configure()

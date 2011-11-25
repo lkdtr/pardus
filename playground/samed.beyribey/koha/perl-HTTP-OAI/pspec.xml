@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>API for the OAI-PMH</Summary>
         <Description>OAI-PERL are a set of Perl modules that provide an API to the Open Archives Initiative Protocol for Metadata Harvesting (OAI-PMH).</Description>
-        <Archive sha1sum="9331028262da054deeb6776f6cff75771e82036b" type="targz">mirrors://cpan/authors/id/T/TI/TIMBRODY/HTTP-OAI-3.24.tar.gz</Archive>
+        <Archive sha1sum="c9a777877e2ad73455b28052841ef0806794883d" type="targz">mirrors://cpan/authors/id/T/TI/TIMBRODY/HTTP-OAI-3.27.tar.gz</Archive>
         <BuildDependencies>
             <Dependency version="5.10.1">perl</Dependency>
         </BuildDependencies>
@@ -37,6 +37,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2011-11-24</Date>
+            <Version>3.27</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
         <Update release="1">
             <Date>2011-04-10</Date>
             <Version>3.24</Version>
