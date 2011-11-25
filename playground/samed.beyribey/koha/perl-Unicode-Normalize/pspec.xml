@@ -13,7 +13,7 @@
         <IsA>library</IsA>
         <Summary>Unicode Normalization Forms</Summary>
         <Description>Unicode::Normalize - Unicode Normalization Forms.</Description>
-        <Archive sha1sum="74d2208fd83ee7a54afc244623bd859f0a0b7a93" type="targz">mirrors://cpan/authors/id/S/SA/SADAHIRO/Unicode-Normalize-1.12-withoutworldwriteables.tar.gz</Archive>
+        <Archive sha1sum="cfec620bb393e6dd8d62d1ecbfdf7829f62f50d4" type="targz">mirrors://cpan/authors/id/S/SA/SADAHIRO/Unicode-Normalize-1.13.tar.gz</Archive>
         <BuildDependencies>
             <Dependency version="5.10.1">perl</Dependency>
         </BuildDependencies>
@@ -32,6 +32,13 @@
     </Package>
 
     <History>
+        <Update release="2">
+            <Date>2011-11-24</Date>
+            <Version>1.13</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
         <Update release="1">
             <Date>2011-04-10</Date>
             <Version>1.12</Version>
