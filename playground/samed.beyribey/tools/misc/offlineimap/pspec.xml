@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>offlineimap</Name>
+        <Homepage>http://offlineimap.org</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>Powerful IMAP/Maildir synchronization and reader support</Summary>
+        <Description>OfflineIMAP is a tool to simplify your e-mail reading. With OfflineIMAP, you can read the same mailbox from multiple computers.</Description>
+        <Archive sha1sum="1081dca493d961dfa487086bc72ed02adc19cf31" type="targz">https://github.com/spaetz/offlineimap/tarball/v6.4.0</Archive>
+    </Source>
+
+    <Package>
+        <Name>offlineimap</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="2">
+            <Date>2011-11-27</Date>
+            <Version>6.4.0</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+        <Update release="1">
+            <Date>2008-04-18</Date>
+            <Version>5.99.11</Version>
+            <Comment>First release</Comment>
+            <Name>Kenan Pelit</Name>
+            <Email>kpelit@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>
