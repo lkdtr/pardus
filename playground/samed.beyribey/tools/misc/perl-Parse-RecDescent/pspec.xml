@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Parse-RecDescent</Name>
+        <Homepage>http://search.cpan.org/dist/Parse-RecDescent</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic-2</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Perl module to generate recursive-descent parsers</Summary>
+        <Description>RecDescent incrementally generates top-down recursive-descent text parsers from simple yacc-like grammar specifications.</Description>
+        <Archive sha1sum="bec47f6a011b1c2dd1175b15c106fbdd51cbcd55" type="targz">mirrors://cpan/authors/id/D/DC/DCONWAY/Parse-RecDescent-1.965001.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Parse-RecDescent</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-11-27</Date>
+            <Version>1.965001</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
