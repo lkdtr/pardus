@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>perl-Mail-IMAPClient</Name>
+        <Homepage>http://search.cpan.org/dist/Mail-IMAPClient</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>Artistic-2</License>
+        <License>GPLv1</License>
+        <IsA>library</IsA>
+        <Summary>Perl module that provides an IMAP client API</Summary>
+        <Description>Mail::IMAPClient is a Perl module that provides an interface for communicating with an IMAP server as an IMAP client.</Description>
+        <Archive sha1sum="c8f43e53bc77eb28c34829065d1a768bfb6d9004" type="targz">mirrors://cpan/authors/id/P/PL/PLOBBES/Mail-IMAPClient-3.30.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>perl-Mail-IMAPClient</Name>
+        <RuntimeDependencies>
+            <Dependency version="5.10.1">perl</Dependency>
+            <Dependency>perl-Parse-RecDescent</Dependency>
+            <Dependency>perl-Digest-HMAC</Dependency>
+            <Dependency>perl-Authen-SASL</Dependency>
+            <Dependency>perl-MIME-Base64</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-11-27</Date>
+            <Version>3.30</Version>
+            <Comment>Initial release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
