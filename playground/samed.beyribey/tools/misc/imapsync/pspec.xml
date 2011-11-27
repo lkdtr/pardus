@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>imapsync</Name>
+        <Homepage>http://http://imapsync.lamiral.info</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed@ozguryazilim.com.tr</Email>
+        </Packager>
+        <License>WTFPL-2</License>
+        <Icon>imapsync</Icon>
+        <IsA>app:console</IsA>
+        <Summary>IMAP synchronisation, sync, copy or migration tool</Summary>
+        <Description>imapsync software is a command line tool allowing incremental and recursive IMAP transfers from one mailbox to another, both anywhere on the internet or in your local network</Description>
+        <Archive sha1sum="6f9e39192582a1dd518fded6e5888b767d9a0fee" type="targz">https://fedorahosted.org/released/imapsync/imapsync-1.468.tgz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>imapsync</Name>
+        <RuntimeDependencies>
+            <Dependency>perl-Date-Manip</Dependency>
+            <Dependency>perl-Mail-IMAPClient</Dependency>
+            <Dependency>perl-Term-ReadKey</Dependency>
+            <Dependency>perl-IO-Socket-SSL</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="data">/</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-11-27</Date>
+            <Version>1.468</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed@ozguryazilim.com.tr</Email>
+        </Update>
+    </History>
+</PISI>
