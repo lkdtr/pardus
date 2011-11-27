@@ -6,7 +6,7 @@
         <Homepage>http://http://imapsync.lamiral.info</Homepage>
         <Packager>
             <Name>Samed Beyribey</Name>
-            <Email>samed@ozguryazilim.com.tr</Email>
+            <Email>samed.beyribey@linux.org.tr</Email>
         </Packager>
         <License>WTFPL-2</License>
         <Icon>imapsync</Icon>
@@ -38,7 +38,7 @@
             <Version>1.468</Version>
             <Comment>First release</Comment>
             <Name>Samed Beyribey</Name>
-            <Email>samed@ozguryazilim.com.tr</Email>
+            <Email>samed.beyribey@linux.org.tr</Email>
         </Update>
     </History>
 </PISI>
