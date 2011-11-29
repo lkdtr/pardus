@@ -10,7 +10,7 @@
         </Packager>
         <License>GPLv2</License>
         <IsA>app:console</IsA>
-        <Summary>Powerful IMAP/Maildir synchronization and reader support</Summary>
+        <Summary>Powerful IMAP/Maildir synchronization and reader support.</Summary>
         <Description>OfflineIMAP is a tool to simplify your e-mail reading. With OfflineIMAP, you can read the same mailbox from multiple computers.</Description>
         <Archive sha1sum="1081dca493d961dfa487086bc72ed02adc19cf31" type="targz">https://github.com/spaetz/offlineimap/tarball/v6.4.0</Archive>
     </Source>
