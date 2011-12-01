@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>sylfilter</Name>
+        <Summary xml:lang="tr">Genel bir spam filtreleme aracı</Summary>
+        <Description xml:lang="tr">SylFilter genel bir mesaj filtreleme kitaplığı ve aracıdır. Spam filtrelemede oldukça yaygın olan bayesian tipi filtreleme sunar. Ayrıca birden fazla dili de desteklemektedir. C diliyle yazılmıştır ve çok az sistem kaynağı tüketir.</Description>
+    </Source>
+</PISI>

@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>sylfilter</Name>
+        <Homepage>http://sylpheed.sraoss.jp/sylfilter/</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>BSD</License>
+        <IsA>app:console</IsA>
+        <Summary>A generic spam filter tool</Summary>
+        <Description>SylFilter (tentative name) is a generic message filter library and command-line tools. SylFilter provides a bayesian filter which is very popular as an algorithm for spam filtering. SylFilter also supports multilingual and can be applied to any languages. SylFilter is implemented with C language and runs fast with small resources.</Description>
+        <Archive sha1sum="65c004c7773859e2deb6d503bbbb7b8f4eeaba94" type="targz">http://sylpheed.sraoss.jp/sylfilter/src/sylfilter-0.6.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>glib2-devel</Dependency>
+            <Dependency>sqlite</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>sylfilter</Name>
+        <RuntimeDependencies>
+            <Dependency>glib2</Dependency>
+            <Dependency>sqlite</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <Package>
+        <Name>sylfilter-devel</Name>
+        <Files>
+            <Path fileType="header">/usr/include</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-01</Date>
+            <Version>0.6</Version>
+            <Comment>First release.</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
