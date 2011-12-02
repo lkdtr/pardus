@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-gnupginterface</Name>
+        <Homepage>http://py-gnupg.sourceforge.net</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>library</IsA>
+        <Summary>A Python interface to GNU Privacy Guard (GnuPG)</Summary>
+        <Description>GnuPGInterface is a Python module to interface with GnuPG. It concentrates on interacting with GnuPG via filehandles, providing access to control GnuPG via versatile and extensible means.</Description>
+        <Archive sha1sum="4d916b0fa1ba2d1894efdc1bc0c14ea4e6b43fa6" type="targz">mirrors://sourceforge/py-gnupg/GnuPGInterface/0.3.2/GnuPGInterface-0.3.2.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-gnupginterface</Name>
+        <RuntimeDependencies>
+            <Dependency>gnupg</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>0.3.2</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
