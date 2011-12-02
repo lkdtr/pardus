@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>gnump3d</Name>
+        <Summary xml:lang="tr">GNUMP3d çokluortam yayını</Summary>
+        <Description xml:lang="tr">GNUMP3d MP3, OGG, film ve diğer farklı biçimdeki çokluortam öğelerini ağ üzerinden yayınlamanızı sağlayan bir sunucudur.</Description>
+    </Source>
+</PISI>
+

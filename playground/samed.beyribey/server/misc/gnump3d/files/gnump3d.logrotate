@@ -1,0 +1,5 @@
+/var/log/gnump3d/*.log {
+    missingok
+    notifempty
+    size 200k
+}

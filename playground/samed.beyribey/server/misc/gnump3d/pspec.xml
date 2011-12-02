@@ -1,0 +1,52 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>gnump3d</Name>
+        <Homepage>http://www.gnu.org/s/gnump3d</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>service</IsA>
+        <Summary>GNUMP3d Media Streamer</Summary>
+        <Description>A streaming server for MP3s, OGG vorbis files, movies and other media formats.</Description>
+        <Archive sha1sum="811c8fd977bcef932f5f6034e82bd94bcfd8d400" type="targz">http://savannah.gnu.org/download/gnump3d/gnump3d-3.0.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>perl</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>gnump3d</Name>
+        <RuntimeDependencies>
+            <Dependency>perl</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="config">/etc</Path>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share/gnump3d</Path>
+            <Path fileType="data">/var/cache/gnump3d</Path>
+            <Path fileType="data">/var/log/gnump3d</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/logrotate.d/gnump3d">gnump3d.logrotate</AdditionalFile>
+        </AdditionalFiles>
+        <Provides>
+            <COMAR script="service.py">System.Service</COMAR>
+        </Provides>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>3.0</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
