@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>wkhtmltopdf</Name>
+        <Homepage>http://code.google.com/p/wkhtmltopdf/</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv3</License>
+        <IsA>app:console</IsA>
+        <Summary>A simple HTML to PDF converter</Summary>
+        <Description>Simple shell utility to convert HTML to PDF using the WebKit rendering engine, and Qt.</Description>
+        <Archive sha1sum="41f598c0103326e7c13101391447b0284b4ba3cb" type="tarbz2">http://wkhtmltopdf.googlecode.com/files/wkhtmltopdf-0.9.9.tar.bz2</Archive>
+        <BuildDependencies>
+            <Dependency>qt-devel</Dependency>
+            <Dependency>qt-webkit</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>wkhtmltopdf</Name>
+        <RuntimeDependencies>
+            <Dependency>qt</Dependency>
+            <Dependency>qt-webkit</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>0.9.9</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
