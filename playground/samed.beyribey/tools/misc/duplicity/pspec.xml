@@ -1,0 +1,50 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>duplicity</Name>
+        <Homepage>http://www.nongnu.org/duplicity/</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <IsA>app:console</IsA>
+        <Summary>A utility for encrypted, bandwidth-efficient backups using the rsync algorithm</Summary>
+        <Description>Duplicity backs directories by producing encrypted tar-format volumes and uploading them to a remote or local file server.</Description>
+        <Archive sha1sum="cee8f4793f3b2990447bb26c9131202930adf096" type="targz">http://code.launchpad.net/duplicity/0.6-series/0.6.17/+download/duplicity-0.6.17.tar.gz</Archive>
+        <BuildDependencies>
+            <Dependency>librsync</Dependency>
+            <Dependency>ncftp</Dependency>
+            <Dependency>python-boto</Dependency>
+            <Dependency>python-gnupginterface</Dependency>
+        </BuildDependencies>
+    </Source>
+
+    <Package>
+        <Name>duplicity</Name>
+        <RuntimeDependencies>
+            <Dependency>librsync</Dependency>
+            <Dependency>ncftp</Dependency>
+            <Dependency>python-boto</Dependency>
+            <Dependency>python-gnupginterface</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="man">/usr/share/man</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>0.6.17</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>

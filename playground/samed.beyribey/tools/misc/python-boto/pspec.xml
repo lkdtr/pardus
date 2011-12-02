@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>python-boto</Name>
+        <Homepage>http://code.google.com/p/boto</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>MIT</License>
+        <IsA>library</IsA>
+        <Summary>A Python interface to Amazon Web Services (AWS)</Summary>
+        <Description>An integrated interface to current and future infrastructural services offered by Amazon Web Services</Description>
+        <Archive sha1sum="f4cb7574cc51283bed31f34cfc7c38ef81d185e8" type="targz">http://boto.googlecode.com/files/boto-2.1.1.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>python-boto</Name>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="doc">/usr/share/doc</Path>
+        </Files>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-02</Date>
+            <Version>2.1.1</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
