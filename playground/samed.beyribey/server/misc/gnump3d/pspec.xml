@@ -13,16 +13,10 @@
         <Summary>GNUMP3d Media Streamer</Summary>
         <Description>A streaming server for MP3s, OGG vorbis files, movies and other media formats.</Description>
         <Archive sha1sum="811c8fd977bcef932f5f6034e82bd94bcfd8d400" type="targz">http://savannah.gnu.org/download/gnump3d/gnump3d-3.0.tar.gz</Archive>
-        <BuildDependencies>
-            <Dependency>perl</Dependency>
-        </BuildDependencies>
     </Source>
 
     <Package>
         <Name>gnump3d</Name>
-        <RuntimeDependencies>
-            <Dependency>perl</Dependency>
-        </RuntimeDependencies>
         <Files>
             <Path fileType="config">/etc</Path>
             <Path fileType="executable">/usr/bin</Path>
