@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<!DOCTYPE PISI SYSTEM "http://www.pardus.org.tr/projeler/pisi/pisi-spec.dtd">
+<PISI>
+    <Source>
+        <Name>nagstamon</Name>
+        <Homepage>http://nagstamon.ifw-dresden.de/</Homepage>
+        <Packager>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Packager>
+        <License>GPLv2</License>
+        <Icon>nagstamon</Icon>
+        <IsA>app:gui</IsA>
+        <Summary>Nagios status monitor for the desktop</Summary>
+        <Description>Nagstamon is a Nagios status monitor for the desktop. It connects to multiple Nagios, Icinga, Opsview, Centreon, Op5 Monitor/Ninja and Check_MK Multisite monitoring servers and resides in systray.</Description>
+        <Archive sha1sum="6721f6b41dc26327e7fe89087e32580703b565dd" type="targz">http://sourceforge.net/projects/nagstamon/files/nagstamon/nagstamon%200.9.8/nagstamon_0.9.8.tar.gz</Archive>
+    </Source>
+
+    <Package>
+        <Name>nagstamon</Name>
+        <RuntimeDependencies>
+            <Dependency>pygtk</Dependency>
+            <Dependency>gnome-python-extras</Dependency>
+        </RuntimeDependencies>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="library">/usr/lib</Path>
+            <Path fileType="data">/usr/share</Path>
+            <Path fileType="data">/etc/xdg/autostart</Path>
+        </Files>
+        <AdditionalFiles>
+            <AdditionalFile owner="root" permission="0644" target="/etc/xdg/autostart/nagstamon.desktop">nagstamon.desktop</AdditionalFile>
+        </AdditionalFiles>
+    </Package>
+
+    <History>
+        <Update release="1">
+            <Date>2011-12-25</Date>
+            <Version>0.9.8</Version>
+            <Comment>First release</Comment>
+            <Name>Samed Beyribey</Name>
+            <Email>samed.beyribey@linux.org.tr</Email>
+        </Update>
+    </History>
+</PISI>
