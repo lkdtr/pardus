@@ -57,8 +57,4 @@ def install():
     pisitools.remove("/usr/share/freeciv/themes/gui-sdl/human/Makefile*")
     pisitools.remove("/usr/share/applications/freeciv.desktop")
 
-    # docs
-    shelltools.system("./manual/civmanual")
-    pisitools.dohtml("manual*.html")
-
     pisitools.dodoc("ChangeLog", "NEWS", "doc/BUGS", "doc/HOWTOPLAY", "doc/README*", "doc/TODO")
