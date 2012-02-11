@@ -6,14 +6,14 @@
         <Homepage>http://www.freecol.org</Homepage>
         <Packager>
             <Name>Doruk Fişek</Name>
-            <Email>dfisek@fisek.com.tr</Email>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
         </Packager>
         <License>GPLv2</License>
         <Icon>freecol</Icon>
         <IsA>app:gui</IsA>
         <Summary>Colonization clone strategy game</Summary>
         <Description>Game starts in 1492 and the object of the game is to colonize America , build a powerful nation, declare your independence and survive the attack of the King's forces.</Description>
-        <Archive sha1sum="e6d4e339d7a5e7a159486d198c90bd5bb162d3d2" type="targz">mirrors://sourceforge/freecol/freecol-0.10.0-alpha-src.tar.gz</Archive>
+        <Archive sha1sum="2b2e24fc7f1c0eb17717efe085f85769cdca67f8" type="zip">mirrors://sourceforge/freecol/freecol-0.10.4-src.zip</Archive>
         <BuildDependencies>
             <Dependency>sun-jdk</Dependency>
             <Dependency>ant</Dependency>
@@ -41,6 +41,13 @@
     </Package>
 
     <History>
+        <Update release="28">
+            <Date>2012-02-11</Date>
+            <Version>0.10.4</Version>
+            <Comment>New bugfix release</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
+        </Update>
         <Update release="27">
             <Date>2011-01-22</Date>
             <Version>0.10.0_alpha1</Version>
