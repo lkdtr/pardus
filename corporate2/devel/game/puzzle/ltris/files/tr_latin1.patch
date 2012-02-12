@@ -1,5 +1,5 @@
---- po/tr.po.orig	2011-03-03 21:22:57.615000476 +0200
-+++ po/tr.po	2011-03-03 21:27:48.093000475 +0200
+--- po/tr.po.orig	2012-02-12 08:44:33.624000210 +0200
++++ po/tr.po	2012-02-12 08:54:53.301000247 +0200
 @@ -18,11 +18,11 @@
  
  #: src/manager.c:65
@@ -83,10 +83,10 @@
 +"olacak ve tanitilan giris daha hassaslasacaktir."
  
  #: src/manager.c:77
- msgid ""
-@@ -89,9 +89,9 @@
- "movement#Rotate Left/Right: block rotation#Down: faster Dropping#Drop: "
- "INSTANT drop"
+ msgid "Delay for vertical movement when using Down key."
+@@ -93,9 +93,9 @@
+ "Left/Right: horizontal movement#Rotate Left/Right: block rotation#Down: "
+ "faster Dropping#Drop: INSTANT drop"
  msgstr ""
 -"Her kontrol degerinin tanıtılmak icin bir anahtara ihtiyacı vardır. ##Sol/"
 -"Sag: yatay hareket.#Dondur Sol/Sag: donusu engelle#Asagı:daha hızlı "
@@ -95,10 +95,10 @@
 +"Sag: yatay hareket.#Dondur Sol/Sag: donusu engelle#Asagi:daha hizli "
 +"birakis#Birak ANIDEN birak"
  
- #: src/manager.c:78
- msgid "Let's get it on!!!!"
-@@ -100,8 +100,8 @@
  #: src/manager.c:79
+ msgid "Key used to pause and unpause a game."
+@@ -108,8 +108,8 @@
+ #: src/manager.c:81
  msgid "Human player names. If you play against CPU it will be named as CPU-x."
  msgstr ""
 -"Canlı oyuncu isimleri. eger islemciye karsı oynarsanız o CPU-x olarak "
@@ -106,9 +106,9 @@
 +"Canli oyuncu isimleri. eger islemciye karsi oynarsaniz o CPU-x olarak "
 +"adlandirilacaktir."
  
- #: src/manager.c:80
+ #: src/manager.c:82
  #, fuzzy, c-format
-@@ -110,9 +110,9 @@
+@@ -118,9 +118,9 @@
  "always start at level 0 there).##Each starting level up adds you 1.5% score "
  "in the end!"
  msgstr ""
@@ -119,9 +119,9 @@
 +"seviyesinde baslayacaksiniz. ##Her baslangic seviyesi oyun sonunda puaniniza "
 +"yuzde 1.5 oraninda eklenecektir."
  
- #: src/manager.c:81
+ #: src/manager.c:83
  #, fuzzy, c-format
-@@ -125,12 +125,12 @@
+@@ -133,12 +133,12 @@
  "Shows guiding lines or a shadow of the currently dropping block so you see "
  "where it'll hit the ground.##This option has no penalty/bonus."
  msgstr ""
@@ -129,14 +129,14 @@
 +"Rehber satirlari veya su anda dusen obegi gosterir boylece nerede yere "
  "dustugunu gorursun. $$Bu secenegin bonusu yoktur."
  
- #: src/manager.c:83
+ #: src/manager.c:85
  msgid "Some multiplayer and CPU settings."
 -msgstr "Bazı coklu oyuncular ve islemci ayarları."
 +msgstr "Bazi coklu oyuncular ve islemci ayarlari."
  
- #: src/manager.c:84
+ #: src/manager.c:86
  msgid ""
-@@ -138,9 +138,9 @@
+@@ -146,9 +146,9 @@
  "The more holes the harder it will be to remove this line so you should "
  "choose a low value (e.g. 1 or 2) for long multiplayer games."
  msgstr ""
@@ -148,8 +148,8 @@
 +"zorunda kalacaktir, iste bu yuzden coklu oyuncu secilen oyunlarda 1 veya 2  "
  "gibi daha dusuk bir deger secmelisiniz."
  
- #: src/manager.c:85
-@@ -150,10 +150,10 @@
+ #: src/manager.c:87
+@@ -158,10 +158,10 @@
  "each line. If the option is off, all the lines that are sent in one go, will "
  "have the holes in the same spot."
  msgstr ""
@@ -162,9 +162,9 @@
 +"delikler rastgele gozukecektir. Eger bu secenek kapaliysa, tek basina "
 +"gonderilen tum hatlar ayni lekedeki hatlari alacaklardir."
  
- #: src/manager.c:86
+ #: src/manager.c:88
  msgid ""
-@@ -162,11 +162,11 @@
+@@ -170,11 +170,11 @@
  "substracted.##If disabled:#3 Line send -> 2 lines received##If enabled:#3 "
  "lines send -> 3 lines received"
  msgstr ""
@@ -179,16 +179,16 @@
 +"Hat gonderildi -> 2 hat alindi##eger etkinlestirilmis ise: #3 hatlar "
 +"gonderildi -> 3 hat alindi"
  
- #: src/manager.c:87
+ #: src/manager.c:89
  msgid ""
-@@ -174,34 +174,34 @@
+@@ -182,34 +182,34 @@
  "tetris ignoring the 'Send All' setting."
  msgstr ""
  "Eger bu secenek etkinlestirilmis ise rakibiniz tetris'in 'Hepsini Gonder' "
 -"ayarını  yok saydıgı tum dort hattı da alacaktır."
 +"ayarini  yok saydigi tum dort hatti da alacaktir."
  
- #: src/manager.c:88
+ #: src/manager.c:90
  msgid ""
  "This is the delay in milliseconds the CPU waits before dropping a block."
  msgstr ""
@@ -197,7 +197,7 @@
 +"Islemcinin bir obegi birakmadan once bekletmesinden kaynaklanan milisaniye "
 +"oranindaki bir gecikmedir."
  
- #: src/manager.c:89
+ #: src/manager.c:91
  msgid ""
  "The more aggressive the style is the more priority is put on completing "
  "multiple lines at the expense of a balanced bowl contents."
@@ -207,12 +207,12 @@
 +"Tarz ne kadar gerilirse, dengeli hat iceriklerinin saglikli bir sekilde "
 +"coklu hatlarin tamamlanmasindaki oncelik  de o kadar artar."
  
- #: src/manager.c:90
+ #: src/manager.c:92
  msgid "Some advanced options."
 -msgstr "Bazı gelismis secenekler."
 +msgstr "Bazi gelismis secenekler."
  
- #: src/manager.c:91
+ #: src/manager.c:93
  msgid ""
  "Test the CPU analyze algorithm in cpu.c and give an average score for a "
  "number of games."
@@ -222,9 +222,9 @@
 +"cpu . c'deki Islemci analiz cozum yolunu test edin. ve oyun sayilari icin "
 +"aritmetik ortalama puani verin."
  
- #: src/manager.c:92
+ #: src/manager.c:94
  msgid ""
-@@ -209,9 +209,9 @@
+@@ -217,9 +217,9 @@
  "turn them on you can see a general game behaviour and judge the algorithm by "
  "this behaviour."
  msgstr ""
@@ -235,14 +235,14 @@
 +"acarsaniz genel bir oyun davranisi gorebilir ve cozum yolunu bu davranisa "
 +"gore yargilayabilirsiniz."
  
- #: src/manager.c:93
+ #: src/manager.c:95
  msgid ""
-@@ -225,14 +225,14 @@
+@@ -233,14 +233,14 @@
  "multiplayer settings you made.##And in DEMO you can see your CPU do the "
  "work. So relax! ;-)"
  msgstr ""
 -"Temel olarak uc farklı oyun turu vardır:##KLASIK:#Klasik tetris oyunu. Bos "
-+"Temel olarak uc farkli oyun turu vardir:##KLASIK:#KlasIk tetris oyunu. Bos "
++"Temel olarak uc farkli oyun turu vardir:##KLASIK:#Klasik tetris oyunu. Bos "
  "bir kase ile baslar ve siz oyunu surdurdukce bu kase dolar.#SEKILLER:#Her "
 -"seviye de guzel bir sekil kasenizin dibine eklenecektir. 7-12 arasındaki "
 +"seviye de guzel bir sekil kasenizin dibine eklenecektir. 7-12 arasindaki "
@@ -257,8 +257,8 @@
 +"rakibinize gonderilecektir.##Ve DEMO'da islemcinizin oynadigini "
  "goreceksiniz. Bu yuzden, rahat olun! -)"
  
- #: src/manager.c:99
-@@ -240,16 +240,16 @@
+ #: src/manager.c:101
+@@ -248,16 +248,16 @@
  "If you turn this on the background will change every level else it's always "
  "the same."
  msgstr ""
@@ -267,7 +267,7 @@
 +"Eger bunu acarsaniz arkaplaniniz her seviyede degisecek, eger acmazsaniz "
 +"ayni kalacaktir."
  
- #: src/manager.c:100
+ #: src/manager.c:102
  msgid ""
  "If you enable this option the keystate of either the 'Down' key or all the "
  "keys are cleared so you can't accidently move the next block."
@@ -277,9 +277,9 @@
 +"Eger bu secenegi etkinlestirirseniz ya 'Asagi' tusunuz veya tum tus "
 +"takiminiz temizlenecek boylece kazara bir sonraki blogu oynatamayacaksiniz."
  
- #: src/manager.c:101
+ #: src/manager.c:103
  msgid ""
-@@ -257,8 +257,8 @@
+@@ -265,8 +265,8 @@
  "the screen instead that one is drawn at the bottom and one at the top."
  msgstr ""
  "Eger bu etkinlestirilmisse Iki-Oyuncu seceneginde oyunculardan birinin "
@@ -288,9 +288,9 @@
 +"altta, digerinin ustte gosterilmesi yerine, onizleme gorunumu ekranin "
 +"ortasinda olacaktir."
  
- #: src/manager.c:102
+ #: src/manager.c:104
  msgid ""
-@@ -268,10 +268,10 @@
+@@ -276,10 +276,10 @@
  "'Async' you may move the block below others but on the cost of slight "
  "graphical errors."
  msgstr ""
@@ -303,173 +303,177 @@
 +"yerlestirilmistir.)#Eger bu secenegi 'Esitsiz'e isaretlerseniz bazi kucuk "
 +"gorsel hatalari goze almak pahasina blogu asagiya hareket ettirebilirsiniz."
  
- #: src/manager.c:107
+ #: src/manager.c:109
  #, c-format
-@@ -292,7 +292,7 @@
+@@ -300,7 +300,7 @@
  
- #: src/manager.c:209
+ #: src/manager.c:212
  msgid "No Limit"
 -msgstr "Sınır yok"
 +msgstr "Sinir yok"
  
- #: src/manager.c:209
+ #: src/manager.c:212
  msgid "50 FPS"
-@@ -308,7 +308,7 @@
+@@ -316,7 +316,7 @@
  
- #: src/manager.c:210
+ #: src/manager.c:213
  msgid "Defensive"
 -msgstr "Savunmalı"
 +msgstr "Savunmali"
  
- #: src/manager.c:210
+ #: src/manager.c:213
  msgid "Normal"
-@@ -326,7 +326,7 @@
- #: src/manager.c:354 src/manager.c:356 src/manager.c:365 src/manager.c:366
- #: src/manager.c:367 src/manager.c:425 src/manager.c:429 src/manager.c:434
+@@ -334,7 +334,7 @@
+ #: src/manager.c:356 src/manager.c:358 src/manager.c:367 src/manager.c:368
+ #: src/manager.c:369 src/manager.c:436 src/manager.c:440 src/manager.c:445
  msgid "Off"
 -msgstr "Kapalı"
 +msgstr "Kapali"
  
- #: src/manager.c:211
+ #: src/manager.c:214
  msgid "Shadow"
-@@ -342,7 +342,7 @@
+@@ -350,7 +350,7 @@
  
- #: src/manager.c:212 src/value.c:44
+ #: src/manager.c:215 src/value.c:44
  msgid "Down"
 -msgstr "Asagı"
 +msgstr "Asagi"
  
- #: src/manager.c:212
+ #: src/manager.c:215
  msgid "All"
-@@ -395,7 +395,7 @@
+@@ -403,7 +403,7 @@
  
- #: src/manager.c:310 src/menu.c:171
+ #: src/manager.c:312 src/menu.c:171
  msgid "Quit"
 -msgstr "Cık"
 +msgstr "Cik"
  
- #: src/manager.c:318 src/manager.c:329 src/manager.c:342 src/manager.c:361
- #: src/manager.c:372 src/manager.c:380 src/manager.c:413 src/manager.c:418
-@@ -411,7 +411,7 @@
- #: src/manager.c:356 src/manager.c:365 src/manager.c:366 src/manager.c:367
- #: src/manager.c:425 src/manager.c:429 src/manager.c:434
+ #: src/manager.c:320 src/manager.c:331 src/manager.c:344 src/manager.c:363
+ #: src/manager.c:374 src/manager.c:419 src/manager.c:424 src/manager.c:429
+@@ -419,7 +419,7 @@
+ #: src/manager.c:358 src/manager.c:367 src/manager.c:368 src/manager.c:369
+ #: src/manager.c:436 src/manager.c:440 src/manager.c:445
  msgid "On"
 -msgstr "Acık"
 +msgstr "Acik"
  
- #: src/manager.c:325
+ #: src/manager.c:327
  msgid "Volume:"
-@@ -419,11 +419,11 @@
+@@ -427,11 +427,11 @@
  
- #: src/manager.c:332
+ #: src/manager.c:334
  msgid "Animations:"
 -msgstr "Canlandırmalar:"
 +msgstr "Canlandirmalar:"
  
- #: src/manager.c:333
+ #: src/manager.c:335
  msgid "Move:"
 -msgstr "Tası:"
 +msgstr "Tasi:"
  
- #: src/manager.c:333 src/manager.c:334
+ #: src/manager.c:335 src/manager.c:336
  msgid "Tile By Tile"
-@@ -435,11 +435,11 @@
+@@ -443,11 +443,11 @@
  
- #: src/manager.c:334 src/manager.c:387 src/manager.c:393 src/manager.c:399
+ #: src/manager.c:336 src/manager.c:382 src/manager.c:388 src/manager.c:394
  msgid "Drop:"
 -msgstr "Bırak:"
 +msgstr "Birak:"
  
- #: src/manager.c:335
+ #: src/manager.c:337
  msgid "Change Background:"
 -msgstr "Artalanı Degistir:"
 +msgstr "Artalani Degistir:"
  
- #: src/manager.c:335
+ #: src/manager.c:337
  msgid "Yes"
-@@ -447,7 +447,7 @@
+@@ -455,7 +455,7 @@
  
- #: src/manager.c:335
+ #: src/manager.c:337
  msgid "No"
 -msgstr "Hayır"
 +msgstr "Hayir"
  
- #: src/manager.c:337
+ #: src/manager.c:339
  msgid "Display:"
-@@ -463,7 +463,7 @@
+@@ -471,7 +471,7 @@
  
- #: src/manager.c:340
+ #: src/manager.c:342
  msgid "Frame Rate:"
 -msgstr "Cerceve Oranı:"
 +msgstr "Cerceve Orani:"
  
- #: src/manager.c:344
+ #: src/manager.c:346
  msgid "Start Game"
-@@ -495,7 +495,7 @@
+@@ -503,7 +503,7 @@
  
- #: src/manager.c:353
+ #: src/manager.c:355
  msgid "Help:"
 -msgstr "Yardım:"
 +msgstr "Yardim:"
  
- #: src/manager.c:354
+ #: src/manager.c:356
  msgid "Expert Mode:"
-@@ -515,7 +515,7 @@
+@@ -523,7 +523,7 @@
  
- #: src/manager.c:366
+ #: src/manager.c:368
  msgid "Send All Lines:"
 -msgstr "Butun Hatları Gonder:"
 +msgstr "Butun Hatlari Gonder:"
  
- #: src/manager.c:367
- msgid "Always Send Tetris:"
-@@ -523,11 +523,11 @@
- 
  #: src/manager.c:369
+ msgid "Always Send Tetris:"
+@@ -531,11 +531,11 @@
+ 
+ #: src/manager.c:371
  msgid "CPU Style:"
 -msgstr "Islemci Tarzı:"
 +msgstr "Islemci Tarzi:"
  
- #: src/manager.c:370
+ #: src/manager.c:372
  msgid "CPU Drop Delay:"
 -msgstr "Islemci Bırakma Gecikmesi:"
 +msgstr "Islemci Birakma Gecikmesi:"
  
- #: src/manager.c:378
- msgid "Horizontal Delay:"
-@@ -551,11 +551,11 @@
+ #: src/manager.c:376
+ msgid "Pause Key:"
+@@ -559,7 +559,7 @@
  
- #: src/manager.c:386 src/manager.c:392 src/manager.c:398
+ #: src/manager.c:381 src/manager.c:387 src/manager.c:393
  msgid "Down:"
 -msgstr "Asagı:"
 +msgstr "Asagi:"
  
- #: src/manager.c:425
+ #: src/manager.c:415
+ msgid "Horizontal Delay:"
+@@ -572,7 +572,7 @@
+ 
+ #: src/manager.c:436
  msgid "Quick Help:"
 -msgstr "Hızlı Yardım:"
 +msgstr "Hizli Yardim:"
  
- #: src/manager.c:428
+ #: src/manager.c:439
  msgid "Clear Keystate:"
-@@ -567,7 +567,7 @@
+@@ -584,7 +584,7 @@
  
- #: src/manager.c:430
+ #: src/manager.c:441
  msgid "Collision Check:"
 -msgstr "Carpısma Denetimi:"
 +msgstr "Carpisma Denetimi:"
  
- #: src/manager.c:430
+ #: src/manager.c:441
  msgid "Sync"
-@@ -579,7 +579,7 @@
+@@ -596,7 +596,7 @@
  
- #: src/manager.c:433
+ #: src/manager.c:444
  msgid "Test CPU Algorithm"
 -msgstr "Islemci Algoritmasını Sına"
 +msgstr "Islemci Algoritmasini Sina"
  
- #: src/manager.c:434
+ #: src/manager.c:445
  msgid "Visualization"
-@@ -592,11 +592,11 @@
+@@ -609,7 +609,7 @@
  #: src/tetris.c:127
  #, fuzzy
  msgid "n"
@@ -478,21 +482,21 @@
  
  #: src/tetris.c:385
  msgid "End Game? y/n"
--msgstr "Oyun Bitsin mi? e/h"
-+msgstr "Oyun Bitsin mi? y/n"
+@@ -638,11 +638,11 @@
  
- #: src/bowl.c:551 src/bowl.c:552
- msgid "Game Over"
-@@ -633,7 +633,7 @@
+ #: src/chart.c:187
+ msgid "Name      Level    Score"
+-msgstr "Isim''''''''''''Seviye''''''''''''Sonuc"
++msgstr "Isim      Duzey    Sonuc"
  
- #: src/main.c:67
- msgid "Classic"
--msgstr "Klasik"
-+msgstr "KlasIk"
+ #: src/chart.c:212
+ msgid "Level"
+-msgstr "Seviye"
++msgstr "Duzey"
  
- #: src/main.c:68
- msgid "Figures"
-@@ -649,15 +649,15 @@
+ #: src/main.c:66
+ msgid "Demo"
+@@ -666,15 +666,15 @@
  
  #: src/main.c:71
  msgid "Vs Human&Human"
@@ -511,7 +515,7 @@
  
  #: src/value.c:40
  msgid "Space"
-@@ -673,7 +673,7 @@
+@@ -690,7 +690,7 @@
  
  #: src/value.c:43
  msgid "Up"
@@ -520,7 +524,7 @@
  
  #: src/value.c:45
  msgid "Right Shift"
-@@ -709,40 +709,40 @@
+@@ -726,40 +726,40 @@
  
  #: src/value.c:53
  msgid "PageUp"
