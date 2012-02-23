@@ -1,0 +1,8 @@
+<?xml version="1.0" ?>
+<PISI>
+    <Source>
+        <Name>kdiff3</Name>
+        <Summary xml:lang="tr">Gelişmiş Fark Aracı</Summary>
+        <Description xml:lang="tr">KDiff3 bir dizin ve dosyaların farkını alma ve birleştirme aracıdır. İki ya da daha fazla dosya ya da dizini karşılaştırır ve birleştirir, satır satır ve karakter karakter farklarını gösterir, otomatik bir birleştirme sistemi sunar, birleştirme sonucu doğan çakışmaları çözmek için kolay bir editörü vardır, KIO sayesinde ağ desteği sunar, boşluk ya da yorumları renklendirebilir ya da gizleyebilir, UTF-8 dahil farklı karakter kodlamalarını destekler, sürüm takip sistemi anahtar sözcüklerini destekler ve tarihçe birleştirebilir.</Description>
+    </Source>
+</PISI>

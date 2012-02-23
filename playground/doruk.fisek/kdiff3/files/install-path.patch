@@ -1,0 +1,29 @@
+diff -Nur kdiff3-0.9.96-orig/src-QT4/kdiff3.pro kdiff3-0.9.96/src-QT4/kdiff3.pro
+--- kdiff3-0.9.96-orig/src-QT4/kdiff3.pro	2011-08-27 13:48:43.000000000 +0300
++++ kdiff3-0.9.96/src-QT4/kdiff3.pro	2012-02-23 17:12:14.789000133 +0200
+@@ -61,11 +61,11 @@
+ }
+ 
+ unix {
+-  documentation.path = /usr/local/share/doc/kdiff3
++  documentation.path = /usr/share/doc/kdiff3
+   documentation.files = ../doc/*
+ 
+   INSTALLS += documentation
+ 
+-  target.path = /usr/local/bin
++  target.path = /usr/bin
+   INSTALLS += target
+ }
+diff -Nur kdiff3-0.9.96-orig/src-QT4/kreplacements/kreplacements.cpp kdiff3-0.9.96/src-QT4/kreplacements/kreplacements.cpp
+--- kdiff3-0.9.96-orig/src-QT4/kreplacements/kreplacements.cpp	2011-08-28 00:49:16.000000000 +0300
++++ kdiff3-0.9.96/src-QT4/kreplacements/kreplacements.cpp	2012-02-23 17:11:58.807000133 +0200
+@@ -107,7 +107,7 @@
+          pBrowser = new QTextBrowser( 0 );
+          pBrowser->setMinimumSize( 600, 400 );
+       }
+-      pBrowser->setSource(QUrl("file://usr/local/share/doc/kdiff3/en/index.html"));
++      pBrowser->setSource(QUrl("file://usr/share/doc/kdiff3/en/index.html"));
+       pBrowser->show();
+    #endif
+ }
