@@ -12,10 +12,9 @@
         <IsA>app:console</IsA>
         <Summary>Remove files based on their last access time</Summary>
         <Description>Utility which recursively searches through specified directories and removes files which have not been accessed in a specified period of time.</Description>
-        <Archive sha1sum="9529c355ed0036e3c8c21974d86f802f1df58e68" type="tarbz2">https://fedorahosted.org/releases/t/m/tmpwatch/tmpwatch-2.10.1.tar.bz2</Archive>
+        <Archive sha1sum="6b014979af44aa1550b724f4c0d94fdc50e50b37" type="tarbz2">https://fedorahosted.org/releases/t/m/tmpwatch/tmpwatch-2.10.3.tar.bz2</Archive>
         <Patches>
             <Patch>example.patch</Patch>
-            <Patch level="1">tmpwatch-2.10-X-doc.patch</Patch>
         </Patches>
     </Source>
 
@@ -24,7 +23,7 @@
         <Files>
             <Path fileType="executable">/usr/sbin</Path>
             <Path fileType="config">/etc</Path>
-            <Path fileType="doc">/usr/share/doc</Path>
+            <Path fileType="doc">/usr/share/doc/tmpwatch</Path>
             <Path fileType="man">/usr/share/man</Path>
         </Files>
         <AdditionalFiles>
@@ -33,6 +32,13 @@
     </Package>
 
     <History>
+        <Update release="7">
+            <Date>2012-02-24</Date>
+            <Version>2.10.3</Version>
+            <Comment>Version bump, strict doc path</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
+        </Update>
         <Update release="6">
             <Date>2010-10-15</Date>
             <Version>2.10.1</Version>
