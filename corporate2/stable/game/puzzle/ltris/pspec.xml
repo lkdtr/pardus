@@ -6,14 +6,14 @@
         <Homepage>http://lgames.sourceforge.net/?project=LTris</Homepage>
         <Packager>
             <Name>Doruk Fişek</Name>
-            <Email>dfisek@fisek.com.tr</Email>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
         </Packager>
         <License>GPLv2</License>
         <Icon>ltris48</Icon>
         <IsA>app:gui</IsA>
         <Summary>SDL Tetris Clone</Summary>
         <Description>LTris as a tetris clone which means you have a bowl with blocks falling down. By rotating and moving the blocks you try to assemble whole lines which then disappear. LTris has three modes for this: Classic is the classical one where you play until the bowl becomes filled, Figures resets the bowl contents to a new figure for each level and adds suddenly appearing tiles and lines later on and Multiplayer where up to three players either controlled by human or CPU compete and send completed lines to each other.</Description>
-        <Archive sha1sum="08785fc962ed83678b955f61a9a87a0215938123" type="targz">mirrors://sourceforge/lgames/ltris-1.0.16.tar.gz</Archive>
+        <Archive sha1sum="0197231b2dd5e2adb7aa68cec2ce1edf0867694c" type="targz">mirrors://sourceforge/lgames/ltris-1.0.18.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>libsdl</Dependency>
             <Dependency>gettext</Dependency>
@@ -47,6 +47,18 @@
     </Package>
 
     <History>
+        <Update release="10">
+            <Date>2012-02-12</Date>
+            <Version>1.0.18</Version>
+            <Comment>Version bump:
+              - An option to configure vertical speed for moving block down by key
+              - The key for pausing the game is now configurable
+              - If rotation of a block would fail because of left or right boundary the block is shifted instead of not rotating at all
+              - The "Game Over" screen can be exited by any key not only Escape
+            </Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
+        </Update>
         <Update release="9">
             <Date>2011-03-03</Date>
             <Version>1.0.16</Version>
