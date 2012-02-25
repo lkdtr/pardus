@@ -6,14 +6,14 @@
         <Homepage>http://www.freeciv.org/</Homepage>
         <Packager>
             <Name>Doruk Fişek</Name>
-            <Email>dfisek@fisek.com.tr</Email>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
         </Packager>
         <License>GPLv2</License>
         <Icon>freeciv-client</Icon>
         <IsA>app:gui</IsA>
         <Summary>Multiplayer strategy game</Summary>
         <Description>Freeciv is a free turn-based multiplayer strategy game in which each player becomes the leader of a civilization, fighting to obtain the ultimate goal: To become the greatest civilization.</Description>
-        <Archive sha1sum="101b42b5f73516e9693c61ae826dd5fbe523edda" type="tarbz2">mirrors://sourceforge/freeciv/freeciv-2.2.4.tar.bz2</Archive>
+        <Archive sha1sum="9d9ee9f48f4c945fc6525139d340443d5a25aac4" type="tarbz2">mirrors://sourceforge/freeciv/freeciv-2.3.1.tar.bz2</Archive>
         <BuildDependencies>
             <Dependency versionFrom="2.18.5">gtk2</Dependency>
             <Dependency versionFrom="1.2.11">libsdl</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="18">
+            <Date>2012-02-11</Date>
+            <Version>2.3.1</Version>
+            <Comment>Version bump.</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
+        </Update>
         <Update release="17">
             <Date>2011-02-05</Date>
             <Version>2.2.4</Version>
