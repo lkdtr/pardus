@@ -6,7 +6,7 @@
         <Homepage>http://www.httrack.com/</Homepage>
         <Packager>
             <Name>Doruk Fişek</Name>
-            <Email>dfisek@fisek.com.tr</Email>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
         </Packager>
         <License>GPLv2</License>
         <Icon>httrack</Icon>
@@ -14,7 +14,7 @@
         <IsA>app:console</IsA>
         <Summary>A website copier and offline browser utility</Summary>
         <Description>HTTrack allows you to download a web site from the Internet to a local directory, building recursively all directories; getting HTML, images, and other files from the server to your computer. HTTrack arranges the original site's relative link-structure. Simply opening a page of the "mirrored" website in your browser, and you can browse the site from link to link, as if you were viewing it online. HTTrack can also update an existing mirrored site, and resume interrupted downloads.</Description>
-        <Archive sha1sum="5bdbc0b294b25929e52bc932e076c9e349a18fa9" type="targz">http://download.httrack.com/httrack-3.44.1.tar.gz</Archive>
+        <Archive sha1sum="fc6d7427f5b1931f15cd13adfee226edb4c908b1" type="targz">http://download.httrack.com/httrack-3.44.5.tar.gz</Archive>
         <BuildDependencies>
             <Dependency>dos2unix</Dependency>
             <Dependency>desktop-file-utils</Dependency>
@@ -53,6 +53,13 @@
     </Package>
 
     <History>
+        <Update release="11">
+            <Date>2012-02-26</Date>
+            <Version>3.44.5</Version>
+            <Comment>Version bump</Comment>
+            <Name>Doruk Fişek</Name>
+            <Email>dfisek@ozguryazilim.com.tr</Email>
+        </Update>
         <Update release="10">
             <Date>2011-05-28</Date>
             <Version>3.44.1</Version>
